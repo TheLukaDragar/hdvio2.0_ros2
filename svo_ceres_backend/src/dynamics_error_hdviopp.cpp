@@ -1,0 +1,617 @@
+/*********************************************************************************
+ *  HDVIO++ - Visual Inertial Odometry ++
+ *  Code based on:
+ *  OKVIS - Open Keyframe-based Visual-Inertial SLAM
+ *  Copyright (c) 2015, Autonomous Systems Lab / ETH Zurich
+ *  Copyright (c) 2016, ETH Zurich, Wyss Zurich, Zurich Eye
+ *  Copyright (c) 2022, Robotics and Perception Group, University of Zurich
+ *
+ *  Redistribution and use in source and binary forms, with or without
+ *  modification, are permitted provided that the following conditions are met:
+ *
+ *   * Redistributions of source code must retain the above copyright notice,
+ *     this list of conditions and the following disclaimer.
+ *   * Redistributions in binary form must reproduce the above copyright notice,
+ *     this list of conditions and the following disclaimer in the documentation
+ *     and/or other materials provided with the distribution.
+ *   * Neither the name of Autonomous Systems Lab / ETH Zurich nor the names of
+ *     its contributors may be used to endorse or promote products derived from
+ *     this software without specific prior written permission.
+ *
+ *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ *  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ *  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ *  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ *  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ *  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ *  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ *  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ *  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGE.
+ *
+ *  Created on: Apr 29, 2024
+ *      Author: Giovanni Cioffi (cioffi@ifi.uzh.ch)
+ *********************************************************************************/
+
+/**
+ * @file DynamicsErrorHDVIOpp.cpp
+ * @brief Source file for the DynamicsErrorHDVIOpp class.
+ * @author Giovanni Cioffi
+ */
+
+#include "svo/ceres_backend/dynamics_error_hdviopp.hpp"
+
+#include <svo/vio_common/matrix.hpp>
+#include <svo/vio_common/matrix_operations.hpp>
+#include <svo/common/conversions.h>
+
+#include "svo/ceres_backend/pose_local_parameterization.hpp"
+
+namespace svo {
+namespace ceres_backend {
+
+// Construct with measurements and parameters.
+DynamicsErrorHDVIOpp::DynamicsErrorHDVIOpp(
+    const DynamicsMeasurements &dynamics_measurements,
+    const DynamicsHandlerOptions& dynamics_parameters,
+    const double& t_0, const double& t_1)
+{  
+  std::lock_guard<std::mutex> lock(preintegration_mutex_);
+  setDynamicsMeasurements(dynamics_measurements);
+  setDynamicsParameters(dynamics_parameters);
+  setT0(t_0);
+  setT1(t_1);
+
+  DEBUG_CHECK(t0_ >= dynamics_measurements.back().timestamp_)
+      << "First dynamics measurement included in DynamicsErrorHDVIOpp is not old enough!";
+  DEBUG_CHECK(t1_ <= dynamics_measurements.front().timestamp_)
+      << "Last dynamics measurement included in DynamicsErrorHDVIOpp is not new enough!";
+}
+
+// Propagates pose, speeds and biases with given IMU measurements.
+int DynamicsErrorHDVIOpp::redoPreintegration(
+    const Transformation& /*T_WS*/, const SpeedAndBias& speed_and_biases) const
+{
+  // ensure unique access
+  std::lock_guard<std::mutex> lock(preintegration_mutex_);
+
+  // now the propagation
+  double time = t0_;
+
+  // sanity check:
+  assert(dynamics_measurements_.back().timestamp_<=time);
+  if (!(dynamics_measurements_.front().timestamp_>=t1_))
+  {
+    return -1;  // nothing to do...
+  }
+
+  // increments (initialise with identity)
+  Delta_q_ = Eigen::Quaterniond(1, 0, 0, 0);
+  C_integral_ = Eigen::Matrix3d::Zero();
+  C_doubleintegral_ = Eigen::Matrix3d::Zero();
+  thr_integral_ = Eigen::Vector3d::Zero();
+  thr_doubleintegral_ = Eigen::Vector3d::Zero();
+  ext_force_integral_ = Eigen::Vector3d::Zero();
+
+  // the Jacobian of the increment
+  // error state includes ext force as well:
+  // d_z = [d_alpha, d_theta, d_beta, d_ba, d_extForce]
+  P_delta_ = Eigen::Matrix<double, 15, 15>::Zero();
+
+  double delta_t = 0;
+  bool has_started = false;
+  bool last_iteration = false;
+  int n_integrated = 0;
+  for (size_t i = dynamics_measurements_.size()-1; i != 0u; --i)
+  {
+    Eigen::Vector3d omega_S_0 = dynamics_measurements_[i].body_rates_;
+    Eigen::Vector3d acc_S_0 = dynamics_measurements_[i].accel_;
+    Eigen::Vector3d thr_S_0 = dynamics_measurements_[i].collective_thrust_;
+    Eigen::Vector3d omega_S_1 = dynamics_measurements_[i-1].body_rates_;
+    Eigen::Vector3d acc_S_1 = dynamics_measurements_[i-1].accel_;
+    Eigen::Vector3d thr_S_1 = dynamics_measurements_[i-1].collective_thrust_;
+    double nexttime = dynamics_measurements_[i-1].timestamp_;
+
+    // time delta
+    double dt = nexttime - time;
+
+    if (t1_ < nexttime)
+    {
+      double interval = nexttime - dynamics_measurements_[i].timestamp_;
+      nexttime = t1_;
+      last_iteration = true;
+      dt = nexttime - time;
+      const double r = dt / interval;
+      omega_S_1 = ((1.0 - r) * omega_S_0 + r * omega_S_1).eval();
+      acc_S_1 = ((1.0 - r) * acc_S_0 + r * acc_S_1).eval();
+      thr_S_1 = ((1.0 - r) * thr_S_0 + r * thr_S_1).eval();
+    }
+
+    if (dt <= 0.0)
+    {
+      continue;
+    }
+    delta_t += dt;
+
+    if (!has_started)
+    {
+      has_started = true;
+      const double r = dt / (nexttime - dynamics_measurements_[i].timestamp_);
+      omega_S_0 = (r * omega_S_0 + (1.0 - r) * omega_S_1).eval();
+      acc_S_0 = (r * acc_S_0 + (1.0 - r) * acc_S_1).eval();
+      thr_S_0 = (r * thr_S_0 + (1.0 - r) * thr_S_1).eval();
+    }
+
+    double sigma_g_c = dynamics_parameters_.sigma_bodyrates_c;
+    double sigma_a_c = dynamics_parameters_.sigma_accel_c;
+    double sigma_ba_c = dynamics_parameters_.sigma_accel_bias_c;
+    double sigma_thrx_c = dynamics_parameters_.sigma_thrustx_c;
+    double sigma_thry_c = dynamics_parameters_.sigma_thrusty_c;
+    double sigma_thrz_c = dynamics_parameters_.sigma_thrustz_c;
+
+    // actual propagation
+    // orientation:
+    Eigen::Quaterniond dq;
+    const Eigen::Vector3d omega_S_true = 0.5 * (omega_S_0 + omega_S_1);
+    const double theta_half = omega_S_true.norm() * 0.5 * dt;
+    const double sinc_theta_half = dynhdviopp_sinc(theta_half);
+    const double cos_theta_half = cos(theta_half);
+    dq.vec() = sinc_theta_half * omega_S_true * 0.5 * dt;
+    dq.w() = cos_theta_half;
+    Eigen::Quaterniond Delta_q_1 = Delta_q_ * dq;
+    // rotation matrix integral:
+    const Eigen::Matrix3d C = Delta_q_.toRotationMatrix();
+    const Eigen::Matrix3d C_1 = Delta_q_1.toRotationMatrix();
+    const Eigen::Vector3d acc_S_true = 
+    (0.5 * (acc_S_0 + acc_S_1) - speed_and_biases.segment<3>(6));
+    const Eigen::Vector3d thr_S_true = 0.5 * (thr_S_0 + thr_S_1);
+    const Eigen::Matrix3d C_integral_1 = C_integral_ + 0.5 * (C + C_1) * dt;
+    const Eigen::Vector3d thr_integral_1 =
+        thr_integral_ + 0.5 * (C + C_1) * thr_S_true * dt;
+    // rotation matrix double integral:
+    C_doubleintegral_ += C_integral_ * dt + 0.25 * (C + C_1) * dt * dt;
+    thr_doubleintegral_ +=
+        thr_integral_ * dt + 0.25 * (C + C_1) * thr_S_true * dt * dt;
+
+    // deal with force propagation
+    const Eigen::Vector3d ext_force_integral_1 =
+    ext_force_integral_ + 0.5 * (C + C_1) * (acc_S_true - thr_S_true) * dt;
+
+    // covariance propagation
+    Eigen::Matrix<double, 15, 15> F_delta =
+        Eigen::Matrix<double, 15, 15>::Identity();
+    // transform
+    F_delta.block<3, 3>(0, 3) =
+        -skewSymmetric(thr_integral_ * dt
+                       + 0.25 * (C + C_1) * thr_S_true * dt * dt);
+    F_delta.block<3, 3>(0, 6) = Eigen::Matrix3d::Identity() * dt;
+    F_delta.block<3, 3>(6, 3) =
+        -skewSymmetric(0.5 * (C + C_1) * thr_S_true * dt);
+    F_delta.block<3, 3>(12, 3) = 
+        -skewSymmetric(0.5 * (C + C_1) * (acc_S_true - thr_S_true) * dt);
+    F_delta.block<3, 3>(12, 9) = -0.5 * (C + C_1) * dt;
+    P_delta_ = F_delta * P_delta_ * F_delta.transpose();
+    // add noise. Note that transformations with rotation matrices can be
+    // ignored, since the noise is isotropic.
+    const double sigma2_dalpha = dt * sigma_g_c * sigma_g_c;
+    P_delta_(3, 3) += sigma2_dalpha;
+    P_delta_(4, 4) += sigma2_dalpha;
+    P_delta_(5, 5) += sigma2_dalpha;
+    const double sigma2_vx = dt * sigma_thrx_c * sigma_thrx_c;
+    const double sigma2_vy = dt * sigma_thry_c * sigma_thry_c;
+    const double sigma2_vz = dt * sigma_thrz_c * sigma_thrz_c;
+    P_delta_(6, 6) += sigma2_vx;
+    P_delta_(7, 7) += sigma2_vy;
+    P_delta_(8, 8) += sigma2_vz;
+    const double sigma2_px = 0.5 * dt * dt * sigma2_vx;
+    const double sigma2_py = 0.5 * dt * dt * sigma2_vy;
+    const double sigma2_pz = 0.5 * dt * dt * sigma2_vz;
+    P_delta_(0, 0) += sigma2_px;
+    P_delta_(1, 1) += sigma2_py;
+    P_delta_(2, 2) += sigma2_pz;
+    const double sigma2_b_a = dt * sigma_ba_c * sigma_ba_c;
+    P_delta_(9, 9) += sigma2_b_a;
+    P_delta_(10, 10) += sigma2_b_a;
+    P_delta_(11, 11) += sigma2_b_a;
+    const double sigma2_ext_f_x = dt * (sigma_thrx_c - sigma_a_c) * (sigma_thrx_c - sigma_a_c);
+    const double sigma2_ext_f_y = dt * (sigma_thry_c - sigma_a_c) * (sigma_thry_c - sigma_a_c);
+    const double sigma2_ext_f_z = dt * (sigma_thrz_c - sigma_a_c) * (sigma_thrz_c - sigma_a_c);
+    P_delta_(12, 12) += sigma2_ext_f_x;
+    P_delta_(13, 13) += sigma2_ext_f_y;
+    P_delta_(14, 14) += sigma2_ext_f_z;
+
+    // memory shift
+    Delta_q_ = Delta_q_1;
+    C_integral_ = C_integral_1;
+    thr_integral_ = thr_integral_1;
+    ext_force_integral_ = ext_force_integral_1;
+    time = nexttime;
+
+    ++n_integrated;
+
+    if (last_iteration)
+      break;
+
+  }
+
+  // store the reference (linearisation) point
+  speed_and_biases_ref_ = speed_and_biases;
+
+  // get the weighting:
+  // enforce symmetric
+  P_delta_ = 0.5 * P_delta_ + 0.5 * P_delta_.transpose().eval();
+
+  // calculate inverse
+  information_ = P_delta_.inverse();
+  information_ = 0.5 * information_ + 0.5 * information_.transpose().eval();
+
+  // square root
+  Eigen::LLT<information_t> lltOfInformation(information_);
+  square_root_information_ = lltOfInformation.matrixL().transpose();
+
+  return n_integrated;
+}
+
+
+const int DynamicsErrorHDVIOpp::integrateExternalForcePrior(
+  const SpeedAndBias& speed_and_biases, ExternalForce& ext_force_prior)
+{
+  // now the propagation
+  double time = t0_;
+
+  // sanity check:
+  assert(dynamics_measurements_.back().timestamp_<=time);
+  if (!(dynamics_measurements_.front().timestamp_>=t1_))
+  {
+    return -1;  // nothing to do...
+  }
+
+  // increments (initialise with identity)
+  Eigen::Quaterniond Delta_q(Eigen::Quaterniond(1, 0, 0, 0));
+  Eigen::Vector3d ext_force_integral(Eigen::Vector3d::Zero());
+
+  double delta_t = 0;
+  bool has_started = false;
+  bool last_iteration = false;
+  int n_integrated = 0;
+  for (size_t i = dynamics_measurements_.size()-1; i != 0u; --i)
+  {
+    Eigen::Vector3d omega_S_0 = dynamics_measurements_[i].body_rates_;
+    Eigen::Vector3d acc_S_0 = dynamics_measurements_[i].accel_;
+    Eigen::Vector3d thr_S_0 = dynamics_measurements_[i].collective_thrust_;
+    Eigen::Vector3d omega_S_1 = dynamics_measurements_[i-1].body_rates_;
+    Eigen::Vector3d acc_S_1 = dynamics_measurements_[i-1].accel_;
+    Eigen::Vector3d thr_S_1 = dynamics_measurements_[i-1].collective_thrust_;
+    double nexttime = dynamics_measurements_[i-1].timestamp_;
+
+    // time delta
+    double dt = nexttime - time;
+
+    if (t1_ < nexttime)
+    {
+      double interval = nexttime - dynamics_measurements_[i].timestamp_;
+      nexttime = t1_;
+      last_iteration = true;
+      dt = nexttime - time;
+      const double r = dt / interval;
+      omega_S_1 = ((1.0 - r) * omega_S_0 + r * omega_S_1).eval();
+      acc_S_1 = ((1.0 - r) * acc_S_0 + r * acc_S_1).eval();
+      thr_S_1 = ((1.0 - r) * thr_S_0 + r * thr_S_1).eval();
+    }
+
+    if (dt <= 0.0)
+    {
+      continue;
+    }
+    delta_t += dt;
+
+    if (!has_started)
+    {
+      has_started = true;
+      const double r = dt / (nexttime - dynamics_measurements_[i].timestamp_);
+      omega_S_0 = (r * omega_S_0 + (1.0 - r) * omega_S_1).eval();
+      acc_S_0 = (r * acc_S_0 + (1.0 - r) * acc_S_1).eval();
+      thr_S_0 = (r * thr_S_0 + (1.0 - r) * thr_S_1).eval();
+    }
+
+    // actual propagation
+    // orientation:
+    Eigen::Quaterniond dq;
+    const Eigen::Vector3d omega_S_true = 0.5 * (omega_S_0 + omega_S_1);
+    const double theta_half = omega_S_true.norm() * 0.5 * dt;
+    const double sinc_theta_half = dynhdviopp_sinc(theta_half);
+    const double cos_theta_half = cos(theta_half);
+    dq.vec() = sinc_theta_half * omega_S_true * 0.5 * dt;
+    dq.w() = cos_theta_half;
+    Eigen::Quaterniond Delta_q_1 = Delta_q * dq;
+    // rotation matrix integral:
+    const Eigen::Matrix3d C = Delta_q.toRotationMatrix();
+    const Eigen::Matrix3d C_1 = Delta_q_1.toRotationMatrix();
+    const Eigen::Vector3d acc_S_true = 
+    (0.5 * (acc_S_0 + acc_S_1) - speed_and_biases.segment<3>(6));
+    const Eigen::Vector3d thr_S_true = 0.5 * (thr_S_0 + thr_S_1);
+    // deal with force propagation
+    ext_force_integral += 0.5 * (C + C_1) * (acc_S_true - thr_S_true) * dt;
+
+    Delta_q = Delta_q_1;
+
+    ++n_integrated;
+
+    if (last_iteration)
+      break;
+
+  }
+
+  ext_force_prior = ext_force_integral / (t1_ - t0_);
+
+  return n_integrated;
+}
+
+
+// This evaluates the error term and additionally computes the Jacobians.
+bool DynamicsErrorHDVIOpp::Evaluate(double const* const * parameters, double* residuals, 
+                                    double** jacobians) const
+{
+  return EvaluateWithMinimalJacobians(parameters, residuals, jacobians, nullptr);
+}
+
+// This evaluates the error term and additionally computes
+// the Jacobians in the minimal internal representation.
+bool DynamicsErrorHDVIOpp::EvaluateWithMinimalJacobians(double const* const * parameters,
+                                                        double* residuals,
+                                                        double** jacobians,
+                                                        double** jacobians_minimal) const
+{
+  // get poses
+  const Transformation T_WS_0(
+        Eigen::Vector3d(parameters[0][0], parameters[0][1], parameters[0][2]),
+      Eigen::Quaterniond(parameters[0][6], parameters[0][3],
+      parameters[0][4], parameters[0][5]));
+
+  const Transformation T_WS_1(
+        Eigen::Vector3d(parameters[2][0], parameters[2][1], parameters[2][2]),
+      Eigen::Quaterniond(parameters[2][6], parameters[2][3],
+      parameters[2][4], parameters[2][5]));
+
+  // get speed and bias
+  SpeedAndBias speed_and_biases_0;
+  SpeedAndBias speed_and_biases_1;
+  for (size_t i = 0; i < 9; ++i)
+  {
+    speed_and_biases_0[i] = parameters[1][i];
+    speed_and_biases_1[i] = parameters[3][i];
+  }
+
+  // get external force (in body frame)
+  ExternalForce fe_0;
+  fe_0(0) = parameters[4][0];
+  fe_0(1) = parameters[4][1]; 
+  fe_0(2) = parameters[4][2];
+
+  // this will NOT be changed:
+  const Eigen::Matrix3d C_WS_0 = T_WS_0.getRotationMatrix();
+  const Eigen::Matrix3d C_S0_W = C_WS_0.transpose();
+
+  // call the propagation
+  const double delta_t = t1_ - t0_;
+  Eigen::Matrix<double, 3, 1> Delta_b_a;
+  // ensure unique access
+  {
+    std::lock_guard<std::mutex> lock(preintegration_mutex_);
+    Delta_b_a = speed_and_biases_0.tail<3>() - speed_and_biases_ref_.tail<3>();
+  }
+  // check change in bias
+  redo_ = redo_ || (Delta_b_a.norm() * delta_t > 0.0005);
+  if (redo_)
+  {
+    redoPreintegration(T_WS_0, speed_and_biases_0);
+    redoCounter_++;
+    Delta_b_a.setZero();
+    redo_ = false;
+    /*if (redoCounter_ > 1) {
+      std::cout << "pre-integration no. " << redoCounter_ << std::endl;
+    }*/
+  }
+
+  // actual propagation output:
+  {
+    std::lock_guard<std::mutex> lock(preintegration_mutex_);
+    // this is a bit stupid, but shared read-locks only come in C++14
+    const Eigen::Vector3d g_W = Eigen::Vector3d(0, 0, 9.8082);
+
+    // assign Jacobian w.r.t. x0
+    Eigen::Matrix<double,15,15> F0 =
+        Eigen::Matrix<double,15,15>::Identity();
+    const Eigen::Vector3d delta_p_est_W =
+        T_WS_0.getPosition() - T_WS_1.getPosition()
+        + speed_and_biases_0.head<3>()* delta_t - 0.5 * g_W* delta_t * delta_t;
+    const Eigen::Vector3d delta_v_est_W = speed_and_biases_0.head<3>()
+        - speed_and_biases_1.head<3>() - g_W * delta_t;
+    const Eigen::Quaterniond Dq = Delta_q_;
+    F0.block<3,3>(0,0) = C_S0_W;
+    F0.block<3,3>(0,3) = C_S0_W * skewSymmetric(delta_p_est_W);
+    F0.block<3,3>(0,6) = C_S0_W * Eigen::Matrix3d::Identity()* delta_t;
+    F0.block<3,3>(0,12) = 0.5 * delta_t * delta_t * Eigen::Matrix3d::Identity();
+    F0.block<3,3>(3,3) =
+        (quaternionPlusMatrix(Dq * T_WS_1.getEigenQuaternion().inverse()) *
+         quaternionOplusMatrix(T_WS_0.getEigenQuaternion())).topLeftCorner<3,3>();
+    F0.block<3,3>(6,3) = C_S0_W * skewSymmetric(delta_v_est_W);
+    F0.block<3,3>(6,6) = C_S0_W;
+    F0.block<3,3>(6,12) = delta_t * Eigen::Matrix3d::Identity();
+    F0.block<3,3>(12,9) = -C_integral_;
+    F0.block<3,3>(12,12) = -delta_t * Eigen::Matrix3d::Identity();
+
+    // assign Jacobian w.r.t. x1
+    Eigen::Matrix<double,15,12> F1 = 
+        Eigen::Matrix<double,15,12>::Zero();
+    F1.block<3,3>(0,0) = -C_S0_W;
+    F1.block<3,3>(3,3) =
+        -(quaternionPlusMatrix(Dq) *
+          quaternionOplusMatrix(T_WS_0.getEigenQuaternion()) *
+          quaternionPlusMatrix(T_WS_1.getEigenQuaternion().inverse()))
+        .topLeftCorner<3,3>();
+    F1.block<3,3>(6,6) = -C_S0_W;
+    F1.block<3,3>(9,9) = -Eigen::Matrix3d::Identity();
+
+    // the full state error vector
+    Eigen::Matrix<double, 15, 1> fullstate_error;
+    fullstate_error.segment<3>(0) =
+        C_S0_W * delta_p_est_W + 0.5 * fe_0 * delta_t * delta_t + thr_doubleintegral_;
+    fullstate_error.segment<3>(3) =
+        2.0 * (Dq * (T_WS_1.getEigenQuaternion().inverse() *
+                     T_WS_0.getEigenQuaternion())).vec();
+    fullstate_error.segment<3>(6) =
+        C_S0_W * delta_v_est_W + fe_0 * delta_t + thr_integral_;
+    fullstate_error.segment<3>(9) = speed_and_biases_0.tail<3>() - speed_and_biases_1.tail<3>();
+    fullstate_error.tail<3>() = ext_force_integral_ - delta_t * fe_0 + F0.block<3,3>(12,9)*Delta_b_a;
+
+    // error weighting
+    Eigen::Matrix<double, 15, 1> fullstate_weighted_error(Eigen::Matrix<double, 15, 1>::Zero());
+    fullstate_weighted_error = square_root_information_ * fullstate_error;
+
+    // accel bias error is not included because it is already in the imu error
+    Eigen::Map<Eigen::Matrix<double, 12, 1> > weighted_error(residuals);
+    weighted_error.segment<9>(0) = fullstate_weighted_error.segment<9>(0);
+    weighted_error.segment<3>(9) = fullstate_weighted_error.segment<3>(12);
+
+    // get the Jacobians
+    if (jacobians != nullptr)
+    {
+      if (jacobians[0] != nullptr)
+      {
+        // Jacobian w.r.t. minimal perturbance
+        Eigen::Matrix<double, 15, 6> J0full_minimal =
+            square_root_information_ * F0.block<15, 6>(0, 0);
+        Eigen::Matrix<double, 12, 6> J0_minimal(Eigen::Matrix<double, 12, 6>::Zero());
+        J0_minimal.block<9,6>(0,0) = J0full_minimal.block<9,6>(0,0);
+        J0_minimal.block<3,6>(9,0) = J0full_minimal.block<3,6>(12,0);
+
+        // pseudo inverse of the local parametrization Jacobian:
+        Eigen::Matrix<double, 6, 7, Eigen::RowMajor> J_lift;
+        PoseLocalParameterization::liftJacobian(parameters[0], J_lift.data());
+
+        // hallucinate Jacobian w.r.t. state
+        Eigen::Map<Eigen::Matrix<double, 12, 7, Eigen::RowMajor> > J0(
+              jacobians[0]);
+        J0 = J0_minimal * J_lift;
+
+        // if requested, provide minimal Jacobians
+        if (jacobians_minimal != nullptr)
+        {
+          if (jacobians_minimal[0] != nullptr)
+          {
+            Eigen::Map<Eigen::Matrix<double, 12, 6, Eigen::RowMajor> >
+                J0_minimal_mapped(jacobians_minimal[0]);
+            J0_minimal_mapped = J0_minimal;
+          }
+        }
+      }
+      if (jacobians[1] != nullptr)
+      {
+        Eigen::Matrix<double, 15, 6> J1full =
+            square_root_information_ * F0.block<15, 6>(0, 6);
+        // we need to include the gyro bias since this is in the parameter block given to the class
+        Eigen::Map<Eigen::Matrix<double, 12, 9, Eigen::RowMajor> >
+            J1(jacobians[1]);
+        J1 = Eigen::Matrix<double, 12, 9>::Zero();
+        J1.block<9,3>(0,0) = J1full.block<9,3>(0,0);
+        J1.block<9,3>(0,6) = J1full.block<9,3>(0,3);
+        J1.block<3,3>(9,0) = J1full.block<3,3>(12,0);
+        J1.block<3,3>(9,6) = J1full.block<3,3>(12,3);
+
+        // if requested, provide minimal Jacobians
+        if (jacobians_minimal != nullptr)
+        {
+          if (jacobians_minimal[1] != nullptr)
+          {
+            Eigen::Map<Eigen::Matrix<double, 12, 9, Eigen::RowMajor> >
+                J1_minimal_mapped(jacobians_minimal[1]);
+            J1_minimal_mapped = J1;
+          }
+        }
+      }
+      if (jacobians[2] != nullptr)
+      {
+        // Jacobian w.r.t. minimal perturbance
+        Eigen::Matrix<double, 15, 6> J2full_minimal =
+            square_root_information_ * F1.block<15, 6>(0, 0);
+        Eigen::Matrix<double, 12, 6> J2_minimal(Eigen::Matrix<double, 12, 6>::Zero());
+        J2_minimal.block<9,6>(0,0) = J2full_minimal.block<9,6>(0,0);
+        J2_minimal.block<3,6>(9,0) = J2full_minimal.block<3,6>(12,0);
+
+        // pseudo inverse of the local parametrization Jacobian:
+        Eigen::Matrix<double, 6, 7, Eigen::RowMajor> J_lift;
+        PoseLocalParameterization::liftJacobian(parameters[2], J_lift.data());
+
+        // hallucinate Jacobian w.r.t. state
+        Eigen::Map<Eigen::Matrix<double, 12, 7, Eigen::RowMajor> > J2(
+              jacobians[2]);
+        J2 = J2_minimal * J_lift;
+
+        // if requested, provide minimal Jacobians
+        if (jacobians_minimal != nullptr)
+        {
+          if (jacobians_minimal[2] != nullptr)
+          {
+            Eigen::Map<Eigen::Matrix<double, 12, 6, Eigen::RowMajor> >
+                J2_minimal_mapped(jacobians_minimal[2]);
+            J2_minimal_mapped = J2_minimal;
+          }
+        }
+      }
+      if (jacobians[3] != nullptr)
+      {
+        Eigen::Matrix<double, 15, 6> J3full =
+            square_root_information_ * F1.block<15, 6>(0, 6);
+        Eigen::Map<Eigen::Matrix<double, 12, 9, Eigen::RowMajor> >
+            J3(jacobians[3]);
+        // we need to include the gyro bias since this is in the parameter block given to the class
+        J3 = Eigen::Matrix<double, 12, 9>::Zero();
+        J3.block<9,3>(0,0) = J3full.block<9,3>(0,0);
+        J3.block<9,3>(0,6) = J3full.block<9,3>(0,3);
+        J3.block<3,3>(9,0) = J3full.block<3,3>(12,0);
+        J3.block<3,3>(9,6) = J3full.block<3,3>(12,3);
+
+        // if requested, provide minimal Jacobians
+        if (jacobians_minimal != nullptr)
+        {
+          if (jacobians_minimal[3] != nullptr)
+          {
+            Eigen::Map<Eigen::Matrix<double, 12, 9, Eigen::RowMajor> >
+                J3_minimal_mapped(jacobians_minimal[3]);
+            J3_minimal_mapped = J3;
+          }
+        }
+      }
+      if (jacobians[4] != nullptr)
+      { 
+        // this is the jacobian wrt the external force parameter
+        Eigen::Matrix<double, 15, 3> J4full = 
+            square_root_information_ * F0.block<15, 3>(0, 12);
+        
+        Eigen::Map<Eigen::Matrix<double, 12, 3, Eigen::RowMajor> >
+            J4(jacobians[4]);
+        J4= Eigen::Matrix<double, 12, 3>::Zero();
+        J4.block<9,3>(0,0) = J4full.block<9,3>(0,0);
+        J4.block<3,3>(9,0) = J4full.block<3,3>(12,0);
+
+        // if requested, provide minimal Jacobians
+        if (jacobians_minimal != nullptr)
+        {
+          if (jacobians_minimal[4] != nullptr)
+          {
+            Eigen::Map<Eigen::Matrix<double, 12, 3, Eigen::RowMajor> >
+                J4_minimal_mapped(jacobians_minimal[4]);
+            J4_minimal_mapped = J4;
+          }
+        }
+      }
+    }
+  }
+
+  return true;
+}
+
+}  // namespace ceres_backend
+}  // namespace svo

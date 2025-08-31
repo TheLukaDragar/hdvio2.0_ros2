@@ -1,0 +1,8 @@
+results/*
+trace_statistics/*
+hdvio2/net_models/*
+.idea/
+scripts/python/__pycache__/
+scripts/python/.ipynb_checkpoints/
+svo_benchmarking/scripts/__pycache__/*
+svo_benchmarking/scripts/*.pyc

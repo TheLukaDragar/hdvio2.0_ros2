@@ -1,0 +1,41 @@
+<!-- Launch File for running svo with ceres backend from bag-file -->
+<launch>
+  <arg name="calib_file" default="realsense"/>
+  <arg name="quad_name" default="parrot"/>
+  <arg name="vio_param_file" default="vio_mono_fisheye"/>
+  <arg name="record" default="false" />
+
+  <!-- SVO node -->
+  <node pkg="hdvio2" type="hdvio2_node" name="svo" clear_params="true" output="screen" args="--v=1" >
+
+    <!-- Camera topic to subscribe to -->
+    <param name="cam0_topic" value="/camera/fisheye1/image_raw" type="str" />
+	
+    <!-- Imu topic to subscribe to -->
+    <param name="imu_topic" value="/camera/imu" type="str" />
+
+    <!-- Dynamics topic to subscribe to -->
+    <param name="use_dynamics" value="true" type="bool" />
+    <param name="dynamics_topic" value="/$(arg quad_name)/agiros_pilot/mpc_command" type="str" />
+    <!-- Use VID-Fusion external force model if false -->
+    <param name="external_force_zero_mean" value="false" type="bool" />
+    <param name="use_learned_residuals" value="true" type="bool" />
+    <param name="use_rotational_dynamics" value="true" type="bool" />
+    <param name="thrust_net_model_file" value="$(find hdvio2)/net_models/thrust_net_flyingroom.engine" type="str"/>
+    <param name="torque_net_model_file" value="$(find hdvio2)/net_models/torque_net_flyingroom.engine" type="str"/>
+
+    <!-- Camera calibration file -->
+    <param name="calib_file" value="$(find hdvio2)/param/calib/$(arg calib_file).yaml" />
+
+    <!--Parameters-->
+    <rosparam file="$(find hdvio2)/param/$(arg vio_param_file).yaml" />
+  </node>
+
+  <!-- Rosbag record -->
+    <group if="$(arg record)">
+        <node pkg="rosbag" type="record" name="recorder" args="-o $(find hdvio2)/tests/ /svo/backend_pose_imu"/>
+    </group>
+
+  <!-- RVIZ -->
+  <node name="vis" pkg="rviz" type="rviz" args=" -d $(find hdvio2)/rviz_config_vio.rviz" />
+</launch>

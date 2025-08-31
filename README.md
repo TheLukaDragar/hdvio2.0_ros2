@@ -1,14 +1,12 @@
 # HDVIO2.0: Wind and Disturbance Estimation with Hybrid Dynamics VIO
 
-THE VIDEO WILL BE HERE ONCE APPROAVED
-
-<!-- [![HDVIO2.0: Wind and Disturbance Estimation with Hybrid Dynamics VIO](doc/eyecatcher_with_youtube_logo.jpg)](https://youtu.be/gmHnhWYfuW0) -->
+[![HDVIO2.0: Wind and Disturbance Estimation with Hybrid Dynamics VIO](img/eyecatcher_with_youtube_logo.jpg)](https://www.youtube.com/watch?v=wUaEp0YGpDM)
 
 This repo contains a sliding-window optimization-based odometry system fusing visual, inertial and hybrid quadrotor dynamics obtained by combining a point-mass vehicle model with a learning-based component, with access to control commands and IMU history, to capture complex aerodynamic effects. 
-It builds on top of the visual-inertial odometry algorithm [SVO Pro](https://github.com/uzh-rpg/rpg_svo_pro_open).
+It builds on top of the visual-inertial odometry algorithm [SVO Pro](https://github.com/uzh-rpg/rpg_svo_pro_open). The B-spline implementation is based on this [work](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sommer_Efficient_Derivative_Computation_for_Cumulative_B-Splines_on_Lie_Groups_CVPR_2020_paper.pdf).
 
 ## Publication
-If you use this code in an academic context, please cite the following [T-RO 2025 paper](https://rpg.ifi.uzh.ch/docs/Arxiv25_Cioffi.pdf).
+If you use this code in an academic context, please cite the following [T-RO 2025 paper](https://rpg.ifi.uzh.ch/docs/tro25_Cioffi.pdf).
 
 G. Cioffi, L. Bauersfeld, and D. Scaramuzza, "**HDVIO2.0: Wind and Disturbance Estimation with Hybrid Dynamics VIO**," IEEE Transactions on Robotics (T-RO) 2025.
 
@@ -48,11 +46,11 @@ sudo apt-get install libblas-dev liblapack-dev libsuitesparse-dev
 
 Create a workspace and clone the code (`ROS-DISTRO`=`noetic`):
 ```sh
-mkdir catkin_ws && cd catkin_ws
+mkdir hdvio2_ws && cd hdvio2_ws
 catkin config --init --mkdirs --extend /opt/ros/<ROS-DISTRO> --cmake-args -DCMAKE_BUILD_TYPE=Release
 cd src
 git clone git@github.com:uzh-rpg/hdvio2.0.git
-vcs-import < ./rpg_svo_pro_with_digital_twins/dependencies.yaml
+vcs-import < ./hdvio2.0/dependencies.yaml
 touch minkindr/minkindr_python/CATKIN_IGNORE
 catkin build
 ```
@@ -61,9 +59,21 @@ catkin build
 
 Refer to [SVO Pro](https://github.com/uzh-rpg/rpg_svo_pro_open#troubleshooting).
 
-## Instructions
+## How to run the code
 
-COMING SOON!
+Download the rosbag and the network weights from [here](https://drive.google.com/drive/folders/1zK88WnSwcYOD7A29tu4WDksy6b0HMIC-?usp=sharing)
+
+Terminal 1:
+
+```sh
+roslaunch hdvio2 hdvio2.launch
+```
+
+Terminal 2:
+
+```sh
+rosbag play flyingroom_flight.bag
+```
 
 ## Credits
 

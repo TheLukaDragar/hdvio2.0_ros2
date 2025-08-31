@@ -1,0 +1,183 @@
+experiment_label: 'hdvio2.0'
+ros_node: hdvio2
+ros_node_name: vimopp_benchmark
+flags: 
+  v: 200
+  logtostderr: 0
+
+settings:
+  dataset_is_stereo: False
+  trace_statistics: False
+  trace_dir: /home/giovanni/vimopp_ws/src/vimopp/trace_statistics
+  calib_name: calib.yaml #needs to be in dataset folder
+  #sleep_us: 50000
+  
+  ################################
+  ##### HDVIO 2.0 parameters #####
+  ################################
+  use_dynamics: True
+  dynamics_dataset: 1
+  dynamics_topic: /feedthrough_command  # not used
+  external_force_zero_mean: False
+  use_learned_residuals: False
+  use_rotational_dynamics: True
+  thrust_net_model_file: /home/giovanni/vimopp_ws/src/vimopp/hdvio2/net_models/thrust_net_reduced_training_blackbird.engine
+  torque_net_model_file: /home/giovanni/vimopp_ws/src/vimopp/hdvio2/net_models/torque_net_reduced_training_blackbird.engine
+  
+  # Instructions:
+  ############################
+  ##### Basic parameters #####
+  ############################
+
+  # Automatic initialisation
+  automatic_reinitialization: False
+
+  # Pipeline type
+  pipeline_is_stereo: False
+
+  # Feature and keyframe number
+  # To run faster, you can decrease `max_fts` and `max_n_kfs`, for example:
+  max_fts: 180
+  max_n_kfs: 10
+  max_map_fts: 300
+  quality_min_fts: 40
+
+  # Map scale when initialized (not used for stereo)
+  # Increase if the initial scene depth is larger
+  map_scale: 5.0
+
+  # Initial rotation
+  T_world_imuinit/qx: 0
+  T_world_imuinit/qy: 0
+  T_world_imuinit/qz: 0
+  T_world_imuinit/qw: 1
+
+  # Keyframe selection
+  kfselect_criterion: FORWARD    # alterntive: DOWNLOOKING
+  # The following kfselect_* ONLY affects FORWARD
+  # If the number of features: >upper, no keyframe; <lower, take keyframe
+  kfselect_numkfs_upper_thresh: 140
+  kfselect_numkfs_lower_thresh: 100
+  # If the current frame is within the following range of any visible keyframes,
+  # do not take a new keyframe.
+  # You can lower these values for more keyframes
+  kfselect_min_dist_metric: 0.1
+  kfselect_min_angle: 20
+  # If the median disparity from the last keyframe is smaller,
+  # do not take a new keyframe
+  # You can lower this value for more keyframes
+  kfselect_min_disparity: 40
+  # When taking a new keyframe,
+  # we can already update the newly initialized seeds with old keyframes.
+  # This is important for forward looking case.
+  update_seeds_with_old_keyframes: True
+
+  # Default affine compensation parameters
+  # Most of the parameters are set to false for the consideration of processing time.
+  # If you observe bad tracking because of light/expousre change,
+  # enable the following parameters.
+  img_align_est_illumination_gain: true
+  img_align_est_illumination_offset: true
+  depth_filter_affine_est_offset: true
+  depth_filter_affine_est_gain: false
+  reprojector_affine_est_offset: true
+  reprojector_affine_est_gain: false
+
+  ########################################
+  ###### Tuning for each module ##########
+  ########################################
+  # Initialization
+  # For a higher resolution, increase the value accordingly.
+  init_min_features: 60
+  init_min_disparity: 30
+
+  # Feature Detection
+  grid_size: 25 # Larger for larger images, for every cell you have max one feature.
+  n_pyr_levels: 3 # Increase for larger images (image align max minus one)
+  detector_threshold_primary: 10 # Fast detector threshold
+  detector_threshold_secondary: 200 # Edgelet detector threshold
+  detector_threshold_shitomasi: 50 # Map Point detector threshold
+
+  # Image Alignment
+  img_align_max_level: 4 # Increase this level by one if the image is double the width and height (752x480).
+  img_align_min_level: 2
+
+  # Reprojection
+  use_async_reprojectors: False # For stereo, change it to True for multithreading.
+  reprojector_max_n_kfs: 5 # Local map size. Larger is computationally more intensive. More reduces drift.
+  scan_epi_unit_sphere: False # for wide angle lens, set it to True.
+  reproject_unconverged_seeds: True
+  max_unconverged_seeds_ratio: 0.2
+
+  # Pose Optimization
+  poseoptim_thresh: 2.0 # Reprojection outlier threshold (px), should be larger for larger  images.
+  poseoptim_using_unit_sphere: False # For wide angle lens, set it to True
+
+  # Depth Filter
+  # How many times does the covariance need to decrease until a seed is considered converged.
+  # Increase to get more accurate points
+  seed_convergence_sigma2_thresh: 200
+  mappoint_convergence_sigma2_thresh: 500
+
+  relocalization_max_trials: 10
+
+  # IMU
+  # Normally the prior should be 0 if not using IMU.
+  use_imu: true
+  poseoptim_prior_lambda: 0.0 # Gyroscope prior in pose optimization
+  img_align_prior_lambda_rot: 0.5 # Gyroscope prior in sparse image alignment
+  img_align_prior_lambda_trans: 0.0 # Constant velocity assumption prior in sparse image alignment
+
+  # Dense input
+  publish_every_nth_dense_input: 5
+
+  # Visualization
+  publish_marker_scale: 0.5
+  publish_active_kfs: True
+
+  # Stereo parameters, not used for mono.
+  max_depth_inv: 0.05
+  min_depth_inv: 1.0
+  mean_depth_inv: 0.3
+  
+  runlc: false
+
+  ##############################
+  ##### Backend parameters #####
+  ##############################
+  use_ceres_backend: true
+  ceres_verbose: false
+  ceres_marginalize: true
+  ceres_num_iterations: 3
+  ceres_num_imu_frames: 3 
+  ceres_max_iteration_time: -1.0 # soft limit, set to -1 to deactivate
+  publish_marker_scale_backend: 0.5 # set to -1 to deactivate visualization of landmarks
+  backend_only_use_corners: false
+  backend_scale_stable_thresh: 0.02
+  
+  # outlier rejection
+  use_outlier_rejection: true
+  outlier_rejection_px_threshold: 2.0
+  
+  # Zero Motion Detection
+  backend_use_zero_motion_detection: true
+  backend_zero_motion_check_n_frames: 5
+  zero_motion_px_diff_threshold: 0.2
+  zero_motion_ratio_moving_pixels_threshold: 0.1
+  zero_motion_min_number_correspondences: 5
+  zero_motion_max_features_to_check: 15
+  zero_motion_sigma: 0.1
+  
+  ### EuRoC ###
+  # use_threaded_depthfilter: False
+  # quality_max_drop_fts: 80
+  # kfselect_min_num_frames_between_kfs: 0
+  
+
+############################
+##### List of Datasets #####
+############################
+datasets:
+  - name: Blackbird/egg/yawForward/maxSpeed6p0/Ancient_Asia_Museum_Multiroom/Camera_Left_Gray/rosbag
+#    settings: 
+#      dataset_first_frame: 0

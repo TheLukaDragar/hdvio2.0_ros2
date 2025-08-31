@@ -1,0 +1,696 @@
+#include <hdvio2/svo_interface.h>
+
+#include <ros/callback_queue.h>
+
+#include <hdvio2/svo_factory.h>
+#include <hdvio2/txt_reader.h>
+#include <hdvio2/visualizer.h>
+#include <svo/common/frame.h>
+#include <svo/map.h>
+#include <svo/imu_handler.h>
+#include <svo/dynamics_handler.h>
+#include <svo/dynamics_net.h>
+#include <svo/opt_quad_angvel_spline.h>
+#include <svo/common/camera.h>
+#include <svo/common/conversions.h>
+#include <svo/frame_handler_mono.h>
+#include <svo/frame_handler_stereo.h>
+#include <svo/frame_handler_array.h>
+#include <svo/initialization.h>
+#include <svo/direct/depth_filter.h>
+
+#include <message_filters/subscriber.h>
+#include <message_filters/synchronizer.h>
+#include <message_filters/sync_policies/exact_time.h>
+#include <message_filters/sync_policies/approximate_time.h>
+#include <image_transport/subscriber_filter.h>
+#include <image_transport/image_transport.h>
+#include <sensor_msgs/image_encodings.h>
+#include <cv_bridge/cv_bridge.h>
+#include <vikit/params_helper.h>
+#include <vikit/timer.h>
+#include <vikit/math_utils.h>
+#include <hdvio2/ceres_backend_factory.h>
+
+
+namespace svo {
+
+SvoInterface::SvoInterface(
+    const PipelineType& pipeline_type,
+    const ros::NodeHandle& nh,
+    const ros::NodeHandle& private_nh)
+  : nh_(nh)
+  , pnh_(private_nh)
+  , pipeline_type_(pipeline_type)
+  , set_initial_attitude_from_gravity_(
+      vk::param<bool>(pnh_, "set_initial_attitude_from_gravity", true))
+  , automatic_reinitialization_(
+      vk::param<bool>(pnh_, "automatic_reinitialization", false))
+{
+  switch (pipeline_type)
+  {
+    case PipelineType::kMono:
+      svo_ = factory::makeMono(pnh_);
+      break;
+    case PipelineType::kStereo:
+      svo_ = factory::makeStereo(pnh_);
+      break;
+    case PipelineType::kArray:
+      svo_ = factory::makeArray(pnh_);
+      break;
+    default:
+      LOG(FATAL) << "Unknown pipeline";
+      break;
+  }
+  ncam_ = svo_->getNCamera();
+
+  visualizer_.reset(
+        new Visualizer(svo_->options_.trace_dir, pnh_, ncam_->getNumCameras()));
+
+  imu_handler_ = factory::getImuHandler(pnh_);
+  svo_->imu_handler_ = imu_handler_;
+
+  bool use_dynamics = vk::param<bool>(pnh_, "use_dynamics", false);
+  size_t dynamics_dataset = vk::param<int>(pnh_, "dynamics_dataset", 0);
+  dynamics_dataset_ = dynamics_dataset;
+
+  if (use_dynamics)
+  {
+    // initialize handler to manage dynamics measurements
+    dynamics_handler_ = factory::getDynamicsHandler(pnh_);
+    
+    // initialize networks for dynamics residuals
+    DynamicsNet::Ptr thrust_dynamics_net(new DynamicsNet(
+      dynamics_handler_->options_.thrust_net_model_file, "thrust"));
+    thrust_dynamics_net_ = thrust_dynamics_net;
+    DynamicsNet::Ptr torque_dynamics_net(new DynamicsNet(
+      dynamics_handler_->options_.torque_net_model_file, "torque"));
+    torque_dynamics_net_ = torque_dynamics_net;
+    if (dynamics_handler_->options_.use_learned_residuals)
+    {
+      SVO_INFO_STREAM("Using learned thrust residuals");
+      SVO_INFO_STREAM("Loading thrust net ...");
+      thrust_dynamics_net_->parseTrtEngine();
+      thrust_dynamics_net_->allocateMemory();
+      SVO_INFO_STREAM("Done setting up thrust net ...");
+
+      if (dynamics_handler_->options_.use_rotational_dynamics)
+      {
+        SVO_INFO_STREAM("Using learned torque residuals");
+        SVO_INFO_STREAM("Loading torque net ...");
+        torque_dynamics_net_->parseTrtEngine();
+        torque_dynamics_net_->allocateMemory();
+        SVO_INFO_STREAM("Done setting up torque net ...");
+      }
+    }
+
+    // initialize spline for rotational dynamics
+    const int64_t spline_length_ns = static_cast<int64_t>(dynamics_handler_->options_.spline_length_s*1e9);
+    const int64_t dt_knot_ns = static_cast<int64_t>(dynamics_handler_->options_.dt_knot_s*1e9);
+    OptimizeQuadAngVelSpline::Ptr opt_quad_angvel_spline(new OptimizeQuadAngVelSpline(dt_knot_ns, spline_length_ns));
+    opt_quad_angvel_spline_ = opt_quad_angvel_spline;
+    opt_quad_angvel_spline_->set_inertia(dynamics_handler_->options_.Inertia);
+  }
+  else
+  {
+    DynamicsHandlerOptions options;
+    DynamicsHandler::Ptr dynamics_handler(new DynamicsHandler(options));
+    dynamics_handler_ = dynamics_handler;
+    
+    DynamicsNet::Ptr thrust_dynamics_net(new DynamicsNet(" ", " "));
+    thrust_dynamics_net_ = thrust_dynamics_net;
+
+    DynamicsNet::Ptr torque_dynamics_net(new DynamicsNet(" ", " "));
+    torque_dynamics_net_ = torque_dynamics_net;
+
+    OptimizeQuadAngVelSpline::Ptr opt_quad_angvel_spline(new OptimizeQuadAngVelSpline());
+    opt_quad_angvel_spline_ = opt_quad_angvel_spline;
+  }
+
+  ceres_backend_interface_ = ceres_backend_factory::makeBackend(pnh_,ncam_);
+  svo_->setBundleAdjuster(ceres_backend_interface_);
+  ceres_backend_interface_->setImu(imu_handler_);
+  ceres_backend_interface_->setDynamicsHandler(dynamics_handler_);
+  ceres_backend_interface_->setThrustDynamicsNet(thrust_dynamics_net_);
+  ceres_backend_interface_->setTorqueDynamicsNet(torque_dynamics_net_);
+  ceres_backend_interface_->setOptimizeQuadAngVelSpline(opt_quad_angvel_spline_);
+  ceres_backend_interface_->makePublisher(pnh_, ceres_backend_publisher_);
+
+  bool init_from_groundtruth = vk::param<bool>(pnh_, "init_from_groundtruth", false);
+  if (init_from_groundtruth)
+  {
+    SVO_INFO_STREAM("Initizalizing backend from groundtruth pose!");
+    std::string gt_file = vk::param<std::string>(pnh_, "groundtruth_file", "");
+
+    PoseMeasurements gt_poses;
+    bool loaded_gt = loadStampedPoses(gt_file, gt_poses);
+
+    if (loaded_gt)
+    {
+      ceres_backend_interface_->setGroundtruthPoses(gt_poses);
+    }
+    else
+    {
+      SVO_INFO_STREAM("Initizalization from groundtruth unsuccessful! .txt was not found!");
+    }
+  }
+
+  svo_->start();
+}
+
+SvoInterface::~SvoInterface()
+{
+  if (imu_thread_)
+    imu_thread_->join();
+  if (image_thread_)
+    image_thread_->join();
+  VLOG(1) << "Destructed SVO.";
+}
+
+void SvoInterface::processImageBundle(
+    const std::vector<cv::Mat>& images,
+    const int64_t timestamp_nanoseconds)
+{
+  svo_->addImageBundle(images, timestamp_nanoseconds);
+}
+
+void SvoInterface::publishResults(
+    const std::vector<cv::Mat>& images,
+    const int64_t timestamp_nanoseconds)
+{
+  CHECK_NOTNULL(svo_.get());
+  CHECK_NOTNULL(visualizer_.get());
+
+  visualizer_->img_caption_.clear();
+  if (svo_->isBackendValid())
+  {
+    std::string static_str = ceres_backend_interface_->getStationaryStatusStr();
+    visualizer_->img_caption_ = static_str;
+  }
+
+  visualizer_->publishSvoInfo(svo_.get(), timestamp_nanoseconds);
+  switch (svo_->stage())
+  {
+    case Stage::kTracking: {
+      Eigen::Matrix<double, 6, 6> covariance;
+      covariance.setZero();
+      visualizer_->publishImuPose(
+            svo_->getLastFrames()->get_T_W_B(), covariance, timestamp_nanoseconds);
+      visualizer_->publishCameraPoses(svo_->getLastFrames(), timestamp_nanoseconds);
+      visualizer_->visualizeMarkers(
+            svo_->getLastFrames(), svo_->closeKeyframes(), svo_->map());
+      visualizer_->exportToDense(svo_->getLastFrames());
+      bool draw_boundary = false;
+      if (svo_->isBackendValid())
+      {
+        draw_boundary = svo_->getBundleAdjuster()->isFixedToGlobalMap();
+      }
+      visualizer_->publishImagesWithFeatures(
+            svo_->getLastFrames(), timestamp_nanoseconds,
+            draw_boundary);
+      break;
+    }
+    case Stage::kInitializing: {
+      visualizer_->publishBundleFeatureTracks(
+            svo_->initializer_->frames_ref_, svo_->getLastFrames(),
+            timestamp_nanoseconds);
+      break;
+    }
+    case Stage::kPaused:
+    case Stage::kRelocalization:
+      visualizer_->publishImages(images, timestamp_nanoseconds);
+      break;
+    case Stage::kReinitialize:
+      visualizer_->publishImages(images, timestamp_nanoseconds);
+      break;
+    default:
+      LOG(FATAL) << "Unknown stage";
+      break;
+  }
+}
+
+bool SvoInterface::setImuPrior(const int64_t timestamp_nanoseconds)
+{
+  if(!svo_->hasStarted())
+  {
+    // when starting up, make sure we already have IMU measurements
+    if(imu_handler_->getMeasurementsCopy().size() < 10u)
+    {
+      return false;
+    }
+  }
+  return true;
+}
+
+void SvoInterface::monoCallback(const sensor_msgs::ImageConstPtr& msg)
+{
+  if(idle_)
+    return;
+
+  cv::Mat image;
+  try
+  {
+    image = cv_bridge::toCvCopy(msg)->image;
+  }
+  catch (cv_bridge::Exception& e)
+  {
+    ROS_ERROR("cv_bridge exception: %s", e.what());
+  }
+
+  std::vector<cv::Mat> images;
+  images.push_back(image.clone());
+
+  if(!setImuPrior(msg->header.stamp.toNSec()))
+  {
+    VLOG(3) << "Could not align gravity! Attempting again in next iteration.";
+    return;
+  }
+
+  imageCallbackPreprocessing(msg->header.stamp.toNSec());
+  processImageBundle(images, msg->header.stamp.toNSec());
+  publishResults(images, msg->header.stamp.toNSec());
+
+  if(svo_->stage() == Stage::kPaused && automatic_reinitialization_)
+    svo_->start();
+
+  imageCallbackPostprocessing();
+}
+
+void SvoInterface::monoCallbackImage(const sensor_msgs::CompressedImage& msg)
+{
+  if(idle_)
+    return;
+
+  cv::Mat image;
+
+  image = cv::imdecode(cv::Mat(1, msg.data.size(), CV_8UC1, (void*)msg.data.data()), cv::IMREAD_UNCHANGED);
+
+  // cv::Mat image;
+  // try
+  // {
+  //   image = cv_bridge::toCvCopy(msg)->image;
+  // }
+  // catch (cv_bridge::Exception& e)
+  // {
+  //   ROS_ERROR("cv_bridge exception: %s", e.what());
+  // }
+
+  std::vector<cv::Mat> images;
+  images.push_back(image.clone());
+
+  if(!setImuPrior(msg.header.stamp.toNSec()))
+  {
+    VLOG(3) << "Could not align gravity! Attempting again in next iteration.";
+    return;
+  }
+
+  imageCallbackPreprocessing(msg.header.stamp.toNSec());
+  processImageBundle(images, msg.header.stamp.toNSec());
+  publishResults(images, msg.header.stamp.toNSec());
+
+  if(svo_->stage() == Stage::kPaused && automatic_reinitialization_)
+    svo_->start();
+
+  imageCallbackPostprocessing();
+}
+
+void SvoInterface::stereoCallback(
+    const sensor_msgs::ImageConstPtr& msg0,
+    const sensor_msgs::ImageConstPtr& msg1)
+{
+  if(idle_)
+    return;
+
+  cv::Mat img0, img1;
+  try {
+    img0 = cv_bridge::toCvShare(msg0, "mono8")->image;
+    img1 = cv_bridge::toCvShare(msg1, "mono8")->image;
+  } catch (cv_bridge::Exception& e) {
+    ROS_ERROR("cv_bridge exception: %s", e.what());
+  }
+
+  if(!setImuPrior(msg0->header.stamp.toNSec()))
+  {
+    VLOG(3) << "Could not align gravity! Attempting again in next iteration.";
+    return;
+  }
+
+  imageCallbackPreprocessing(msg0->header.stamp.toNSec());
+  processImageBundle({img0, img1}, msg0->header.stamp.toNSec());
+  publishResults({img0, img1}, msg0->header.stamp.toNSec());
+
+  if(svo_->stage() == Stage::kPaused && automatic_reinitialization_)
+    svo_->start();
+
+  imageCallbackPostprocessing();
+}
+
+void SvoInterface::imuCallback(const sensor_msgs::ImuConstPtr& msg)
+{
+  const Eigen::Vector3d omega_imu(
+        msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z);
+  const Eigen::Vector3d lin_acc_imu(
+        msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z);
+
+  // correct for scale and axis misalignment
+  if (imu_handler_->imu_calib_.correct_scale_and_axis_misalignment)
+  {
+    Eigen::Vector3d omega_imu_corr = imu_handler_->imu_calib_.Mg_inv * omega_imu;
+    Eigen::Vector3d lin_acc_imu_corr = imu_handler_->imu_calib_.Ma_inv * lin_acc_imu; 
+
+    const ImuMeasurement m(msg->header.stamp.toSec(), omega_imu_corr, lin_acc_imu_corr);
+    if(imu_handler_)
+      imu_handler_->addImuMeasurement(m);
+    else
+      SVO_ERROR_STREAM("SvoNode has no ImuHandler");
+  }
+  else
+  {
+    const ImuMeasurement m(msg->header.stamp.toSec(), omega_imu, lin_acc_imu);
+    if(imu_handler_)
+      imu_handler_->addImuMeasurement(m);
+    else
+      SVO_ERROR_STREAM("SvoNode has no ImuHandler");
+  }
+}
+
+void SvoInterface::dynamicsCallback(const svo_msgs::CommandConstPtr& msg)
+{
+  Eigen::Vector3d mass_norm_collective_thrust(Eigen::Vector3d::Zero());
+  Eigen::Vector3d collective_torque(Eigen::Vector3d::Zero());
+  Eigen::Vector3d collective_torque_in_imu_frame(Eigen::Vector3d::Zero());
+  DynamicsMeasurement m;
+
+  // Agilicious
+  if (dynamics_dataset_ == 0)
+  {
+    // mass-normalized collective thrust
+    double fz, fz_1, fz_2, fz_3, fz_4;
+    fz_1 = msg->thrusts[0];
+    fz_2 = msg->thrusts[1];
+    fz_3 = msg->thrusts[2];
+    fz_4 = msg->thrusts[3];
+
+    fz = fz_1 + fz_2 + fz_3 + fz_4;
+    fz /= dynamics_handler_->options_.mass;
+
+    mass_norm_collective_thrust(2) = fz;
+
+    double omega2_1, omega2_2, omega2_3, omega2_4;
+    omega2_1 = fz_1 / dynamics_handler_->options_.thrust_coeffs(0);
+    omega2_2 = fz_2 / dynamics_handler_->options_.thrust_coeffs(1);
+    omega2_3 = fz_3 / dynamics_handler_->options_.thrust_coeffs(2);
+    omega2_4 = fz_4 / dynamics_handler_->options_.thrust_coeffs(3);
+
+    double tau_1, tau_2, tau_3, tau_4;
+    tau_1 = dynamics_handler_->options_.torque_coeffs(0) * omega2_1;
+    tau_2 = dynamics_handler_->options_.torque_coeffs(1) * omega2_2;
+    tau_3 = dynamics_handler_->options_.torque_coeffs(2) * omega2_3;
+    tau_4 = dynamics_handler_->options_.torque_coeffs(3) * omega2_4;
+
+    collective_torque += Eigen::Vector3d(0., 0., tau_3);
+    collective_torque += Eigen::Vector3d(0., 0., tau_4);
+    collective_torque -= Eigen::Vector3d(0., 0., tau_1);
+    collective_torque -= Eigen::Vector3d(0., 0., tau_2);
+
+    // r_i x thrust_i component
+    collective_torque += skew(dynamics_handler_->options_.r_br) * Eigen::Vector3d(0., 0., fz_1);
+    collective_torque += skew(dynamics_handler_->options_.r_fl) * Eigen::Vector3d(0., 0., fz_2);
+    collective_torque += skew(dynamics_handler_->options_.r_bl) * Eigen::Vector3d(0., 0., fz_3);
+    collective_torque += skew(dynamics_handler_->options_.r_fr) * Eigen::Vector3d(0., 0., fz_4);
+
+    m.timestamp_ = msg->header.stamp.toSec();
+    m.collective_thrust_ = mass_norm_collective_thrust;
+    m.collective_torque_ = collective_torque;
+
+  }
+  // Blackbird
+  else if (dynamics_dataset_ == 1)
+  {
+    double omega2_br, omega2_fr, omega2_bl, omega2_fl;
+    omega2_br = pow(msg->thrusts[3], 2);
+    omega2_fr = pow(msg->thrusts[1], 2);
+    omega2_bl = pow(msg->thrusts[2], 2);
+    omega2_fl = pow(msg->thrusts[0], 2);
+    
+    // mass-normalized collective thrust
+    double fz, fz_br, fz_fr, fz_bl, fz_fl;
+    fz_br = dynamics_handler_->options_.thrust_coeffs(3) * omega2_br;
+    fz_fr = dynamics_handler_->options_.thrust_coeffs(1) * omega2_fr;
+    fz_bl = dynamics_handler_->options_.thrust_coeffs(2) * omega2_bl;
+    fz_fl = dynamics_handler_->options_.thrust_coeffs(0) * omega2_fl;
+
+    fz = fz_bl + fz_br + fz_fl + fz_fr;
+    fz /= dynamics_handler_->options_.mass;
+
+    // z-axis is pointing downwards
+    mass_norm_collective_thrust(2) = -1. * fz;
+
+    // collective torque
+    // br = motor 4, fr = motor 2, bl = motor 3, fl = motor 1
+    // c_t x omega_i^2 component
+    double tau_br, tau_fr, tau_bl, tau_fl;
+    tau_br = dynamics_handler_->options_.torque_coeffs(3) * omega2_br;
+    tau_fr = dynamics_handler_->options_.torque_coeffs(1) * omega2_fr;
+    tau_bl = dynamics_handler_->options_.torque_coeffs(2) * omega2_bl;
+    tau_fl = dynamics_handler_->options_.torque_coeffs(0) * omega2_fl;
+    
+    collective_torque += Eigen::Vector3d(0., 0., tau_fr);
+    collective_torque += Eigen::Vector3d(0., 0., tau_bl);
+    collective_torque -= Eigen::Vector3d(0., 0., tau_br);
+    collective_torque -= Eigen::Vector3d(0., 0., tau_fl);
+
+    // r_i x thrust_i component
+    // -1. it's because the z-axis points down
+    collective_torque += skew(dynamics_handler_->options_.r_br) * Eigen::Vector3d(0., 0., -1.*fz_br);
+    collective_torque += skew(dynamics_handler_->options_.r_fr) * Eigen::Vector3d(0., 0., -1.*fz_fr);
+    collective_torque += skew(dynamics_handler_->options_.r_bl) * Eigen::Vector3d(0., 0., -1.*fz_bl);
+    collective_torque += skew(dynamics_handler_->options_.r_fl) * Eigen::Vector3d(0., 0., -1.*fz_fl);
+
+    // Transform to IMU frame
+    Eigen::Matrix4d T_B_I(ncam_->get_T_B_I().getTransformationMatrix());
+    Eigen::Matrix3d R_B_I(T_B_I.block(0,0,3,3));
+
+    collective_torque_in_imu_frame = R_B_I.inverse() * collective_torque;
+
+    m.timestamp_ = msg->header.stamp.toSec();
+    m.collective_thrust_ = mass_norm_collective_thrust;
+    m.collective_torque_ = collective_torque_in_imu_frame;
+  }
+  // VID
+  else if (dynamics_dataset_ == 2)
+  {
+    SVO_ERROR_STREAM("Not implemented yet!");
+  }
+  else
+  {
+    SVO_ERROR_STREAM("Unknown dynamics dataset!");
+  }
+  
+  if(dynamics_handler_)
+  {
+    dynamics_handler_->addDynamicsMeasurement(m);
+  }
+  else
+  {
+    SVO_ERROR_STREAM("SvoNode has no DynamicsHandler");
+  } 
+}
+
+void SvoInterface::debugDynamicsCallback(const geometry_msgs::WrenchStampedConstPtr &msg)
+{
+  Eigen::Vector3d thrust(Eigen::Vector3d::Zero());
+  Eigen::Vector3d torque(Eigen::Vector3d::Zero());
+
+  // Blackbird
+  if (dynamics_dataset_ == 1)
+  {
+    thrust(0) = msg->wrench.force.x;
+    thrust(1) = msg->wrench.force.y;
+    thrust(2) = msg->wrench.force.z;
+
+    torque(0) = msg->wrench.torque.x;
+    torque(1) = msg->wrench.torque.y;
+    torque(2) = msg->wrench.torque.z;
+  }
+  else
+  {
+    SVO_ERROR_STREAM("Debug Dynamics not implemented for this dataset!");
+  }
+
+  DynamicsMeasurement m;
+  m.timestamp_ = msg->header.stamp.toSec();
+  m.collective_thrust_ = thrust;
+  m.collective_torque_ = torque;
+  
+  if(dynamics_handler_)
+  {
+    dynamics_handler_->addDynamicsMeasurement(m);
+  }
+  else
+  {
+    SVO_ERROR_STREAM("SvoNode has no DynamicsHandler");
+  }
+
+}
+
+void SvoInterface::inputKeyCallback(const std_msgs::StringConstPtr& key_input)
+{
+  std::string remote_input = key_input->data;
+  char input = remote_input.c_str()[0];
+  switch(input)
+  {
+    case 'q':
+      quit_ = true;
+      SVO_INFO_STREAM("SVO user input: QUIT");
+      break;
+    case 'r':
+      svo_->reset();
+      idle_ = true;
+      SVO_INFO_STREAM("SVO user input: RESET");
+      break;
+    case 's':
+      svo_->start();
+      idle_ = false;
+      SVO_INFO_STREAM("SVO user input: START");
+      break;
+     case 'c':
+      svo_->setCompensation(true);
+      SVO_INFO_STREAM("Enabled affine compensation.");
+      break;
+     case 'C':
+      svo_->setCompensation(false);
+      SVO_INFO_STREAM("Disabled affine compensation.");
+      break;
+    default: ;
+  }
+}
+
+void SvoInterface::subscribeImu()
+{
+  imu_thread_ = std::unique_ptr<std::thread>(
+        new std::thread(&SvoInterface::imuLoop, this));
+}
+
+void SvoInterface::subscribeDynamics()
+{
+  dynamics_thread_ = std::unique_ptr<std::thread>(
+        new std::thread(&SvoInterface::dynamicsLoop, this));
+}
+
+void SvoInterface::subscribeDebugDynamics()
+{
+  dynamics_debug_thread_ = std::unique_ptr<std::thread>(
+        new std::thread(&SvoInterface::debugDynamicsLoop, this));
+}
+
+void SvoInterface::subscribeImage()
+{
+  if(pipeline_type_ == PipelineType::kMono)
+    image_thread_ = std::unique_ptr<std::thread>(
+          new std::thread(&SvoInterface::monoLoop, this));
+  else if(pipeline_type_ == PipelineType::kStereo)
+    image_thread_ = std::unique_ptr<std::thread>(
+        new std::thread(&SvoInterface::stereoLoop, this));
+}
+
+void SvoInterface::subscribeRemoteKey()
+{
+  std::string remote_key_topic =
+      vk::param<std::string>(pnh_, "remote_key_topic", "svo/remote_key");
+  sub_remote_key_ =
+      nh_.subscribe(remote_key_topic, 5, &svo::SvoInterface::inputKeyCallback, this);
+}
+
+void SvoInterface::imuLoop()
+{
+  SVO_INFO_STREAM("SvoNode: Started IMU loop.");
+  ros::NodeHandle nh;
+  ros::CallbackQueue queue;
+  nh.setCallbackQueue(&queue);
+  std::string imu_topic = vk::param<std::string>(pnh_, "imu_topic", "imu");
+  ros::Subscriber sub_imu =
+      nh.subscribe(imu_topic, 10, &svo::SvoInterface::imuCallback, this);
+  while(ros::ok() && !quit_)
+  {
+    queue.callAvailable(ros::WallDuration(0.1));
+  }
+}
+
+void SvoInterface::dynamicsLoop()
+{
+  SVO_INFO_STREAM("SvoNode: Started Dynamics loop.");
+  ros::NodeHandle nh;
+  ros::CallbackQueue queue;
+  nh.setCallbackQueue(&queue);
+  std::string dynamics_topic = vk::param<std::string>(pnh_, "dynamics_topic", "dynamics");
+  ros::Subscriber sub_dynamics =
+      nh.subscribe(dynamics_topic, 10, &svo::SvoInterface::dynamicsCallback, this);
+  while(ros::ok() && !quit_)
+  {
+    queue.callAvailable(ros::WallDuration(0.1));
+  }
+}
+
+void SvoInterface::debugDynamicsLoop()
+{
+  SVO_INFO_STREAM("SvoNode: Started Debug Dynamics loop.");
+  ros::NodeHandle nh;
+  ros::CallbackQueue queue;
+  nh.setCallbackQueue(&queue);
+  std::string dynamics_topic = vk::param<std::string>(pnh_, "dynamics_topic", "dynamics");
+  ros::Subscriber sub_dynamics =
+      nh.subscribe(dynamics_topic, 10, &svo::SvoInterface::debugDynamicsCallback, this);
+  while(ros::ok() && !quit_)
+  {
+    queue.callAvailable(ros::WallDuration(0.1));
+  }
+}
+
+void SvoInterface::monoLoop()
+{
+  SVO_INFO_STREAM("SvoNode: Started Image loop.");
+
+  ros::NodeHandle nh;
+  ros::CallbackQueue queue;
+  nh.setCallbackQueue(&queue);
+
+  image_transport::ImageTransport it(nh);
+  std::string image_topic =
+      vk::param<std::string>(pnh_, "cam0_topic", "camera/image_raw");
+  image_transport::Subscriber it_sub =
+     it.subscribe(image_topic, 5, &svo::SvoInterface::monoCallback, this);
+
+  // ros::Subscriber img_sub = nh.subscribe(image_topic, 1, &svo::SvoInterface::monoCallbackImage, this);
+
+  while(ros::ok() && !quit_)
+  {
+    queue.callAvailable(ros::WallDuration(0.1));
+  }
+}
+
+void SvoInterface::stereoLoop()
+{
+  typedef message_filters::sync_policies::ExactTime<sensor_msgs::Image, sensor_msgs::Image> ExactPolicy;
+  typedef message_filters::Synchronizer<ExactPolicy> ExactSync;
+
+  ros::NodeHandle nh(nh_, "image_thread");
+  ros::CallbackQueue queue;
+  nh.setCallbackQueue(&queue);
+
+  // subscribe to cam msgs
+  std::string cam0_topic(vk::param<std::string>(pnh_, "cam0_topic", "/cam0/image_raw"));
+  std::string cam1_topic(vk::param<std::string>(pnh_, "cam1_topic", "/cam1/image_raw"));
+  image_transport::ImageTransport it(nh);
+  image_transport::SubscriberFilter sub0(it, cam0_topic, 1, std::string("raw"));
+  image_transport::SubscriberFilter sub1(it, cam1_topic, 1, std::string("raw"));
+  ExactSync sync_sub(ExactPolicy(5), sub0, sub1);
+  sync_sub.registerCallback(boost::bind(&svo::SvoInterface::stereoCallback, this, _1, _2));
+
+  while(ros::ok() && !quit_)
+  {
+    queue.callAvailable(ros::WallDuration(0.1));
+  }
+}
+
+} // namespace svo

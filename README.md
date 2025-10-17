@@ -61,7 +61,7 @@ Refer to [SVO Pro](https://github.com/uzh-rpg/rpg_svo_pro_open#troubleshooting).
 
 ## How to run the code
 
-Download the rosbag and the network weights from [here](https://drive.google.com/drive/folders/1zK88WnSwcYOD7A29tu4WDksy6b0HMIC-?usp=sharing)
+Download the rosbag and the network weights from [here](https://drive.google.com/drive/folders/1zK88WnSwcYOD7A29tu4WDksy6b0HMIC-?usp=sharing). Place the network weights in the folder hdvio2/net_models.
 
 Terminal 1:
 

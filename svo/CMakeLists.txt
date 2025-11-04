@@ -23,6 +23,7 @@ find_package(opengv REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(glog REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 include(SvoSetup)
 
@@ -52,9 +53,6 @@ set(TRT_ROOT $ENV{TRT_ROOT})
 find_library(NVINFER NAMES nvinfer 
     HINTS ${TRT_ROOT}/lib
     PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
-find_library(NVPARSERS NAMES nvparsers 
-    HINTS ${TRT_ROOT}/lib
-    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
 find_library(NVINFERPLUGIN NAMES nvinfer_plugin 
     HINTS ${TRT_ROOT}/lib
     PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
@@ -62,10 +60,9 @@ find_library(NVONNXPARSER NAMES nvonnxparser
     HINTS ${TRT_ROOT}/lib
     PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
 
-if (NVINFER AND NVPARSERS AND NVINFERPLUGIN AND NVONNXPARSER)
+if (NVINFER AND NVINFERPLUGIN AND NVONNXPARSER)
     message("TensorRT is available!")
     message("NVINFER: ${NVINFER}")
-    message("NVPARSERS: ${NVPARSERS}")
     message("NVINFERPLUGIN: ${NVINFERPLUGIN}")
     message("NVONNXPARSER: ${NVONNXPARSER}")
     set(TRT_AVAIL ON)
@@ -150,6 +147,7 @@ ament_target_dependencies(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
   glog::glog
+  yaml-cpp
   ${CUDA_LIBRARIES}
   ${CUDA_CUBLAS_LIBRARIES}
   ${CUDA_curand_LIBRARY}
@@ -162,7 +160,6 @@ endif()
 if(TRT_AVAIL)
   target_link_libraries(${PROJECT_NAME}
     ${NVINFER}
-    ${NVPARSERS}
     ${NVINFERPLUGIN}
     ${NVONNXPARSER}
   )

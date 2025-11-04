@@ -33,8 +33,18 @@ T getParam(rclcpp::Node::SharedPtr node, const std::string& name, const T& defau
   }
   catch(const rclcpp::exceptions::ParameterNotDeclaredException&)
   {
-    RCLCPP_WARN_STREAM(node->get_logger(), "Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
-    return defaultValue;
+    try
+    {
+      T v = node->declare_parameter(name, defaultValue);
+      RCLCPP_INFO_STREAM(node->get_logger(), "Declared parameter: " << name << ", value: " << v);
+      return v;
+    }
+    catch(const rclcpp::exceptions::ParameterAlreadyDeclaredException&)
+    {
+      T v = node->get_parameter(name).get_value<T>();
+      RCLCPP_INFO_STREAM(node->get_logger(), "Found parameter: " << name << ", value: " << v);
+      return v;
+    }
   }
 }
 
@@ -49,7 +59,7 @@ T getParam(rclcpp::Node::SharedPtr node, const std::string& name)
   }
   catch(const rclcpp::exceptions::ParameterNotDeclaredException&)
   {
-    RCLCPP_ERROR_STREAM(node->get_logger(), "Cannot find value for parameter: " << name);
+    RCLCPP_ERROR_STREAM(node->get_logger(), "Parameter not declared and no default provided: " << name);
     return T();
   }
 }
@@ -58,8 +68,9 @@ template<typename T>
 T param(rclcpp::Node::SharedPtr node, const std::string& name, const T& defaultValue,
         const bool silent=false)
 {
-  if(node->has_parameter(name))
+  try
   {
+    // First try to get the parameter if it exists
     T v = node->get_parameter(name).get_value<T>();
     if (!silent)
     {
@@ -67,11 +78,39 @@ T param(rclcpp::Node::SharedPtr node, const std::string& name, const T& defaultV
     }
     return v;
   }
-  if (!silent)
+  catch(const rclcpp::exceptions::ParameterNotDeclaredException&)
   {
-    RCLCPP_WARN_STREAM(node->get_logger(), "Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
+    // Parameter doesn't exist, declare it with the default value
+    try
+    {
+      T v = node->declare_parameter(name, defaultValue);
+      if (!silent)
+      {
+        RCLCPP_INFO_STREAM(node->get_logger(), "Declared parameter: " << name << ", value: " << v);
+      }
+      return v;
+    }
+    catch(const rclcpp::exceptions::ParameterAlreadyDeclaredException&)
+    {
+      // Parameter was declared by another thread, get its value
+      T v = node->get_parameter(name).get_value<T>();
+      if (!silent)
+      {
+        RCLCPP_INFO_STREAM(node->get_logger(), "Found parameter: " << name << ", value: " << v);
+      }
+      return v;
+    }
   }
-  return defaultValue;
+  catch(const rclcpp::ParameterTypeException&)
+  {
+    // Type mismatch - parameter exists but with different type
+    // Try to get it as the existing type and convert if possible
+    if (!silent)
+    {
+      RCLCPP_WARN_STREAM(node->get_logger(), "Parameter " << name << " exists with different type, using default: " << defaultValue);
+    }
+    return defaultValue;
+  }
 }
 
 } // namespace vk

@@ -38,13 +38,38 @@ find_package(svo_tracker REQUIRED)
 find_package(svo_ceres_backend REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GFLAGS REQUIRED gflags)
+pkg_check_modules(GLOG REQUIRED libglog)
+find_package(yaml-cpp REQUIRED)
+find_package(Ceres REQUIRED)
 
 find_package(CUDA REQUIRED)
 
+# TensorRT related
 set(TRT_ROOT $ENV{TRT_ROOT})
 if(NOT TRT_ROOT)
   set(TRT_ROOT "/usr")
 endif()
+
+find_library(NVINFER NAMES nvinfer 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+
+find_library(NVINFERPLUGIN NAMES nvinfer_plugin 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+find_library(NVONNXPARSER NAMES nvonnxparser 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+
+if (NVINFER AND NVINFERPLUGIN AND NVONNXPARSER)
+    message("TensorRT is available!")
+    set(TRT_AVAIL ON)
+else ()
+    message(WARNING "TensorRT is NOT Available - building without TensorRT support")
+    set(TRT_AVAIL OFF)
+endif ()
 
 include(SvoSetup)
 
@@ -72,6 +97,8 @@ include_directories(
   ${TRT_ROOT}/include
   ${CUDA_INCLUDE_DIRS}
   ${EIGEN3_INCLUDE_DIRS}
+  ${GFLAGS_INCLUDE_DIRS}
+  ${GLOG_INCLUDE_DIRS}
 )
 
 add_library(${PROJECT_NAME} SHARED
@@ -107,27 +134,35 @@ ament_target_dependencies(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
   ${OpenCV_LIBRARIES}
-  ${NVINFER}
-  ${NVPARSERS}
-  ${NVINFERPLUGIN}
+  ${GFLAGS_LIBRARIES}
+  ${GLOG_LIBRARIES}
+  yaml-cpp
+  ${CERES_LIBRARIES}
   ${CUDA_LIBRARIES}
   ${CUDA_CUBLAS_LIBRARIES}
   ${CUDA_curand_LIBRARY}
   ${CUDNN_LIBRARY}
-  ${NVONNXPARSER}
-  ${TensorRT_LIBRARIES}
 )
 
+# Link TensorRT libraries only if available
+if(TRT_AVAIL)
+  target_link_libraries(${PROJECT_NAME}
+    ${NVINFER}
+    ${NVINFERPLUGIN}
+    ${NVONNXPARSER}
+  )
+endif()
+
 add_executable(svo_benchmark src/benchmark_node.cpp)
-target_link_libraries(svo_benchmark ${PROJECT_NAME})
+target_link_libraries(svo_benchmark ${PROJECT_NAME} ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES})
 ament_target_dependencies(svo_benchmark rclcpp)
 
 add_executable(hdvio2_node src/hdvio2_node.cpp)
-target_link_libraries(hdvio2_node ${PROJECT_NAME})
+target_link_libraries(hdvio2_node ${PROJECT_NAME} ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES})
 ament_target_dependencies(hdvio2_node rclcpp)
 
 add_executable(hdvio2_benchmark src/benchmark_node_dynamics.cpp)
-target_link_libraries(hdvio2_benchmark ${PROJECT_NAME})
+target_link_libraries(hdvio2_benchmark ${PROJECT_NAME} ${GFLAGS_LIBRARIES} ${GLOG_LIBRARIES})
 ament_target_dependencies(hdvio2_benchmark rclcpp)
 
 install(TARGETS
@@ -148,7 +183,15 @@ install(DIRECTORY include/
   DESTINATION include
 )
 
-install(DIRECTORY launch param
+install(DIRECTORY launch param net_models
+  DESTINATION share/${PROJECT_NAME}
+)
+
+# Install rviz config files
+install(FILES 
+  rviz_config.rviz
+  rviz_config_vio.rviz
+  rviz_config_vio_ros2.rviz
   DESTINATION share/${PROJECT_NAME}
 )
 

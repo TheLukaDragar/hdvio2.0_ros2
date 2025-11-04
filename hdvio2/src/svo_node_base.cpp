@@ -10,11 +10,12 @@ namespace svo_ros {
 
 void SvoNodeBase::initThirdParty(int argc, char **argv)
 {
-  google::InitGoogleLogging(argv[0]);
-  google::ParseCommandLineFlags(&argc, &argv, true);
-  google::InstallFailureSignalHandler();
-
+  // Initialize ROS2 first to handle --ros-args
   rclcpp::init(argc, argv);
+  
+  google::InitGoogleLogging(argv[0]);
+  // Don't parse command line flags in ROS2 - let rclcpp handle arguments
+  google::InstallFailureSignalHandler();
 }
 
 SvoNodeBase::SvoNodeBase()

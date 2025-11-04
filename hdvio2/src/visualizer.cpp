@@ -103,7 +103,9 @@ void publishPositionVecAsPC(
       pc.push_back(pt);
     }
   }
-  pub->publish(pc);
+  sensor_msgs::msg::PointCloud2 pc_msg;
+  pcl::toROSMsg(pc, pc_msg);
+  pub->publish(pc_msg);
 }
 
 void publishStringsAtPositions(
@@ -148,12 +150,14 @@ Visualizer::Visualizer(const std::string& trace_dir,
                        const rclcpp::Node::SharedPtr& nh_private,
                        const size_t n_cameras)
   : pnh_(nh_private)
+  , trace_id_(0)
   , trace_dir_(trace_dir)
   , img_pub_level_(pnh_->declare_parameter("publish_img_pyr_level", 0))
   , img_pub_nth_(pnh_->declare_parameter("publish_every_nth_img", 1))
   , dense_pub_nth_(pnh_->declare_parameter("publish_every_nth_dense_input", 1))
   , viz_caption_str_(pnh_->declare_parameter("publish_image_caption_str", false))
   , pc_(new PointCloud)
+  , br_(std::make_shared<tf2_ros::TransformBroadcaster>(pnh_))
   , publish_world_in_cam_frame_(
         pnh_->declare_parameter("publish_world_in_cam_frame", true))
   , publish_map_every_frame_(
@@ -167,7 +171,6 @@ Visualizer::Visualizer(const std::string& trace_dir,
         pnh_->declare_parameter("publish_active_kfs", false))
   , trace_pointcloud_(pnh_->declare_parameter("trace_pointcloud", false))
   , vis_scale_(pnh_->declare_parameter("publish_marker_scale", 1.2))
-  , br_(std::make_shared<tf2_ros::TransformBroadcaster>(pnh_))
 {
   // Init ROS Marker Publishers
   pub_frames_ = pnh_->create_publisher<visualization_msgs::msg::Marker>("keyframes", 10);
@@ -184,10 +187,10 @@ Visualizer::Visualizer(const std::string& trace_dir,
   for (size_t i = 0; i < n_cameras; ++i)
   {
     pub_dense_.at(i) = pnh_->create_publisher<svo_msgs::msg::DenseInputWithFeatures>(
-        "dense_input/" + std::to_string(i), 2);
-    pub_images_.at(i) = it.advertise("image/" + std::to_string(i), 10);
+        "dense_input/cam" + std::to_string(i), 2);
+    pub_images_.at(i) = it.advertise("image/cam" + std::to_string(i), 10);
     pub_cam_poses_.at(i) = pnh_->create_publisher<geometry_msgs::msg::PoseStamped>(
-        "pose_cam/" + std::to_string(i), 10);
+        "pose_cam/cam" + std::to_string(i), 10);
   }
 }
 
@@ -197,13 +200,12 @@ void Visualizer::publishSvoInfo(const svo::FrameHandlerBase* const svo,
   CHECK_NOTNULL(svo);
   ++trace_id_;
 
-  if (pub_info_.get_subscription_count() == 0)
+  if (pub_info_->get_subscription_count() == 0)
     return;
   VLOG(100) << "Publish SVO info";
 
   svo_msgs::msg::Info msg_info;
   msg_info.header.frame_id = "cam";
-  msg_info.header.seq = trace_id_;
   msg_info.header.stamp = rclcpp::Time(timestamp_nanoseconds);
   msg_info.processing_time = svo->lastProcessingTime();
   msg_info.stage = static_cast<int>(svo->stage());
@@ -216,7 +218,7 @@ void Visualizer::publishImuPose(const Transformation& T_world_imu,
                                 const Eigen::Matrix<double, 6, 6> Covariance,
                                 const int64_t timestamp_nanoseconds)
 {
-  if (pub_imu_pose_.get_subscription_count() == 0)
+  if (pub_imu_pose_->get_subscription_count() == 0)
     return;
   VLOG(100) << "Publish IMU Pose";
 
@@ -236,7 +238,7 @@ void Visualizer::publishImuPose(const Transformation& T_world_imu,
   msg_pose->pose.pose.orientation.w = q.w();
   for (size_t i = 0; i < 36; ++i)
     msg_pose->pose.covariance[i] = Covariance(i % 6, i / 6);
-  pub_imu_pose_->publish(msg_pose);
+  pub_imu_pose_->publish(*msg_pose);
 }
 
 void Visualizer::publishCameraPoses(const FrameBundlePtr& frame_bundle,
@@ -244,11 +246,11 @@ void Visualizer::publishCameraPoses(const FrameBundlePtr& frame_bundle,
 {
   vk::output_helper::publishTfTransform(
       frame_bundle->at(0)->T_cam_world(),
-      rclcpp::Time(timestamp_nanoseconds), "cam_pos", kWorldFrame, br_);
+      rclcpp::Time(timestamp_nanoseconds), "cam_pos", kWorldFrame, *br_);
 
   for (size_t i = 0; i < frame_bundle->size(); ++i)
   {
-    if (pub_cam_poses_.at(i).get_subscription_count() == 0)
+    if (pub_cam_poses_.at(i)->get_subscription_count() == 0)
       return;
     VLOG(100) << "Publish camera pose " << i;
 
@@ -266,7 +268,7 @@ void Visualizer::publishCameraPoses(const FrameBundlePtr& frame_bundle,
     msg_pose->pose.orientation.y = q.y();
     msg_pose->pose.orientation.z = q.z();
     msg_pose->pose.orientation.w = q.w();
-    pub_cam_poses_.at(i).publish(msg_pose);
+    pub_cam_poses_.at(i)->publish(*msg_pose);
   }
 }
 
@@ -295,7 +297,7 @@ void Visualizer::publishFeatureTracks(
     const ImgPyr& img_pyr, const Level& level, const uint64_t timestamp,
     const size_t frame_index)
 {
-  if (pub_images_.at(frame_index).get_subscription_count() == 0)
+  if (pub_images_.at(frame_index).getNumSubscribers() == 0)
     return;
   VLOG(100) << "Publish feature tracks.";
   const int scale = (1 << level);
@@ -329,7 +331,7 @@ void Visualizer::publishImages(const std::vector<cv::Mat>& images,
 
   for (size_t i = 0; i < images.size(); ++i)
   {
-    if (pub_images_.at(i).get_subscription_count() == 0)
+    if (pub_images_.at(i).getNumSubscribers() == 0)
       continue;
 
     // Downsample image for publishing.
@@ -367,7 +369,7 @@ void Visualizer::publishImagesWithFeatures(const FrameBundlePtr& frame_bundle,
 
   for (size_t i = 0; i < frame_bundle->size(); ++i)
   {
-    if (pub_images_.at(i).get_subscription_count() == 0)
+    if (pub_images_.at(i).getNumSubscribers() == 0)
       continue;
     VLOG(100) << "Publish image with features " << i;
 
@@ -395,7 +397,7 @@ void Visualizer::publishImagesWithFeatures(const FrameBundlePtr& frame_bundle,
 void Visualizer::visualizeHexacopter(const Transformation& T_frame_world,
                                      const uint64_t timestamp)
 {
-  if (pub_frames_.get_subscription_count() > 0)
+  if (pub_frames_->get_subscription_count() > 0)
   {
     vk::output_helper::publishCameraMarker(pub_frames_, "cam_pos", "cams",
                                            rclcpp::Time(timestamp), 1,
@@ -408,9 +410,9 @@ void Visualizer::visualizeQuadrocopter(const Transformation& T_frame_world,
 {
   vk::output_helper::publishTfTransform(T_frame_world,
                                         rclcpp::Time(timestamp),
-                                        "cam_pos", kWorldFrame, br_);
+                                        "cam_pos", kWorldFrame, *br_);
 
-  if (pub_frames_.get_subscription_count() > 0)
+  if (pub_frames_->get_subscription_count() > 0)
   {
     vk::output_helper::publishQuadrocopterMarkers(
         pub_frames_, "cam_pos", "cams", rclcpp::Time(timestamp), 1, 0,
@@ -449,7 +451,7 @@ void Visualizer::visualizeMarkers(const FrameBundlePtr& frame_bundle,
 void Visualizer::publishTrajectoryPoint(const Eigen::Vector3d& pos_in_vision,
                                         const uint64_t timestamp, const int id)
 {
-  if (pub_points_.get_subscription_count() > 0)
+  if (pub_points_->get_subscription_count() > 0)
   {
     VLOG(100) << "Publish trajectory point.";
     vk::output_helper::publishPointMarker(
@@ -507,7 +509,7 @@ void Visualizer::publishSeedsAsPointcloud(const Frame& frame,
                                           bool only_converged_seeds,
                                           bool reset_pc_before_publishing)
 {
-  if (pub_pc_.get_subscription_count() == 0)
+  if (pub_pc_->get_subscription_count() == 0)
     return;
 
   if (reset_pc_before_publishing)
@@ -516,7 +518,7 @@ void Visualizer::publishSeedsAsPointcloud(const Frame& frame,
   }
 
   pc_->header.frame_id = kWorldFrame;
-  pc_->header.stamp = rclcpp::Clock().now().toNSec();
+  pc_->header.stamp = rclcpp::Clock().now().nanoseconds();
   pc_->reserve(frame.num_features_);
   for (size_t i = 0; i < frame.num_features_; ++i)
   {
@@ -593,7 +595,7 @@ void Visualizer::publishMapRegion(const std::vector<FramePtr>& frames)
 {
   VLOG(100) << "Publish map region.";
   uint64_t ts = vk::Timer::getCurrentTime();
-  if (pub_pc_.get_subscription_count() > 0)
+  if (pub_pc_->get_subscription_count() > 0)
   {
     pc_->header.frame_id = kWorldFrame;
 
@@ -623,7 +625,7 @@ void Visualizer::publishMapRegion(const std::vector<FramePtr>& frames)
     { sensor_msgs::msg::PointCloud2 pc_msg; pcl::toROSMsg(*pc_, pc_msg); pub_pc_->publish(pc_msg); }
   }
 
-  if (pub_points_.get_subscription_count() > 0)
+  if (pub_points_->get_subscription_count() > 0)
   {
     for (const FramePtr& frame : frames)
       publishKeyframeWithPoints(frame, ++ts, point_marker_scale_);
@@ -725,7 +727,7 @@ void Visualizer::exportToDense(const FrameBundlePtr& frame_bundle)
   for (size_t cam_index = 0; cam_index < frame_bundle->size(); ++cam_index)
   {
     if (dense_pub_nth_ > 0 && trace_id_ % dense_pub_nth_ == 0 &&
-        pub_dense_.at(cam_index).get_subscription_count() > 0)
+        pub_dense_.at(cam_index)->get_subscription_count() > 0)
     {
       const FramePtr& frame = frame_bundle->at(cam_index);
       svo_msgs::msg::DenseInputWithFeatures msg;
@@ -793,14 +795,14 @@ void Visualizer::exportToDense(const FrameBundlePtr& frame_bundle)
       msg.pose.orientation.x = q.x();
       msg.pose.orientation.y = q.y();
       msg.pose.orientation.z = q.z();
-      pub_dense_.at(cam_index).publish(msg);
+      pub_dense_.at(cam_index)->publish(msg);
     }
   }
 }
 
 void Visualizer::visualizeCoordinateFrames(const Transformation& T_world_cam)
 {
-  if (pub_markers_.get_subscription_count() == 0)
+  if (pub_markers_->get_subscription_count() == 0)
     return;
 
   // camera frame

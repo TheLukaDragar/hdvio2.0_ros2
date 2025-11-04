@@ -616,7 +616,6 @@ void SvoInterface::imuLoop()
       std::bind(&svo::SvoInterface::imuCallback, this, std::placeholders::_1));
   while(rclcpp::ok() && !quit_)
   {
-    rclcpp::spin_some(nh_);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
 }
@@ -630,7 +629,6 @@ void SvoInterface::dynamicsLoop()
       std::bind(&svo::SvoInterface::dynamicsCallback, this, std::placeholders::_1));
   while(rclcpp::ok() && !quit_)
   {
-    rclcpp::spin_some(nh_);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
 }
@@ -644,7 +642,6 @@ void SvoInterface::debugDynamicsLoop()
       std::bind(&svo::SvoInterface::debugDynamicsCallback, this, std::placeholders::_1));
   while(rclcpp::ok() && !quit_)
   {
-    rclcpp::spin_some(nh_);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
 }
@@ -666,7 +663,6 @@ void SvoInterface::monoLoop()
 
   while(rclcpp::ok() && !quit_)
   {
-    rclcpp::spin_some(nh_);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
 }
@@ -689,7 +685,6 @@ void SvoInterface::stereoLoop()
 
   while(rclcpp::ok() && !quit_)
   {
-    rclcpp::spin_some(nh_);
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
   }
 }

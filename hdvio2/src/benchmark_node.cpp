@@ -39,8 +39,8 @@ namespace svo
 class BenchmarkNode : public SvoInterface
 {
 public:
-  BenchmarkNode(const PipelineType& type, const ros::NodeHandle& nh,
-                const ros::NodeHandle& pnh);
+  BenchmarkNode(const PipelineType& type, const rclcpp::Node::SharedPtr& nh,
+                const rclcpp::Node::SharedPtr& pnh);
 
   // general evaluation functions: general dataset
   void runBenchmark(const std::string& dataset_dir);
@@ -110,8 +110,8 @@ private:
 };
 
 BenchmarkNode::BenchmarkNode(const PipelineType& type,
-                             const ros::NodeHandle& nh,
-                             const ros::NodeHandle& pnh)
+                             const rclcpp::Node::SharedPtr& nh,
+                             const rclcpp::Node::SharedPtr& pnh)
   : SvoInterface(type, nh, pnh)
 {
   // create pose tracefile
@@ -139,16 +139,16 @@ BenchmarkNode::BenchmarkNode(const PipelineType& type,
   sleep_us_ = static_cast<size_t>(vk::param<int>(pnh_, "sleep_us", 0));
 
   first_frame_id_ =
-      static_cast<size_t>(vk::getParam<int>("svo/dataset_first_frame", 0));
+      static_cast<size_t>(vk::getParam<int>(nh, "svo/dataset_first_frame", 0));
   last_frame_id_ =
-      static_cast<size_t>(vk::getParam<int>("svo/dataset_last_frame", 0));
+      static_cast<size_t>(vk::getParam<int>(nh, "svo/dataset_last_frame", 0));
 
-  trace_only_kf_ = vk::getParam<bool>("svo/trace_only_keyframes", false);
+  trace_only_kf_ = vk::getParam<bool>(nh, "svo/trace_only_keyframes", false);
 
   blackout_start_id_ =
-      static_cast<size_t>(vk::getParam<int>("svo/blackout_first_id", 0));
+      static_cast<size_t>(vk::getParam<int>(nh, "svo/blackout_first_id", 0));
   blackout_end_id_ =
-      static_cast<size_t>(vk::getParam<int>("svo/blackout_last_id", 0));
+      static_cast<size_t>(vk::getParam<int>(nh, "svo/blackout_last_id", 0));
 }
 
 void BenchmarkNode::safeCreateTrace(const std::string& trace_fn,
@@ -278,7 +278,7 @@ void BenchmarkNode::runBenchmark(const std::string& dataset_dir)
     return;
   }
 
-  while (img_fs.good() && !img_fs.eof() && ros::ok())
+  while (img_fs.good() && !img_fs.eof() && rclcpp::ok())
   {
     // load image
     size_t img_id;
@@ -585,7 +585,7 @@ void BenchmarkNode::runKittiBenchmark(const std::string& dataset_dir)
       return;
     }
     processImageBundle({ img_l_8uC1, img_r_8uC1 }, id);
-    publishResults({ img_l_8uC1, img_r_8uC1 }, nh->now().nanoseconds());
+    publishResults({ img_l_8uC1, img_r_8uC1 }, nh_->get_clock()->now().nanoseconds());
     if (svo_->getLastFrames())
       tracePoseKitti(svo_->getLastFrames()->at(0)->T_world_cam());
   }
@@ -603,8 +603,8 @@ void BenchmarkNode::runArrayBenchmark(const std::string& dataset_dir)
     return;
   }
 
-  size_t first_frame_id = vk::getParam<int>("svo/dataset_first_frame", 0);
-  while (img_fs.good() && !img_fs.eof() && ros::ok())
+  size_t first_frame_id = vk::getParam<int>(nh_, "svo/dataset_first_frame", 0);
+  while (img_fs.good() && !img_fs.eof() && rclcpp::ok())
   {
     if (img_fs.peek() == '#')  // skip comments
       img_fs.ignore(std::numeric_limits<std::streamsize>::max(), '\n');

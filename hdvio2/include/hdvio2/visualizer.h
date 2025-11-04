@@ -25,6 +25,8 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_types.h>
+#include <svo_msgs/msg/info.hpp>
+#include <svo_msgs/msg/dense_input_with_features.hpp>
 #include <svo/global.h>
 #include <svo/common/types.h>
 

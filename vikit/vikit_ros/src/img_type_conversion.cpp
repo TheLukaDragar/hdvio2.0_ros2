@@ -1,4 +1,5 @@
 #include <vikit/img_type_conversion.h>
+#include <rclcpp/rclcpp.hpp>
 
 namespace vk {
 namespace img_type_conversion{
@@ -129,7 +130,7 @@ int sensorMsgsEncodingToOpenCVType(const std::string &encoding)
   }
 
   // invalid sensor_msgs encoding was passed
-  ROS_ERROR("[sensorMsgsEncodingToOpenCVType] Invalid sensor_msgs encoding was passed");
+  RCLCPP_ERROR(rclcpp::get_logger("vk"), "[sensorMsgsEncodingToOpenCVType] Invalid sensor_msgs encoding was passed");
   return -1;
 }
 
@@ -249,7 +250,7 @@ std::string openCVTypeToSensorMsgsEncoding(const int opencv_type)
   }
 
   // invalid opencv type was passed
-  ROS_ERROR("[openCVTypeToSensorMsgsEncoding] Invalid OpenCV type was passed");
+  RCLCPP_ERROR(rclcpp::get_logger("vk"), "[openCVTypeToSensorMsgsEncoding] Invalid OpenCV type was passed");
   return "";
 }
 

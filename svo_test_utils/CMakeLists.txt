@@ -1,8 +1,21 @@
+cmake_minimum_required(VERSION 3.5)
 project(svo_test_utils)
-cmake_minimum_required(VERSION 2.8.3)
 
-find_package(catkin_simple REQUIRED)
-catkin_simple(ALL_DEPS_REQUIRED)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(svo_cmake REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(eigen3_cmake_module REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(glog REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+find_package(svo_common REQUIRED)
+find_package(vikit_ros REQUIRED)
+find_package(vikit_common REQUIRED)
+find_package(vikit_cameras REQUIRED)
 
 include(SvoSetup)
 
@@ -25,8 +38,47 @@ set(SOURCES
   src/point_cloud_generator.cpp
 )
 
-cs_add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  ${EIGEN3_INCLUDE_DIRS}
+)
+ament_target_dependencies(${PROJECT_NAME}
+  cv_bridge
+  ament_index_cpp
+  svo_common
+  vikit_ros
+  vikit_common
+  vikit_cameras
+)
+target_link_libraries(${PROJECT_NAME}
+  glog::glog
+)
 
 ################################################################################
-cs_install()
-cs_export()
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(
+  cv_bridge
+  eigen3_cmake_module
+  Eigen3
+  glog
+  ament_index_cpp
+  svo_common
+  vikit_ros
+  vikit_common
+  vikit_cameras
+)
+
+ament_package()

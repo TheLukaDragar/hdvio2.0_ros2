@@ -1,8 +1,20 @@
+cmake_minimum_required(VERSION 3.5)
 project(svo_common)
-cmake_minimum_required(VERSION 2.8.3)
 
-find_package(catkin_simple REQUIRED)
-catkin_simple()
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(svo_cmake REQUIRED)
+find_package(vikit_common REQUIRED)
+find_package(vikit_cameras REQUIRED)
+find_package(fast_neon REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(glog REQUIRED)
+find_package(eigen3_cmake_module REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(eigen_checks REQUIRED)
 
 include(SvoSetup)
 
@@ -25,27 +37,62 @@ set(SOURCES
   src/point.cpp
   )
 
-cs_add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  ${EIGEN3_INCLUDE_DIRS}
+)
+ament_target_dependencies(${PROJECT_NAME}
+  vikit_common
+  vikit_cameras
+  fast_neon
+  rclcpp
+  eigen_checks
+)
+target_link_libraries(${PROJECT_NAME}
+  glog::glog
+)
 
 ################################################################################
 # TESTS
 
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+
+  ament_add_gtest(${PROJECT_NAME}-test
+    test/test_main.cpp
+    test/test_feature_wrapper.cpp
+  )
+  target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
+
+  ament_add_gtest(container-helpers-test
+    test/test_container_helpers.cpp
+  )
+  target_link_libraries(container-helpers-test ${PROJECT_NAME})
+endif()
+
 ################################################################################
-###
-### GTEST
-###
-
-catkin_add_gtest(${PROJECT_NAME}-test
-  test/test_main.cpp
-  test/test_feature_wrapper.cpp
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
-target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME} pthread)
 
-catkin_add_gtest(container-helpers-test
-  test/test_container_helpers.cpp
+install(DIRECTORY include/
+  DESTINATION include
 )
-target_link_libraries(container-helpers-test ${PROJECT_NAME})
 
-################################################################################
-cs_install()
-cs_export()
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(
+  vikit_common
+  vikit_cameras
+  fast_neon
+  glog
+  eigen3_cmake_module
+  Eigen3
+  eigen_checks
+)
+
+ament_package()

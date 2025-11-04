@@ -5,67 +5,71 @@
  *      Author: cforster
  *
  * from libpointmatcher_ros
+ * Migrated to ROS2
  */
 
 #ifndef ROS_PARAMS_HELPER_H_
 #define ROS_PARAMS_HELPER_H_
 
 #include <string>
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 
 namespace vk {
 
 inline
-bool hasParam(const std::string& name)
+bool hasParam(rclcpp::Node::SharedPtr node, const std::string& name)
 {
-  return ros::param::has(name);
+  return node->has_parameter(name);
 }
 
 template<typename T>
-T getParam(const std::string& name, const T& defaultValue)
+T getParam(rclcpp::Node::SharedPtr node, const std::string& name, const T& defaultValue)
 {
-  T v;
-  if(ros::param::get(name, v))
+  try
   {
-    ROS_INFO_STREAM("Found parameter: " << name << ", value: " << v);
+    T v = node->get_parameter(name).get_value<T>();
+    RCLCPP_INFO_STREAM(node->get_logger(), "Found parameter: " << name << ", value: " << v);
     return v;
   }
-  else
-    ROS_WARN_STREAM("Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
-  return defaultValue;
+  catch(const rclcpp::exceptions::ParameterNotDeclaredException&)
+  {
+    RCLCPP_WARN_STREAM(node->get_logger(), "Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
+    return defaultValue;
+  }
 }
 
 template<typename T>
-T getParam(const std::string& name)
+T getParam(rclcpp::Node::SharedPtr node, const std::string& name)
 {
-  T v;
-  if(ros::param::get(name, v))
+  try
   {
-    ROS_INFO_STREAM("Found parameter: " << name << ", value: " << v);
+    T v = node->get_parameter(name).get_value<T>();
+    RCLCPP_INFO_STREAM(node->get_logger(), "Found parameter: " << name << ", value: " << v);
     return v;
   }
-  else
-    ROS_ERROR_STREAM("Cannot find value for parameter: " << name);
-  return T();
+  catch(const rclcpp::exceptions::ParameterNotDeclaredException&)
+  {
+    RCLCPP_ERROR_STREAM(node->get_logger(), "Cannot find value for parameter: " << name);
+    return T();
+  }
 }
 
 template<typename T>
-T param(const ros::NodeHandle& nh, const std::string& name, const T& defaultValue,
+T param(rclcpp::Node::SharedPtr node, const std::string& name, const T& defaultValue,
         const bool silent=false)
 {
-  if(nh.hasParam(name))
+  if(node->has_parameter(name))
   {
-    T v;
-    nh.param<T>(name, v, defaultValue);
+    T v = node->get_parameter(name).get_value<T>();
     if (!silent)
     {
-      ROS_INFO_STREAM("Found parameter: " << name << ", value: " << v);
+      RCLCPP_INFO_STREAM(node->get_logger(), "Found parameter: " << name << ", value: " << v);
     }
     return v;
   }
   if (!silent)
   {
-    ROS_WARN_STREAM("Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
+    RCLCPP_WARN_STREAM(node->get_logger(), "Cannot find value for parameter: " << name << ", assigning default: " << defaultValue);
   }
   return defaultValue;
 }

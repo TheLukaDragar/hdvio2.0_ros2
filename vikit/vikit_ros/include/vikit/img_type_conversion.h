@@ -1,7 +1,6 @@
 #pragma once
 
-#include <ros/ros.h>
-#include <sensor_msgs/image_encodings.h>
+#include <sensor_msgs/image_encodings.hpp>
 #include <cv_bridge/cv_bridge.h>
 
 namespace vk {

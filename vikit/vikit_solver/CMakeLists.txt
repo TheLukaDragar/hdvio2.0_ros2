@@ -1,35 +1,69 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(vikit_solver)
-find_package(catkin_simple REQUIRED)
-catkin_simple(ALL_DEPS_REQUIRED)
 
-SET(CMAKE_BUILD_TYPE Release) # Release, RelWithDebInfo
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++11")
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(glog REQUIRED)
+find_package(eigen3_cmake_module REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 #############
 # LIBRARIES #
 #############
-cs_add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME}
   include/vikit/solver/mini_least_squares_solver.h
   include/vikit/solver/implementation/mini_least_squares_solver.hpp
   src/robust_cost.cpp
   include/vikit/solver/robust_cost.h
 )
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  ${EIGEN3_INCLUDE_DIRS}
+)
+target_link_libraries(${PROJECT_NAME}
+  glog::glog
+)
 
 ## Declare a cpp executable
-#cs_add_executable(elevation_map_node src/elevation_map_node.cpp)
+#add_executable(elevation_map_node src/elevation_map_node.cpp)
 #target_link_libraries(elevation_map_node ${PROJECT_NAME})
 
 ##########
 # GTESTS #
 ##########
-#catkin_add_gtest(test_cameras
-#    test/test-cameras.cc
-#)
-#target_link_libraries(test_cameras ${PROJECT_NAME}) 
+#if(BUILD_TESTING)
+#  find_package(ament_cmake_gtest REQUIRED)
+#  ament_add_gtest(test_cameras test/test-cameras.cc)
+#  target_link_libraries(test_cameras ${PROJECT_NAME})
+#endif()
 
 ##########
 # EXPORT #
 ##########
-cs_install()
-cs_export()
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(
+  glog
+  eigen3_cmake_module
+  Eigen3
+)
+
+ament_package()

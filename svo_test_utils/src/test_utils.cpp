@@ -5,7 +5,7 @@
 #include <glog/logging.h>
 #include <opencv2/opencv.hpp>
 #ifdef SVO_USE_ROS
-# include <ros/package.h>
+# include <ament_index_cpp/get_package_share_directory.hpp>
 # include <vikit/params_helper.h>
 #endif
 
@@ -16,7 +16,7 @@ std::string getDatasetDir()
 {
   const char* env_dir = std::getenv("SVO_DATASET_DIR");
 #ifdef SVO_USE_ROS
-  std::string dataset_dir(ros::package::getPath("svo")+"/test/data");
+  std::string dataset_dir(ament_index_cpp::get_package_share_directory("svo")+"/test/data");
   if(env_dir != NULL)
     dataset_dir = std::string(env_dir);
   return dataset_dir;
@@ -28,7 +28,7 @@ std::string getDatasetDir()
 std::string getTestDataDir()
 {
 #ifdef SVO_USE_ROS
-  return std::string(ros::package::getPath("svo_experiments")+"/data");
+  return std::string(ament_index_cpp::get_package_share_directory("svo_experiments")+"/data");
 #else
   const char* env_dir = std::getenv("SVO_DATASET_DIR");
   return std::string(env_dir);
@@ -38,8 +38,13 @@ std::string getTestDataDir()
 std::string getTraceDir()
 {
 #ifdef SVO_USE_ROS
-  std::string default_dir(ros::package::getPath("svo_experiments")+"/results");
-  return vk::getParam<std::string>("svo/trace_dir", default_dir);
+  std::string default_dir(ament_index_cpp::get_package_share_directory("svo_experiments")+"/results");
+  // TODO: Need node handle to get parameter in ROS2
+  // For now, just return the default directory or use environment variable
+  const char* trace_dir = std::getenv("SVO_TRACE_DIR");
+  if(trace_dir != NULL)
+    return std::string(trace_dir);
+  return default_dir;
 #else
   return "/tmp";
 #endif

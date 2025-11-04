@@ -155,7 +155,7 @@ namespace svo {
             }
             std::cout << "\n";
             std::cout << "knots_values: \n";
-            for (const auto v : knots_)
+            for (const auto& v : knots_)
             {
                 std::cout << v.x() << ", " << v.y() << ", " << v.z() << "\n";
             }

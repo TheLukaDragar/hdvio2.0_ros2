@@ -345,7 +345,7 @@ bool Estimator::addStates(const FrameBundleConstPtr& frame_bundle,
           std::make_shared<ceres_backend::ExternalForceParameterBlock>(external_force, id.asInteger());
           if(!map_ptr_->addParameterBlock(external_force_parameter_block))
           {
-            ROS_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
+            SVO_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
           }
           else
           {
@@ -388,7 +388,7 @@ bool Estimator::addStates(const FrameBundleConstPtr& frame_bundle,
           std::make_shared<ceres_backend::ExternalForceParameterBlock>(external_force, id.asInteger());
           if(!map_ptr_->addParameterBlock(external_force_parameter_block))
           {
-            ROS_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
+            SVO_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
           }
           else
           {
@@ -423,7 +423,7 @@ bool Estimator::addStates(const FrameBundleConstPtr& frame_bundle,
           std::make_shared<ceres_backend::ExternalForceParameterBlock>(external_force, id.asInteger());
           if(!map_ptr_->addParameterBlock(external_force_parameter_block))
           {
-            ROS_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
+            SVO_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
           }
           else
           {
@@ -461,7 +461,7 @@ bool Estimator::addStates(const FrameBundleConstPtr& frame_bundle,
           std::make_shared<ceres_backend::ExternalForceParameterBlock>(external_force, id.asInteger());
           if(!map_ptr_->addParameterBlock(external_force_parameter_block))
           {
-            ROS_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
+            SVO_WARN_STREAM("Cannot add parameter for external force to the backed. Dropping the dynamic residual!");
           }
           else
           {

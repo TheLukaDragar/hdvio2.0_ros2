@@ -367,7 +367,7 @@ InitResult OneShotInit::addFrameBundle(const FrameBundlePtr &frames_cur)
   FramePtr frame_cur = frames_cur->at(0);
   FeatureMatches matches_cur_ref;
   feature_tracking_utils::getFeatureMatches(*frame_cur, *frame_ref, &matches_cur_ref);
-  for(const std::pair<size_t, size_t> it : matches_cur_ref)
+  for(const std::pair<size_t, size_t>& it : matches_cur_ref)
   {
     const BearingVector f_ref = frame_ref->f_vec_.col(it.second);
     const Vector3d xyz_in_cam = (f_ref/f_ref.z()) * depth_at_current_frame_;

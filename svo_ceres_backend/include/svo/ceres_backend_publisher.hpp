@@ -5,9 +5,8 @@
 
 #pragma once
 
-#include <boost/shared_ptr.hpp>
-#include <ros/ros.h>
-#include <pcl_ros/point_cloud.h>
+#include <memory>
+#include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl_conversions/pcl_conversions.h>
 

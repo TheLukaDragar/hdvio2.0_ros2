@@ -41,19 +41,17 @@ DynamicsNet::DynamicsNet(
     net_model_file_ = net_model_file;
     type_ = type;
     // call allocateMemory() to initialize
-    input_idx_ = 0;
-    output_idx_ = 0;
     input_size_ = 0;
     output_size_ = 0;
+    input_buffer_ = nullptr;
+    output_buffer_ = nullptr;
 }
 
 
 DynamicsNet::~DynamicsNet()
 {
-    for (void* buf : buffers_)
-    {
-        cudaFree(buf);
-    }
+    if (input_buffer_) cudaFree(input_buffer_);
+    if (output_buffer_) cudaFree(output_buffer_);
 }
 
 
@@ -105,8 +103,8 @@ void DynamicsNet::parseTrtEngine()
 
     TRTUniquePtr<nvinfer1::IRuntime> runtime{nvinfer1::createInferRuntime(gLogger)};
 
-    // initialize engine
-    engine_.reset(runtime->deserializeCudaEngine(engine_data.data(), fsize, nullptr));
+    // initialize engine (TensorRT 10+ API)
+    engine_.reset(runtime->deserializeCudaEngine(engine_data.data(), fsize));
     context_.reset(engine_->createExecutionContext());
 }
 
@@ -115,18 +113,26 @@ void DynamicsNet::allocateMemory()
 {
     std::cout << "[" << type_ << " net] Allocating memory for inference!\n";
 
-    // get sizes of input and output and allocate memory required for input data and for output data
-    buffers_.reserve(engine_->getNbBindings());
-    input_idx_ = engine_->getBindingIndex("input");
-    output_idx_ = engine_->getBindingIndex("output");
-    nvinfer1::Dims3 input_dims = static_cast<nvinfer1::Dims3&&>(
-        engine_->getBindingDimensions(input_idx_));
-    nvinfer1::Dims3 output_dims = static_cast<nvinfer1::Dims3&&>(
-        engine_->getBindingDimensions(output_idx_));
+    // get sizes of input and output and allocate memory (TensorRT 10+ name-based API)
+    const char* input_name = "input";
+    const char* output_name = "output";
+    
+    nvinfer1::Dims input_dims = engine_->getTensorShape(input_name);
+    nvinfer1::Dims output_dims = engine_->getTensorShape(output_name);
+    
     input_size_ = input_dims.d[1] * input_dims.d[2] * sizeof(float);
     output_size_ = output_dims.d[1] * sizeof(float);
-    checkCuda(cudaMalloc(&buffers_[input_idx_], input_size_));
-    checkCuda(cudaMalloc(&buffers_[output_idx_], output_size_));
+    
+    void* input_buffer;
+    void* output_buffer;
+    checkCuda(cudaMalloc(&input_buffer, input_size_));
+    checkCuda(cudaMalloc(&output_buffer, output_size_));
+    
+    // Store tensor names for later use
+    input_name_ = input_name;
+    output_name_ = output_name;
+    input_buffer_ = input_buffer;
+    output_buffer_ = output_buffer;
 
     std::cout << "Memory allocated\n";
     std::cout << "Input size = " << input_size_ 
@@ -140,16 +146,20 @@ float* DynamicsNet::inference(float* input)
 {
     // copy inputs to GPU
     checkCuda(
-        cudaMemcpy(buffers_[input_idx_], input, input_size_, cudaMemcpyHostToDevice));
+        cudaMemcpy(input_buffer_, input, input_size_, cudaMemcpyHostToDevice));
 
-    // inference
-    context_->executeV2(buffers_.data());
+    // Set tensor addresses for TensorRT 10+ API
+    context_->setInputTensorAddress(input_name_, input_buffer_);
+    context_->setTensorAddress(output_name_, output_buffer_);
 
-    // copy ouput from GPU
+    // inference with enqueueV3 (TensorRT 10+ API)
+    context_->enqueueV3(0);
+
+    // copy output from GPU
     float* output = nullptr;
     output = new float[15];
     checkCuda(
-        cudaMemcpy(output, buffers_[output_idx_], output_size_, cudaMemcpyDeviceToHost));
+        cudaMemcpy(output, output_buffer_, output_size_, cudaMemcpyDeviceToHost));
 
     return output;  
 }

@@ -35,24 +35,32 @@ message("CUDA Headers: ${CUDA_INCLUDE_DIRS}")
 # CuDNN related
 option(CUDNN_AVAIL "CUDNN available" OFF)
 find_library(CUDNN_LIBRARY
-        NAMES libcudnn.so
-        PATHS /usr/local/cuda/lib64
+        NAMES cudnn libcudnn.so
+        PATHS /usr/lib/x86_64-linux-gnu /usr/local/cuda/lib64 /usr/lib64
         )
 if (CUDNN_LIBRARY)
     message("CUDNN is available!")
     message("CUDNN_LIBRARY: ${CUDNN_LIBRARY}")
     set(CUDNN_AVAIL ON)
 else ()
-    message("CUDNN is NOT Available")
+    message(WARNING "CUDNN is NOT Available - building without CUDNN support")
     set(CUDNN_AVAIL OFF)
 endif ()
 
 # TensorRT related
 set(TRT_ROOT $ENV{TRT_ROOT})
-find_library(NVINFER NAMES nvinfer HINTS ${TRT_ROOT}/lib)
-find_library(NVPARSERS NAMES nvparsers HINTS ${TRT_ROOT}/lib)
-find_library(NVINFERPLUGIN NAMES nvinfer_plugin HINTS ${TRT_ROOT}/lib)
-find_library(NVONNXPARSER NAMES nvonnxparser HINTS ${TRT_ROOT}/lib)
+find_library(NVINFER NAMES nvinfer 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+find_library(NVPARSERS NAMES nvparsers 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+find_library(NVINFERPLUGIN NAMES nvinfer_plugin 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
+find_library(NVONNXPARSER NAMES nvonnxparser 
+    HINTS ${TRT_ROOT}/lib
+    PATHS /usr/lib/x86_64-linux-gnu /usr/local/lib /usr/lib64)
 
 if (NVINFER AND NVPARSERS AND NVINFERPLUGIN AND NVONNXPARSER)
     message("TensorRT is available!")
@@ -62,7 +70,7 @@ if (NVINFER AND NVPARSERS AND NVINFERPLUGIN AND NVONNXPARSER)
     message("NVONNXPARSER: ${NVONNXPARSER}")
     set(TRT_AVAIL ON)
 else ()
-    message("TensorRT is NOT Available")
+    message(WARNING "TensorRT is NOT Available - building without TensorRT support")
     set(TRT_AVAIL OFF)
 endif ()
 
@@ -142,16 +150,23 @@ ament_target_dependencies(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
   glog::glog
-  ${NVINFER}
-  ${NVPARSERS}
-  ${NVINFERPLUGIN}
   ${CUDA_LIBRARIES}
   ${CUDA_CUBLAS_LIBRARIES}
   ${CUDA_curand_LIBRARY}
-  ${CUDNN_LIBRARY}
-  ${NVONNXPARSER}
-  ${TensorRT_LIBRARIES}
 )
+
+if(CUDNN_LIBRARY)
+  target_link_libraries(${PROJECT_NAME} ${CUDNN_LIBRARY})
+endif()
+
+if(TRT_AVAIL)
+  target_link_libraries(${PROJECT_NAME}
+    ${NVINFER}
+    ${NVPARSERS}
+    ${NVINFERPLUGIN}
+    ${NVONNXPARSER}
+  )
+endif()
 
 ################################################################################
 ###

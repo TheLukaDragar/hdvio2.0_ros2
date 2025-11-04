@@ -87,7 +87,7 @@ bool saveMap(
       << YAML::BeginSeq;
 
   // safe points
-  for(const PointPtr point : points)
+  for(const PointPtr& point : points)
   {
     out << YAML::BeginMap
         << YAML::Key << "point_id" << YAML::Value << point->id()

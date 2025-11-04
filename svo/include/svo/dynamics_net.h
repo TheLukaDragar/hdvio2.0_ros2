@@ -29,7 +29,7 @@
 
 namespace svo {
 
-// destroy TensorRT objects if something goes wrong
+// destroy TensorRT objects - TensorRT 8+ uses delete instead of destroy()
 struct TRTDestroy
 {
     template <class T>
@@ -37,7 +37,7 @@ struct TRTDestroy
     {
         if (obj)
         {
-            obj->destroy();
+            delete obj;
         }
     }
 };    
@@ -71,11 +71,13 @@ class DynamicsNet
     std::string net_model_file_;
     std::string type_;
     const int batch_size_ = 1;
-    int input_idx_;
-    int output_idx_;
     size_t input_size_;
     size_t output_size_;
-    std::vector<void*> buffers_; // buffers for input and output data
+    // TensorRT 10+ uses name-based tensor API
+    const char* input_name_;
+    const char* output_name_;
+    void* input_buffer_;
+    void* output_buffer_;
 };
 
 } // namespace svo

@@ -6,11 +6,14 @@ if(NOT CMAKE_CXX_STANDARD)
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(svo_cmake REQUIRED)
 find_package(svo_common REQUIRED)
 find_package(svo_vio_common REQUIRED)
 find_package(svo REQUIRED)
-find_package(pcl_ros REQUIRED)
+find_package(pcl_conversions REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(glog REQUIRED)
 find_package(Ceres REQUIRED)
@@ -106,10 +109,13 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 )
 
 ament_target_dependencies(${PROJECT_NAME}
+  rclcpp
+  geometry_msgs
+  sensor_msgs
   svo_common
   svo_vio_common
   svo
-  pcl_ros
+  pcl_conversions
 )
 
 target_link_libraries(${PROJECT_NAME}

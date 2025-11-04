@@ -903,7 +903,7 @@ bool CeresBackendInterface::addStatesAndInertialMeasurementsToBackend(
       // we use this values to check that the spline values are reasonable
       double sum = 0;
       double sq_sum = 0;
-      for (const auto im : imu_measurements)
+      for (const auto& im : imu_measurements)
       {
         double angvel_norm = im.angular_velocity_.norm();
         sum += angvel_norm;
@@ -1251,7 +1251,7 @@ void CeresBackendInterface::setPerformanceMonitor(const std::string& trace_dir)
   g_permon_backend_->addLog("marginalization");
   g_permon_backend_->addLog("fixation");
   g_permon_backend_->addLog("n_fixed_lm");
-  for (const auto k : MarginalizationTiming::names_)
+  for (const auto& k : MarginalizationTiming::names_)
   {
     g_permon_backend_->addLog(k);
   }
@@ -1312,7 +1312,7 @@ void CeresBackendInterface::optimizationLoop()
       if (g_permon_backend_)
       {
         g_permon_backend_->log("marginalization", timer.stop());
-        for (const auto k : MarginalizationTiming::names_)
+        for (const auto& k : MarginalizationTiming::names_)
         {
           g_permon_backend_->log(k, mag_timing.get(k));
         }

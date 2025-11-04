@@ -3,6 +3,7 @@
 #include <thread>
 #include <condition_variable>
 #include <math.h>
+#include <rclcpp/rclcpp.hpp>
 
 #include <svo/abstract_bundle_adjustment.h>
 #include <svo/vio_common/backend_types.hpp>
@@ -173,14 +174,14 @@ public:
 
   /**
    * @brief Make a publisher node for the backend
-   * @param[in]   nh_private Node handle to be used to publish
+   * @param[in]   node ROS2 node to be used to publish
    * @param[out]  publisher Publisher handle, shared with frontend for
    *              benchmarking purposes.
    */
-  void makePublisher(const ros::NodeHandle& nh_private,
+  void makePublisher(rclcpp::Node::SharedPtr node,
                      std::shared_ptr<CeresBackendPublisher>& publisher)
   {
-    publisher_.reset(new CeresBackendPublisher(nh_private, backend_.getMap()));
+    publisher_.reset(new CeresBackendPublisher(node, backend_.getMap()));
     publisher = publisher_;
   }
 

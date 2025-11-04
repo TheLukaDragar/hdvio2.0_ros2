@@ -19,7 +19,7 @@
 namespace vk {
 namespace blender_utils {
 
-void loadBlenderDepthmap(
+inline void loadBlenderDepthmap(
     const std::string file_name,
     const int img_width,
     const int img_height,

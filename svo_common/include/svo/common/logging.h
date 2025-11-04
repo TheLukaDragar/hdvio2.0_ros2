@@ -12,7 +12,11 @@
 # define SVO_DEBUG_STREAM(x) RCLCPP_DEBUG_STREAM(rclcpp::get_logger("svo"), x)
 # define SVO_INFO_STREAM(x) RCLCPP_INFO_STREAM(rclcpp::get_logger("svo"), x)
 # define SVO_WARN_STREAM(x) RCLCPP_WARN_STREAM(rclcpp::get_logger("svo"), x)
-# define SVO_WARN_STREAM_THROTTLE(rate, x) RCLCPP_WARN_STREAM_THROTTLE(rclcpp::get_logger("svo"), *rclcpp::Clock().get_clock(), rate * 1000, x)
+# define SVO_WARN_STREAM_THROTTLE(rate, x) \
+    do { \
+      static rclcpp::Clock steady_clock(RCL_STEADY_TIME); \
+      RCLCPP_WARN_STREAM_THROTTLE(rclcpp::get_logger("svo"), steady_clock, static_cast<int>(rate * 1000), x); \
+    } while(0)
 # define SVO_ERROR_STREAM(x) RCLCPP_ERROR_STREAM(rclcpp::get_logger("svo"), x)
 #else
 # ifdef LUCY_LOGGING

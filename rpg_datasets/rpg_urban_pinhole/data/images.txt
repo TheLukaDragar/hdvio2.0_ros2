@@ -1,0 +1,7 @@
+# Image list placeholder
+# Format: timestamp filename
+# Example: 1403636579763555584.000000 data/frame_00000.png
+
+# No actual test images available
+# Tests will fail due to missing image data
+# To run tests, add actual image sequences here

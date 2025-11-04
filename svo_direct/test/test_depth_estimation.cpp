@@ -2,7 +2,7 @@
 #include <aslam/common/memory.h>
 #include <aslam/common/numdiff-jacobian-tester.h>
 #include <eigen-checks/gtest.h>
-#include <ros/package.h>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 #include <svo/common/camera.h>
 #include <svo/common/frame.h>
 #include <svo/common/seed.h>
@@ -36,7 +36,7 @@ struct DepthJacobianFunctor : public aslam::common::NumDiffFunctor<2, 1>
       typename aslam::common::NumDiffFunctor<2, 1>::JacobianType* Jout) const
   {
     CHECK(camera_);
-    svo::BearingVector f_cur = T_cur_ref_ * (f_ref_ * (1.0 / inv_depth(0.0)));
+    svo::BearingVector f_cur = T_cur_ref_ * (f_ref_ * (1.0 / inv_depth(0,0)));
 
     Eigen::Matrix<double, 2, 3> projection_jacobian;
     auto res = camera_->project3(f_cur, &px_cur, &projection_jacobian);
@@ -85,7 +85,7 @@ TEST(TestDepthEstimation, testBearing)
 
 TEST(TestDepthEstimation, DISABLED_testDataset)
 {
-  std::string dataset_dir = ros::package::getPath("rpg_datasets")+"/rpg_vfr_pinhole";
+  std::string dataset_dir = ament_index_cpp::get_package_share_directory("rpg_datasets")+"/rpg_vfr_pinhole";
   CHECK(!dataset_dir.empty());
   svo::test_utils::SyntheticDataset dataset(dataset_dir, 0, 0);
 

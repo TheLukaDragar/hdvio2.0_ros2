@@ -1,5 +1,5 @@
 #include <gflags/gflags.h>
-#include <ros/package.h>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 // svo
 #include <svo/test_utils/synthetic_dataset.h>
@@ -20,7 +20,7 @@ using namespace svo;
 void test()
 {
   // Load dataset.
-  std::string dataset_dir = ros::package::getPath("rpg_datasets")+"/rpg_urban_pinhole";
+  std::string dataset_dir = ament_index_cpp::get_package_share_directory("rpg_datasets")+"/rpg_urban_pinhole";
   svo::test_utils::SyntheticDataset dataset(dataset_dir, 0, 0);
 
   // Load detector.

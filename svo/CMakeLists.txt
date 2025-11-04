@@ -1,8 +1,28 @@
+cmake_minimum_required(VERSION 3.5)
 project(svo)
-cmake_minimum_required(VERSION 2.8.3)
 
-find_package(catkin_simple)
-catkin_simple()
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
+find_package(ament_cmake REQUIRED)
+find_package(svo_cmake REQUIRED)
+find_package(svo_common REQUIRED)
+find_package(svo_direct REQUIRED)
+find_package(svo_tracker REQUIRED)
+find_package(svo_test_utils REQUIRED)
+find_package(svo_img_align REQUIRED)
+find_package(svo_vio_common REQUIRED)
+find_package(rpg_common REQUIRED)
+find_package(vikit_common REQUIRED)
+find_package(vikit_cameras REQUIRED)
+find_package(vikit_solver REQUIRED)
+find_package(minkindr REQUIRED)
+find_package(fast_neon REQUIRED)
+find_package(opengv REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(glog REQUIRED)
 
 include(SvoSetup)
 
@@ -94,19 +114,43 @@ list(APPEND SVO_HEADERFILES
 
 ################################################################################
 # Create svo library
-include_directories(include ${INCLUDE_DIRS} ${TRT_ROOT}/include ${CUDA_INCLUDE_DIRS})
-cs_add_library(svo SHARED ${SVO_SOURCEFILES} ${SVO_HEADERFILES})
-target_link_libraries(svo 
-      ${LINK_LIBS}
-      ${NVINFER}
-      ${NVPARSERS}
-      ${NVINFERPLUGIN}
-      ${CUDA_LIBRARIES}
-      ${CUDA_CUBLAS_LIBRARIES}
-      ${CUDA_curand_LIBRARY}
-      ${CUDNN_LIBRARY}
-      ${NVONNXPARSER}
-      ${TensorRT_LIBRARIES}
+add_library(${PROJECT_NAME} SHARED ${SVO_SOURCEFILES} ${SVO_HEADERFILES})
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  ${EIGEN3_INCLUDE_DIRS}
+  ${TRT_ROOT}/include
+  ${CUDA_INCLUDE_DIRS}
+)
+
+ament_target_dependencies(${PROJECT_NAME}
+  svo_common
+  svo_direct
+  svo_tracker
+  svo_test_utils
+  svo_img_align
+  svo_vio_common
+  rpg_common
+  vikit_common
+  vikit_cameras
+  vikit_solver
+  minkindr
+  fast_neon
+  opengv
+  cv_bridge
+)
+
+target_link_libraries(${PROJECT_NAME}
+  glog::glog
+  ${NVINFER}
+  ${NVPARSERS}
+  ${NVINFERPLUGIN}
+  ${CUDA_LIBRARIES}
+  ${CUDA_CUBLAS_LIBRARIES}
+  ${CUDA_curand_LIBRARY}
+  ${CUDNN_LIBRARY}
+  ${NVONNXPARSER}
+  ${TensorRT_LIBRARIES}
 )
 
 ################################################################################
@@ -114,9 +158,38 @@ target_link_libraries(svo
 ### GTEST
 ###
 
-catkin_add_gtest(${PROJECT_NAME}-test-frame test/test_frame.cpp)
-target_link_libraries(${PROJECT_NAME}-test-frame ${PROJECT_NAME})
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  ament_add_gtest(${PROJECT_NAME}-test-frame test/test_frame.cpp)
+  target_link_libraries(${PROJECT_NAME}-test-frame ${PROJECT_NAME})
+endif()
 
 ################################################################################
-cs_install()
-cs_export()
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(
+  svo_common
+  svo_direct
+  svo_tracker
+  svo_img_align
+  svo_vio_common
+  rpg_common
+  vikit_common
+  vikit_cameras
+  minkindr
+  fast_neon
+  opengv
+  cv_bridge
+  Eigen3
+)
+ament_package()

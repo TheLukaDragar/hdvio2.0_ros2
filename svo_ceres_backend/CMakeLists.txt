@@ -1,23 +1,31 @@
+cmake_minimum_required(VERSION 3.5)
 project(svo_ceres_backend)
-cmake_minimum_required(VERSION 2.8.3)
 
-find_package(catkin_simple REQUIRED)
-catkin_simple(ALL_DEPS_REQUIRED)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
+find_package(ament_cmake REQUIRED)
+find_package(svo_cmake REQUIRED)
+find_package(svo_common REQUIRED)
+find_package(svo_vio_common REQUIRED)
+find_package(svo REQUIRED)
+find_package(pcl_ros REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(glog REQUIRED)
+find_package(Ceres REQUIRED)
 find_package(CUDA REQUIRED)
 
 set(TRT_ROOT $ENV{TRT_ROOT})
 
-################################################################################
-# generic setup (compiler flags, etc.)
 include(SvoSetup)
 
 # OpenMP
 find_package(OpenMP QUIET)
-if (OPENMP_FOUND)
+if(OPENMP_FOUND)
   message(STATUS "OpenMP found")
   add_definitions(-DUSE_OPENMP)
-endif ()
+endif()
 
 #############
 # LIBRARIES #
@@ -88,58 +96,89 @@ set(SOURCES
   src/map_alignment.cpp
   )
 
-include_directories(${PROJECT_NAME} ${TRT_ROOT}/include ${CUDA_INCLUDE_DIRS})
-cs_add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
-target_link_libraries(${PROJECT_NAME} 
-      ${NVINFER}
-      ${NVPARSERS}
-      ${NVINFERPLUGIN}
-      ${CUDA_LIBRARIES}
-      ${CUDA_CUBLAS_LIBRARIES}
-      ${CUDA_curand_LIBRARY}
-      ${CUDNN_LIBRARY}
-      ${NVONNXPARSER}
-      ${TensorRT_LIBRARIES}
+add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+  ${EIGEN3_INCLUDE_DIRS}
+  ${CERES_INCLUDE_DIRS}
+  ${CUDA_INCLUDE_DIRS}
+)
+
+ament_target_dependencies(${PROJECT_NAME}
+  svo_common
+  svo_vio_common
+  svo
+  pcl_ros
+)
+
+target_link_libraries(${PROJECT_NAME}
+  ${CERES_LIBRARIES}
+  glog::glog
+  ${CUDA_LIBRARIES}
+  ${CUDA_CUBLAS_LIBRARIES}
 )
 
 ##########
 # GTESTS #
 ##########
-catkin_add_gtest(test_backend_id test/test_backend_id.cpp)
-target_link_libraries(test_backend_id ${PROJECT_NAME})
-
-catkin_add_gtest(test_estimator test/test_estimator.cpp)
-target_link_libraries(test_estimator ${PROJECT_NAME})
-
-catkin_add_gtest(test_homogeneous_point_error test/test_homogeneous_point_error.cpp)
-target_link_libraries(test_homogeneous_point_error ${PROJECT_NAME})
-
-catkin_add_gtest(test_map test/test_map.cpp)
-target_link_libraries(test_map ${PROJECT_NAME})
-
-catkin_add_gtest(test_marginalization test/test_marginalization.cpp)
-target_link_libraries(test_marginalization ${PROJECT_NAME})
-
-catkin_add_gtest(test_pose_error test/test_pose_error.cpp)
-target_link_libraries(test_pose_error ${PROJECT_NAME})
-
-catkin_add_gtest(test_pose_local_parameterization test/test_pose_local_parameterization.cpp)
-target_link_libraries(test_pose_local_parameterization ${PROJECT_NAME})
-
-catkin_add_gtest(test_reprojection_error test/test_reprojection_error.cpp)
-target_link_libraries(test_reprojection_error ${PROJECT_NAME})
-
-catkin_add_gtest(test_relative_pose_error test/test_relative_pose_error.cpp)
-target_link_libraries(test_relative_pose_error ${PROJECT_NAME})
-
-catkin_add_gtest(test_speed_and_bias_error test/test_speed_and_bias_error.cpp)
-target_link_libraries(test_speed_and_bias_error ${PROJECT_NAME})
-
-catkin_add_gtest(test_imu_error test/test_imu_error.cpp)
-target_link_libraries(test_imu_error ${PROJECT_NAME})
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  
+  ament_add_gtest(test_backend_id test/test_backend_id.cpp)
+  target_link_libraries(test_backend_id ${PROJECT_NAME})
+  
+  ament_add_gtest(test_estimator test/test_estimator.cpp)
+  target_link_libraries(test_estimator ${PROJECT_NAME})
+  
+  ament_add_gtest(test_homogeneous_point_error test/test_homogeneous_point_error.cpp)
+  target_link_libraries(test_homogeneous_point_error ${PROJECT_NAME})
+  
+  ament_add_gtest(test_map test/test_map.cpp)
+  target_link_libraries(test_map ${PROJECT_NAME})
+  
+  ament_add_gtest(test_marginalization test/test_marginalization.cpp)
+  target_link_libraries(test_marginalization ${PROJECT_NAME})
+  
+  ament_add_gtest(test_pose_error test/test_pose_error.cpp)
+  target_link_libraries(test_pose_error ${PROJECT_NAME})
+  
+  ament_add_gtest(test_pose_local_parameterization test/test_pose_local_parameterization.cpp)
+  target_link_libraries(test_pose_local_parameterization ${PROJECT_NAME})
+  
+  ament_add_gtest(test_reprojection_error test/test_reprojection_error.cpp)
+  target_link_libraries(test_reprojection_error ${PROJECT_NAME})
+  
+  ament_add_gtest(test_relative_pose_error test/test_relative_pose_error.cpp)
+  target_link_libraries(test_relative_pose_error ${PROJECT_NAME})
+  
+  ament_add_gtest(test_speed_and_bias_error test/test_speed_and_bias_error.cpp)
+  target_link_libraries(test_speed_and_bias_error ${PROJECT_NAME})
+  
+  ament_add_gtest(test_imu_error test/test_imu_error.cpp)
+  target_link_libraries(test_imu_error ${PROJECT_NAME})
+endif()
 
 ##########
 # EXPORT #
 ##########
-cs_install()
-cs_export()
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(
+  svo_common
+  svo_vio_common
+  svo
+  pcl_ros
+  Eigen3
+)
+ament_package()

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>svo_cmake</name>
   <description>
     CMake configuration, scripts and macros common for common SVO usage
@@ -10,6 +11,9 @@
   <maintainer email="forster@ifi.uzh.ch">Christian Forster</maintainer>
   <author>Manuel Werlberger</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <buildtool_depend>catkin_simple</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>

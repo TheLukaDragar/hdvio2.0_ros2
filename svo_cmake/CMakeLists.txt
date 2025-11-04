@@ -1,11 +1,17 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(svo_cmake)
 
-find_package(catkin_simple REQUIRED)
-catkin_simple()
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
-# install all included cmake files
-install(DIRECTORY cmake DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake)
+find_package(ament_cmake REQUIRED)
 
-cs_install()
-cs_export(CFG_EXTRAS svo_cmake-extras.cmake)
+# Install all included cmake files
+install(DIRECTORY cmake/Modules
+  DESTINATION share/${PROJECT_NAME}/cmake
+)
+
+ament_package(
+  CONFIG_EXTRAS cmake/svo_cmake-extras.cmake
+)

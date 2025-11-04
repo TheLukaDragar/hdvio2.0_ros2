@@ -6,3 +6,8 @@ scripts/python/__pycache__/
 scripts/python/.ipynb_checkpoints/
 svo_benchmarking/scripts/__pycache__/*
 svo_benchmarking/scripts/*.pyc
+
+# ROS2 build artifacts
+build/
+install/
+log/

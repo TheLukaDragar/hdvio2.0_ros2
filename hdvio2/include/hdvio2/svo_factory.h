@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 #include <svo/common/camera_fwd.h>
 
 namespace svo {
@@ -18,30 +18,30 @@ namespace factory {
 
 /// Get IMU Handler.
 std::shared_ptr<ImuHandler> getImuHandler(
-    const ros::NodeHandle& pnh);
+    const rclcpp::Node::SharedPtr& pnh);
 
 /// Get Dynamics Handler.
 std::shared_ptr<DynamicsHandler> getDynamicsHandler(
-    const ros::NodeHandle& pnh);
+    const rclcpp::Node::SharedPtr& pnh);
 
 /// Factory for Mono-SVO.
 std::shared_ptr<FrameHandlerMono> makeMono(
-    const ros::NodeHandle& pnh,
+    const rclcpp::Node::SharedPtr& pnh,
     const CameraBundlePtr& cam = nullptr);
 
 /// Factory for Stereo-SVO.
 std::shared_ptr<FrameHandlerStereo> makeStereo(
-    const ros::NodeHandle& pnh,
+    const rclcpp::Node::SharedPtr& pnh,
     const CameraBundlePtr& cam = nullptr);
 
 /// Factory for Camera-Array-SVO.
 std::shared_ptr<FrameHandlerArray> makeArray(
-    const ros::NodeHandle& pnh,
+    const rclcpp::Node::SharedPtr& pnh,
     const CameraBundlePtr& cam = nullptr);
 
 /// Factory for Camera-Array-SVO
 std::shared_ptr<FrameHandlerDenseMono> makeDenseMono(
-    const ros::NodeHandle& pnh);
+    const rclcpp::Node::SharedPtr& pnh);
 
 } // namespace factory
 } // namespace mono

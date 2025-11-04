@@ -2,12 +2,12 @@
 
 #include <thread>
 
-#include <ros/ros.h>
-#include <std_msgs/String.h>    // user-input
-#include <geometry_msgs/WrenchStamped.h>
-#include <sensor_msgs/Image.h>
-#include <sensor_msgs/CompressedImage.h>
-#include <sensor_msgs/Imu.h>
+#include <rclcpp/rclcpp.hpp>
+#include <std_msgs/msg/string.hpp>    // user-input
+#include <geometry_msgs/msg/wrench_stamped.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/compressed_image.hpp>
+#include <sensor_msgs/msg/imu.hpp>
 
 #include <svo/common/types.h>
 #include <svo/common/camera_fwd.h>
@@ -15,7 +15,7 @@
 
 #include <opencv2/imgcodecs.hpp>
 
-#include "svo_msgs/Command.h"
+#include "svo_msgs/msg/command.hpp"
 
 namespace svo {
 
@@ -42,10 +42,10 @@ class SvoInterface
 public:
 
   // ROS subscription and publishing.
-  ros::NodeHandle nh_;
-  ros::NodeHandle pnh_;
+  rclcpp::Node::SharedPtr nh_;
+  rclcpp::Node::SharedPtr pnh_;
   PipelineType pipeline_type_;
-  ros::Subscriber sub_remote_key_;
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_remote_key_;
   std::string remote_input_;
   std::unique_ptr<std::thread> imu_thread_;
   std::unique_ptr<std::thread> dynamics_thread_;
@@ -81,8 +81,8 @@ public:
   int dynamics_dataset_ = 0;
 
   SvoInterface(const PipelineType& pipeline_type,
-          const ros::NodeHandle& nh,
-          const ros::NodeHandle& private_nh);
+          const rclcpp::Node::SharedPtr& nh,
+          const rclcpp::Node::SharedPtr& private_nh);
 
   virtual ~SvoInterface();
 
@@ -98,15 +98,15 @@ public:
       const int64_t timestamp_nanoseconds);
 
   // Subscription and callbacks
-  void monoCallback(const sensor_msgs::ImageConstPtr& msg);
-  void monoCallbackImage(const sensor_msgs::CompressedImage& msg);
+  void monoCallback(const sensor_msgs::msg::Image::ConstSharedPtr& msg);
+  void monoCallbackImage(const sensor_msgs::msg::CompressedImage::ConstSharedPtr& msg);
   void stereoCallback(
-      const sensor_msgs::ImageConstPtr& msg0,
-      const sensor_msgs::ImageConstPtr& msg1);
-  void imuCallback(const sensor_msgs::ImuConstPtr& imu_msg);
-  void dynamicsCallback(const svo_msgs::CommandConstPtr &dynamics_msg);
-  void debugDynamicsCallback(const geometry_msgs::WrenchStampedConstPtr &dynamics_msg);
-  void inputKeyCallback(const std_msgs::StringConstPtr& key_input);
+      const sensor_msgs::msg::Image::ConstSharedPtr& msg0,
+      const sensor_msgs::msg::Image::ConstSharedPtr& msg1);
+  void imuCallback(const sensor_msgs::msg::Imu::ConstSharedPtr& imu_msg);
+  void dynamicsCallback(const svo_msgs::msg::Command::ConstSharedPtr &dynamics_msg);
+  void debugDynamicsCallback(const geometry_msgs::msg::WrenchStamped::ConstSharedPtr &dynamics_msg);
+  void inputKeyCallback(const std_msgs::msg::String::ConstSharedPtr& key_input);
 
 
   // These functions are called before and after monoCallback or stereoCallback.

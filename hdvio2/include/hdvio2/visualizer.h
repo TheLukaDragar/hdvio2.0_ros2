@@ -11,16 +11,19 @@
 #include <boost/shared_ptr.hpp>
 
 // ros
-#include <ros/ros.h>
-#include <visualization_msgs/Marker.h>
-#include <visualization_msgs/MarkerArray.h>
-#include <sensor_msgs/Image.h>
-#include <sensor_msgs/CameraInfo.h>
-#include <nav_msgs/Odometry.h>
-#include <std_msgs/ColorRGBA.h>
-#include <tf/transform_broadcaster.h>
-#include <image_transport/image_transport.h>
-#include <pcl_ros/point_cloud.h>
+#include <rclcpp/rclcpp.hpp>
+#include <visualization_msgs/msg/marker.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
+#include <sensor_msgs/msg/image.hpp>
+#include <sensor_msgs/msg/camera_info.hpp>
+#include <nav_msgs/msg/odometry.hpp>
+#include <std_msgs/msg/color_rgba.hpp>
+#include <geometry_msgs/msg/pose_stamped.hpp>
+#include <geometry_msgs/msg/pose_with_covariance_stamped.hpp>
+#include <tf2_ros/transform_broadcaster.h>
+#include <image_transport/image_transport.hpp>
+#include <sensor_msgs/msg/point_cloud2.hpp>
+#include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_types.h>
 #include <svo/global.h>
 #include <svo/common/types.h>
@@ -46,7 +49,7 @@ public:
   static constexpr double trajectory_marker_scale_ = 0.03;
   static constexpr double point_marker_scale_ = 0.05;
 
-  ros::NodeHandle pnh_;
+  rclcpp::Node::SharedPtr pnh_;
   size_t trace_id_ = 0;
   std::string trace_dir_;
   size_t img_pub_level_;
@@ -54,32 +57,32 @@ public:
   size_t dense_pub_nth_;
   bool viz_caption_str_;
 
-  ros::Publisher pub_frames_;
-  ros::Publisher pub_points_;
-  ros::Publisher pub_imu_pose_;
-  ros::Publisher pub_info_;
-  ros::Publisher pub_markers_;
-  ros::Publisher pub_pc_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_frames_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_points_;
+  rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_imu_pose_;
+  rclcpp::Publisher<svo_msgs::msg::Info>::SharedPtr pub_info_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_markers_;
+  rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_pc_;
   PointCloud::Ptr pc_;
-  std::vector<ros::Publisher> pub_cam_poses_;
-  std::vector<ros::Publisher> pub_dense_;
+  std::vector<rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr> pub_cam_poses_;
+  std::vector<rclcpp::Publisher<svo_msgs::msg::DenseInputWithFeatures>::SharedPtr> pub_dense_;
   std::vector<image_transport::Publisher> pub_images_;
 
-  tf::TransformBroadcaster br_;
+  std::shared_ptr<tf2_ros::TransformBroadcaster> br_;
   bool publish_world_in_cam_frame_;
   bool publish_map_every_frame_;
-  ros::Duration publish_points_display_time_;
+  rclcpp::Duration publish_points_display_time_;
   bool publish_seeds_;
   bool publish_seeds_uncertainty_;
   bool publish_active_keyframes_;
   bool trace_pointcloud_;
   double vis_scale_;
   std::ofstream ofs_pointcloud_;
-  ros::Publisher pub_visible_fixed_landmarks_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_visible_fixed_landmarks_;
   
   std::string img_caption_;
 
-  Visualizer(const std::string& trace_dir, const ros::NodeHandle& nh_private,
+  Visualizer(const std::string& trace_dir, const rclcpp::Node::SharedPtr& nh_private,
              const size_t num_cameras);
 
   ~Visualizer() = default;

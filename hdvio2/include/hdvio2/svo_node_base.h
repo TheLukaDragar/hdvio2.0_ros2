@@ -14,8 +14,8 @@ class SvoNodeBase {
   void run();
 
  private:
-  ros::NodeHandle node_handle_;
-  ros::NodeHandle private_node_handle_;
+  rclcpp::Node::SharedPtr node_handle_;
+  rclcpp::Node::SharedPtr private_node_handle_;
   svo::PipelineType type_;
 
  public:

@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include <ros/package.h>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 #include <vikit/params_helper.h>
 
 #include <svo/imu_handler.h>
@@ -11,7 +11,7 @@
 namespace svo {
 namespace ceres_backend_factory {
 
-MotionDetectorOptions loadMotionDetectorOptions(const ros::NodeHandle& pnh)
+MotionDetectorOptions loadMotionDetectorOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   MotionDetectorOptions o;
   o.px_diff_threshold =
@@ -27,7 +27,7 @@ MotionDetectorOptions loadMotionDetectorOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-CeresBackendInterface::Ptr makeBackend(const ros::NodeHandle& pnh,
+CeresBackendInterface::Ptr makeBackend(const rclcpp::Node::SharedPtr& pnh,
                                        const CameraBundlePtr& camera_bundle)
 {
   VLOG(1) << "Initialize Backend.";

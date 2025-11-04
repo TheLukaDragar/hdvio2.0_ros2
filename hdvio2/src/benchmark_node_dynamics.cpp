@@ -4,8 +4,8 @@
 #include <iostream>
 #include <glog/logging.h>
 #include <gflags/gflags.h>
-#include <ros/ros.h>
-#include <ros/package.h>
+#include <rclcpp/rclcpp.hpp>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 #include <opencv2/opencv.hpp>
 #include <vikit/params_helper.h>
 #include <vikit/blender_utils.h>
@@ -566,7 +566,7 @@ void BenchmarkNode::runBlenderBenchmark(const std::string& dataset_dir,
   // process next frames
   frame_count_ = 1;
   FramePtr cur_frame;
-  while (dataset.getNextFrame(n_pyr_levels, cur_frame, nullptr) && ros::ok())
+  while (dataset.getNextFrame(n_pyr_levels, cur_frame, nullptr) && rclcpp::ok())
   {
     T_w_gt = cur_frame->T_f_w_.inverse();
 
@@ -694,9 +694,9 @@ int main(int argc, char** argv)
   google::ParseCommandLineFlags(&argc, &argv, true);
   google::InstallFailureSignalHandler();
 
-  ros::init(argc, argv, "svo");
-  ros::NodeHandle nh;
-  ros::NodeHandle pnh("~");
+  rclcpp::init(argc, argv);
+  auto nh = std::make_shared<rclcpp::Node>("svo");
+  auto pnh = nh;
   std::string benchmark_dir(
       vk::param<std::string>(pnh, "dataset_directory", "/tmp"));
   if (vk::param<bool>(pnh, "dataset_is_kitti", false))

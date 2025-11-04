@@ -2,7 +2,7 @@
 
 #include <gflags/gflags.h>
 #include <glog/logging.h>
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 #include <svo/common/logging.h>
 #include <vikit/params_helper.h>
 
@@ -14,14 +14,15 @@ void SvoNodeBase::initThirdParty(int argc, char **argv)
   google::ParseCommandLineFlags(&argc, &argv, true);
   google::InstallFailureSignalHandler();
 
-  ros::init(argc, argv, "svo");
+  rclcpp::init(argc, argv);
 }
 
 SvoNodeBase::SvoNodeBase()
-: node_handle_(), private_node_handle_("~"), type_(
-    vk::param<bool>(private_node_handle_, "pipeline_is_stereo", false) ?
+: node_handle_(std::make_shared<rclcpp::Node>("svo")),
+  private_node_handle_(node_handle_),
+  type_(private_node_handle_->declare_parameter("pipeline_is_stereo", false) ?
         svo::PipelineType::kStereo : svo::PipelineType::kMono),
-        svo_interface_(type_, node_handle_, private_node_handle_)
+  svo_interface_(type_, node_handle_, private_node_handle_)
 {
   svo_interface_.subscribeImu();
 
@@ -35,7 +36,7 @@ SvoNodeBase::SvoNodeBase()
 
 void SvoNodeBase::run()
 {
-  ros::spin();
+  rclcpp::spin(node_handle_);
   SVO_INFO_STREAM("SVO quit");
   svo_interface_.quit_ = true;
   SVO_INFO_STREAM("SVO terminated.\n");

@@ -1,4 +1,4 @@
-#include <ros/package.h>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 #include <svo/svo.h>
 #include <svo/common/imu_calibration.h>
@@ -14,12 +14,12 @@
 namespace svo {
 namespace factory {
 
-BaseOptions loadBaseOptions(const ros::NodeHandle& pnh, bool forward_default)
+BaseOptions loadBaseOptions(const rclcpp::Node::SharedPtr& pnh, bool forward_default)
 {
   BaseOptions o;
-  o.max_n_kfs = vk::param<int>(pnh, "max_n_kfs", 5);
-  o.use_imu = vk::param<bool>(pnh, "use_imu", false);
-  o.trace_dir = vk::param<std::string>(pnh, "trace_dir", ros::package::getPath("svo")+"/trace");
+  o.max_n_kfs = pnh->declare_parameter("max_n_kfs", 5);
+  o.use_imu = pnh->declare_parameter("use_imu", false);
+  o.trace_dir = pnh->declare_parameter<std::string>("trace_dir", ament_index_cpp::get_package_share_directory("svo")+"/trace");
   o.quality_min_fts = vk::param<int>(pnh, "quality_min_fts", 50);
   o.quality_max_fts_drop = vk::param<int>(pnh, "quality_max_drop_fts", 40);
   o.relocalization_max_trials = vk::param<int>(pnh, "relocalization_max_trials", 50);
@@ -63,7 +63,7 @@ BaseOptions loadBaseOptions(const ros::NodeHandle& pnh, bool forward_default)
   return o;
 }
 
-DetectorOptions loadDetectorOptions(const ros::NodeHandle& pnh)
+DetectorOptions loadDetectorOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   DetectorOptions o;
   o.cell_size = vk::param<int>(pnh, "grid_size", 35);
@@ -78,7 +78,7 @@ DetectorOptions loadDetectorOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-DepthFilterOptions loadDepthFilterOptions(const ros::NodeHandle& pnh)
+DepthFilterOptions loadDepthFilterOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   DepthFilterOptions o;
   o.max_search_level = vk::param<int>(pnh, "n_pyr_levels", 3) - 1;
@@ -101,7 +101,7 @@ DepthFilterOptions loadDepthFilterOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-InitializationOptions loadInitializationOptions(const ros::NodeHandle& pnh)
+InitializationOptions loadInitializationOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   InitializationOptions o;
   o.init_min_features = vk::param<int>(pnh, "init_min_features", 100);
@@ -125,7 +125,7 @@ InitializationOptions loadInitializationOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-FeatureTrackerOptions loadTrackerOptions(const ros::NodeHandle& pnh)
+FeatureTrackerOptions loadTrackerOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   FeatureTrackerOptions o;
   o.klt_max_level = vk::param<int>(pnh, "klt_max_level", 4);
@@ -133,7 +133,7 @@ FeatureTrackerOptions loadTrackerOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-ReprojectorOptions loadReprojectorOptions(const ros::NodeHandle& pnh)
+ReprojectorOptions loadReprojectorOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   ReprojectorOptions o;
   o.max_n_kfs = vk::param<int>(pnh, "reprojector_max_n_kfs", 5);
@@ -164,7 +164,7 @@ ReprojectorOptions loadReprojectorOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-CameraBundle::Ptr loadCameraFromYaml(const ros::NodeHandle& pnh)
+CameraBundle::Ptr loadCameraFromYaml(const rclcpp::Node::SharedPtr& pnh)
 {
   std::string calib_file = vk::param<std::string>(pnh, "calib_file", "~/cam.yaml");
   CameraBundle::Ptr ncam = CameraBundle::loadFromYaml(calib_file);
@@ -174,7 +174,7 @@ CameraBundle::Ptr loadCameraFromYaml(const ros::NodeHandle& pnh)
   return ncam;
 }
 
-StereoTriangulationOptions loadStereoOptions(const ros::NodeHandle& pnh)
+StereoTriangulationOptions loadStereoOptions(const rclcpp::Node::SharedPtr& pnh)
 {
   StereoTriangulationOptions o;
   o.triangulate_n_features = vk::param<int>(pnh, "max_fts", 120);
@@ -184,7 +184,7 @@ StereoTriangulationOptions loadStereoOptions(const ros::NodeHandle& pnh)
   return o;
 }
 
-ImuHandler::Ptr getImuHandler(const ros::NodeHandle& pnh)
+ImuHandler::Ptr getImuHandler(const rclcpp::Node::SharedPtr& pnh)
 {
   std::string calib_file = vk::param<std::string>(pnh, "calib_file", "");
   ImuCalibration imu_calib = ImuHandler::loadCalibrationFromFile(calib_file);
@@ -204,7 +204,7 @@ ImuHandler::Ptr getImuHandler(const ros::NodeHandle& pnh)
   return imu_handler;
 }
 
-DynamicsHandler::Ptr getDynamicsHandler(const ros::NodeHandle& pnh)
+DynamicsHandler::Ptr getDynamicsHandler(const rclcpp::Node::SharedPtr& pnh)
 {
   DynamicsHandlerOptions options;
   std::string calib_file = vk::param<std::string>(pnh, "calib_file", "");
@@ -319,7 +319,7 @@ DynamicsHandler::Ptr getDynamicsHandler(const ros::NodeHandle& pnh)
   return dynamics_handler;
 }
 
-void setInitialPose(const ros::NodeHandle& pnh, FrameHandlerBase& vo)
+void setInitialPose(const rclcpp::Node::SharedPtr& pnh, FrameHandlerBase& vo)
 {
   Transformation T_world_imuinit(
         Quaternion(vk::param<double>(pnh, "T_world_imuinit/qw", 1.0),
@@ -333,7 +333,7 @@ void setInitialPose(const ros::NodeHandle& pnh, FrameHandlerBase& vo)
 }
 
 
-FrameHandlerMono::Ptr makeMono(const ros::NodeHandle& pnh, const CameraBundlePtr& cam)
+FrameHandlerMono::Ptr makeMono(const rclcpp::Node::SharedPtr& pnh, const CameraBundlePtr& cam)
 {
   // Create camera
   CameraBundle::Ptr ncam = (cam) ? cam : loadCameraFromYaml(pnh);
@@ -360,7 +360,7 @@ FrameHandlerMono::Ptr makeMono(const ros::NodeHandle& pnh, const CameraBundlePtr
   return vo;
 }
 
-FrameHandlerStereo::Ptr makeStereo(const ros::NodeHandle& pnh, const CameraBundlePtr& cam)
+FrameHandlerStereo::Ptr makeStereo(const rclcpp::Node::SharedPtr& pnh, const CameraBundlePtr& cam)
 {
   // Load cameras
   CameraBundle::Ptr ncam = (cam) ? cam : loadCameraFromYaml(pnh);
@@ -390,7 +390,7 @@ FrameHandlerStereo::Ptr makeStereo(const ros::NodeHandle& pnh, const CameraBundl
   return vo;
 }
 
-FrameHandlerArray::Ptr makeArray(const ros::NodeHandle& pnh, const CameraBundlePtr& cam)
+FrameHandlerArray::Ptr makeArray(const rclcpp::Node::SharedPtr& pnh, const CameraBundlePtr& cam)
 {
   // Load cameras
   CameraBundle::Ptr ncam = (cam) ? cam : loadCameraFromYaml(pnh);

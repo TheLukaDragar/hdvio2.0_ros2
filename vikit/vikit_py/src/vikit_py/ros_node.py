@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
-import rospy
+import rclpy
 import psutil
 import threading
 import numpy as np
@@ -35,13 +35,13 @@ class RosNode:
                 self._param_string += ' _'+namespace+key+':='+str(parameter_dictionary[key])
     
     def add_flags(self, flag_dictionary):
-        for key, value in flag_dictionary.iteritems():
+        for key, value in flag_dictionary.items():
             self._param_string += ' --'+key+'='+str(value)
                 
     def clear_all_parameters(self):
-        params = rospy.get_param_names()
-        for p in params:
-            rospy.delete_param(p)
+        # ROS2 Note: Parameter clearing is typically not needed as each node has its own parameter server
+        # If needed, this would require a node instance to access parameters
+        pass
 
     def run(self, parameter_dictionary, namespace='', log_cpu_usage=True, log_cpu_usage_folder='/tmp'):
         self.clear_all_parameters()
@@ -55,7 +55,7 @@ class RosNode:
             t = threading.Thread(target=log_cpu_usage_thread, args=(log_cpu_usage_folder,t_stop))    
             t.start()
             
-        command = 'rosrun ' + self._package + ' ' + self._executable + ' ' + self._param_string
+        command = 'ros2 run ' + self._package + ' ' + self._executable + ' ' + self._param_string
         print('Executing Process: '+command)
         os.system(command)
         print('ROS node finished processing.')

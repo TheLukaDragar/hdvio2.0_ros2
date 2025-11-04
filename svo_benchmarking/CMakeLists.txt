@@ -1,32 +1,40 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(svo_benchmarking)
 
-## Find catkin macros and libraries
-## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
-## is used, also find other catkin packages
-find_package(catkin_simple REQUIRED)
-catkin_simple()
-set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_CXX_FLAGS "-std=c++11")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -g")
-# find_package(catkin REQUIRED COMPONENTS
-#   rospy
-#   roscpp
-#   rosbag
-# )
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
-## Uncomment this if the package has a setup.py. This macro ensures
-## modules and global scripts declared therein get installed
-## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
-catkin_python_setup()
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
 
-# catkin_package(
-# #  INCLUDE_DIRS include
-# #  LIBRARIES bag_to_pose
-# #  CATKIN_DEPENDS other_catkin_pkg
-# #  DEPENDS system_lib
-# )
-#
-# include_directories(
-#   ${catkin_INCLUDE_DIRS}
-# )
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall")
+
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rosbag2_cpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+
+# Install Python modules
+ament_python_install_package(svo_ceres_benchmarking
+  PACKAGE_DIR src/svo_ceres_benchmarking
+)
+
+# Install scripts directory
+install(DIRECTORY scripts/
+  DESTINATION lib/${PROJECT_NAME}
+  USE_SOURCE_PERMISSIONS
+  PATTERN "*.sh" EXCLUDE
+)
+
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
+
+ament_package()

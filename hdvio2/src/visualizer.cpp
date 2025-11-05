@@ -177,9 +177,14 @@ Visualizer::Visualizer(const std::string& trace_dir,
   pub_points_ = pnh_->create_publisher<visualization_msgs::msg::Marker>("points", 10000);
   pub_imu_pose_ =
       pnh_->create_publisher<geometry_msgs::msg::PoseWithCovarianceStamped>("pose_imu", 10);
+  pub_path_ = pnh_->create_publisher<nav_msgs::msg::Path>("trajectory", 10);
   pub_info_ = pnh_->create_publisher<svo_msgs::msg::Info>("info", 10);
   pub_markers_ = pnh_->create_publisher<visualization_msgs::msg::Marker>("markers", 100);
   pub_pc_ = pnh_->create_publisher<sensor_msgs::msg::PointCloud2>("pointcloud", 1);
+  
+  // Initialize path message
+  path_msg_.header.frame_id = kWorldFrame;
+  path_msg_.poses.reserve(10000);
   pub_dense_.resize(n_cameras);
   pub_images_.resize(n_cameras);
   pub_cam_poses_.resize(n_cameras);
@@ -458,6 +463,32 @@ void Visualizer::publishTrajectoryPoint(const Eigen::Vector3d& pos_in_vision,
         pub_points_, pos_in_vision, "trajectory",
         rclcpp::Time(timestamp), id, 0,
         0.5 * trajectory_marker_scale_ * vis_scale_, Vector3d(0., 0., 0.5));
+  }
+  
+  // Add to path message
+  if (pub_path_->get_subscription_count() > 0)
+  {
+    geometry_msgs::msg::PoseStamped pose_stamped;
+    pose_stamped.header.frame_id = kWorldFrame;
+    pose_stamped.header.stamp = rclcpp::Time(timestamp);
+    pose_stamped.pose.position.x = pos_in_vision.x();
+    pose_stamped.pose.position.y = pos_in_vision.y();
+    pose_stamped.pose.position.z = pos_in_vision.z();
+    pose_stamped.pose.orientation.w = 1.0;
+    pose_stamped.pose.orientation.x = 0.0;
+    pose_stamped.pose.orientation.y = 0.0;
+    pose_stamped.pose.orientation.z = 0.0;
+    
+    path_msg_.poses.push_back(pose_stamped);
+    path_msg_.header.stamp = rclcpp::Time(timestamp);
+    
+    // Limit path length to prevent memory issues (keep last 10000 poses)
+    if (path_msg_.poses.size() > 10000)
+    {
+      path_msg_.poses.erase(path_msg_.poses.begin());
+    }
+    
+    pub_path_->publish(path_msg_);
   }
 }
 

@@ -17,6 +17,7 @@
 #include <sensor_msgs/msg/image.hpp>
 #include <sensor_msgs/msg/camera_info.hpp>
 #include <nav_msgs/msg/odometry.hpp>
+#include <nav_msgs/msg/path.hpp>
 #include <std_msgs/msg/color_rgba.hpp>
 #include <geometry_msgs/msg/pose_stamped.hpp>
 #include <geometry_msgs/msg/pose_with_covariance_stamped.hpp>
@@ -66,6 +67,8 @@ public:
   rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_markers_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pub_pc_;
   PointCloud::Ptr pc_;
+  rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pub_path_;
+  nav_msgs::msg::Path path_msg_;
   std::vector<rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr> pub_cam_poses_;
   std::vector<rclcpp::Publisher<svo_msgs::msg::DenseInputWithFeatures>::SharedPtr> pub_dense_;
   std::vector<image_transport::Publisher> pub_images_;

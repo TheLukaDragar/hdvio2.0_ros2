@@ -38,12 +38,12 @@ svo:
     update_seeds_with_old_keyframes: True
 
     # Affine compensation (disabled for speed)
-    img_align_est_illumination_gain: true
-    img_align_est_illumination_offset: true
-    depth_filter_affine_est_offset: true
-    depth_filter_affine_est_gain: true
-    reprojector_affine_est_offset: true
-    reprojector_affine_est_gain: true
+    img_align_est_illumination_gain: false
+    img_align_est_illumination_offset: false
+    depth_filter_affine_est_offset: false
+    depth_filter_affine_est_gain: false
+    reprojector_affine_est_offset: false
+    reprojector_affine_est_gain: false
 
     # Pinhole radtan specific - NO distortion jacobian needed
     img_align_use_distortion_jacobian: False
@@ -57,7 +57,7 @@ svo:
     # Initialization
     # For a higher resolution, increase the value accordingly.
     init_min_features: 60
-    init_min_disparity: 30.0
+    init_min_disparity: 10.0
 
     # Feature Detection
     grid_size: 25 # Larger for larger images, for every cell you have max one feature.
@@ -89,9 +89,9 @@ svo:
 
     # IMU
     # Normally the prior should be 0 if not using IMU.
-    poseoptim_prior_lambda: 2.0 # Gyroscope prior in pose optimization
-    img_align_prior_lambda_rot: 5.0 # Gyroscope prior in sparse image alignment
-    img_align_prior_lambda_trans: 0.5 # Constant velocity assumption prior in sparse image alignment
+    poseoptim_prior_lambda: 0.0 # Gyroscope prior in pose optimization
+    img_align_prior_lambda_rot: 0.0 # Gyroscope prior in sparse image alignment
+    img_align_prior_lambda_trans: 0.0 # Constant velocity assumption prior in sparse image alignment
 
     # Dense input
     publish_every_nth_dense_input: 5

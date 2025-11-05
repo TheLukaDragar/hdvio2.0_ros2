@@ -1,0 +1,86 @@
+label: "Camera Calib 8e"
+id: camera_calib8e_custom
+cameras:
+- camera:
+    label: cam0
+    id: camera_calib8e_cam0
+    line-delay-nanoseconds: 0
+    image_height: 480
+    image_width: 640
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [484.1350388813289, 483.2522215738731, 322.5087380864358, 285.01510031519746]
+    distortion:
+      type: radial-tangential
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.31385324880704635, 0.10158312861709942, -0.0004281421487010315, -0.003693181241684521]
+  T_I_C:
+    cols: 4
+    rows: 4
+    data: [-0.0515435, 0.05754779, 0.99701129, 0.08696332,
+          -0.99785412, -0.04333283, -0.04908589, -0.01522098,
+          0.04037854, -0.99740188, 0.05965783, 0.01229277,
+          0.0, 0.0, 0.0, 1.0]
+  T_B_I:
+    cols: 4
+    rows: 4
+    data: [1.0, 0.0, 0.0, 0.0,
+          0.0, 1.0, 0.0, 0.0,
+          0.0, 0.0, 1.0, 0.0,
+          0.0, 0.0, 0.0, 1.0]
+
+imu_params:
+  delay_imu_cam: -0.12404883519056623
+  max_imu_delta_t: 0.01
+  acc_max: 176.0
+  omega_max: 17
+  sigma_omega_c: 0.00875         # gyroscope_noise_density = 8.7500e-3
+  sigma_acc_c: 0.0785            # accelerometer_noise_density = 7.8500e-2
+  sigma_omega_bias_c: 0.00026    # gyroscope_random_walk = 2.6000e-04
+  sigma_acc_bias_c: 0.02         # accelerometer_random_walk = 2.0000e-2
+  sigma_integration: 0.0
+  g: 9.8082
+  imu_rate: 200
+
+imu_initialization:
+  velocity: [0.0, 0.0, 0.0]
+  omega_bias: [0.0, 0.0, 0.0]
+  acc_bias: [0.0, 0.0, 0.0]
+  velocity_sigma: 2.0
+  omega_bias_sigma: 0.01
+  acc_bias_sigma: 0.1
+
+dynamics_params:
+  thrust_net_sampling_freq: 100.0
+  thrust_net_input_window_length: 0.05
+  torque_net_sampling_freq: 100.0
+  torque_net_input_window_length: 0.1
+  mass: 0.87
+  r_fr: [0.075, -0.100, 0.0]
+  r_br: [-0.075, -0.100, 0.0]
+  r_bl: [-0.075, 0.100, 0.0]
+  r_fl: [0.075, 0.100, 0.0]
+  inertia_diag: [0.0025, 0.0021, 0.0043]
+  thrust_coeffs: [1.562522e-6, 1.562522e-6, 1.562522e-6, 1.562522e-6]
+  torque_coeffs: [1.909e-8, 1.909e-8, 1.909e-8, 1.909e-8]
+  n_init_frames: 550
+  min_height: 1.0
+  sigma_bodyrates_c: 0.01
+  sigma_gyro_bias_c: 0.1
+  sigma_accel_c: 0.01
+  sigma_accel_bias_c: 0.04
+  sigma_thrustx_c: 0.1
+  sigma_thrusty_c: 0.1
+  sigma_thrustz_c: 0.1
+  sigma_external_force: [0.1, 0.1, 0.1]
+  publish_dynamics: true
+  dt_knot_s: 0.01
+  spline_length_s: 0.1
+  max_iter: 3
+  stop_thresh: 1e-3
+  mode: 3
+  debug_info: true

@@ -11,3 +11,6 @@ svo_benchmarking/scripts/*.pyc
 build/
 install/
 log/
+flyingroom_flight_ros2/flyingroom_flight_ros2.db3
+*.mcap
+2025-11-05-13-56-45/2025-11-05-13-56-45_0.db3

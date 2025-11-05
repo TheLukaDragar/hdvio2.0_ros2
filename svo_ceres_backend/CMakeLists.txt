@@ -18,6 +18,7 @@ find_package(Eigen3 REQUIRED)
 find_package(glog REQUIRED)
 find_package(Ceres REQUIRED)
 find_package(CUDA REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 set(TRT_ROOT $ENV{TRT_ROOT})
 
@@ -121,6 +122,7 @@ ament_target_dependencies(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   ${CERES_LIBRARIES}
   glog::glog
+  yaml-cpp
   ${CUDA_LIBRARIES}
   ${CUDA_CUBLAS_LIBRARIES}
 )

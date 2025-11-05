@@ -1,0 +1,89 @@
+label: "Realsense t265"
+id: 412eab8e4058621f7036b5e765dfe812
+cameras:
+- camera:
+    label: cam0
+    id: 54812562fa109c40fe90b29a59dd7798
+    line-delay-nanoseconds: 0
+    image_height: 800
+    image_width: 848
+    type: pinhole
+    mask: fisheye_mask.png
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [287.6771296048829, 287.4104532624523, 420.5435494803322, 400.74244215352127]
+    distortion:
+      type: equidistant  
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.007564066970266521, 0.0485474688770961, -0.04820204717192626, 0.009979184888011246]
+  T_I_C:
+    cols: 4
+    rows: 4
+    data: [-0.99993319, -0.00122189, 0.01149468, 0.01267904,
+          0.00117805, -0.99999201, -0.00381976, 0.00716576,
+          0.01149926, -0.00380596, 0.99992664, 0.00412263,
+          0.0, 0.0, 0.0, 1.0]
+  T_B_I:
+    cols: 4
+    rows: 4
+    data: [-0.06534376, -0.42528229, 0.90269882, 0.07886578, 
+          0.99785084, -0.03228025, 0.05702356, 0.04476118,
+          0.00488824, 0.90448491, 0.4264776, -0.03819208,
+          0.0, 0.0, 0.0, 1.0]
+
+imu_params:
+  delay_imu_cam: 0.0
+  max_imu_delta_t: 0.01
+  acc_max: 176.0
+  omega_max: 17
+  sigma_omega_c: 0.001
+  sigma_acc_c: 0.005
+  sigma_omega_bias_c: 0.0001
+  sigma_acc_bias_c: 0.001
+  sigma_integration: 0.0
+  g: 9.8082
+  imu_rate: 200
+
+imu_initialization:
+  velocity: [0.0, 0, 0.0]
+  omega_bias: [0.0, 0, 0.0]
+  acc_bias: [0.0, 0.0, 0.0]
+  velocity_sigma: 2.0
+  omega_bias_sigma: 0.01
+  acc_bias_sigma: 0.1
+
+dynamics_params:
+  thrust_net_sampling_freq: 100.0 # [Hz]
+  thrust_net_input_window_length: 0.05 # [s]
+  torque_net_sampling_freq: 100.0 # [Hz]
+  torque_net_input_window_length: 0.1 # [s]
+  mass: 0.87 # [kg]
+  r_fr: [0.075, -0.100, 0.]
+  r_br: [-0.075, -0.100, 0.]
+  r_bl: [-0.075, 0.100, 0.]
+  r_fl: [0.075, 0.100, 0.]
+  inertia_diag: [0.0025, 0.0021, 0.0043]
+  thrust_coeffs: [1.562522e-6, 1.562522e-6, 1.562522e-6, 1.562522e-6] # rpm to thrust coefficient
+  torque_coeffs: [1.909e-8, 1.909e-8, 1.909e-8, 1.909e-8] # rpm to torque coefficient
+  n_init_frames: 550 # not used in this version of the code
+  min_height: 1.0  # wait that the drone is above this height at least once before including the dynamics
+  sigma_bodyrates_c: 0.01
+  sigma_gyro_bias_c: 0.1 # gyroscope bias noise (if gyroscope measurements are used)
+  sigma_accel_c: 0.01 # used in VID and HDVIO2 dynamics error
+  sigma_accel_bias_c: 0.04
+  sigma_thrustx_c: 0.1
+  sigma_thrusty_c: 0.1
+  sigma_thrustz_c: 0.1
+  sigma_external_force: [0.1, 0.1, 0.1]
+  publish_dynamics: false
+  # Rotation dynamics
+  dt_knot_s: 0.01 # knots spacing
+  spline_length_s: 0.1 # length of the spline
+  max_iter: 3 # spline optimization params
+  stop_thresh: 1e-3 # spline optimization params
+  # Residuals. 0: angular velocities, 1: angular accelerations (not supported), 2: angular velocities and torques, 3 torques
+  mode: 3
+  debug_info: false

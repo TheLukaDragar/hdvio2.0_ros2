@@ -1,0 +1,50 @@
+rosbag2_bagfile_information:
+  compression_format: ''
+  compression_mode: ''
+  custom_data: null
+  duration:
+    nanoseconds: 104823355516
+  files:
+  - duration:
+      nanoseconds: 104823355516
+    message_count: 59199
+    path: flyingroom_flight_ros2.db3
+    starting_time:
+      nanoseconds_since_epoch: 1674813258709883581
+  message_count: 59199
+  relative_file_paths:
+  - flyingroom_flight_ros2.db3
+  ros_distro: rosbags
+  starting_time:
+    nanoseconds_since_epoch: 1674813258709883581
+  storage_identifier: sqlite3
+  topics_with_message_count:
+  - message_count: 10479
+    topic_metadata:
+      name: /parrot/agiros_pilot/mpc_command
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: agiros_msgs/msg/Command
+      type_description_hash: RIHS01_888aaccd4daf0c4f61a8caed5769b96438431701f850e0c56d4ca4c652a02f23
+  - message_count: 25148
+    topic_metadata:
+      name: /mocap/parrot/pose
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: geometry_msgs/msg/PoseStamped
+      type_description_hash: RIHS01_10f3786d7d40fd2b54367835614bff85d4ad3b5dab62bf8bca0cc232d73b4cd8
+  - message_count: 20500
+    topic_metadata:
+      name: /camera/imu
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: sensor_msgs/msg/Imu
+      type_description_hash: RIHS01_7d9a00ff131080897a5ec7e26e315954b8eae3353c3f995c55faf71574000b5b
+  - message_count: 3072
+    topic_metadata:
+      name: /camera/fisheye1/image_raw
+      offered_qos_profiles: ''
+      serialization_format: cdr
+      type: sensor_msgs/msg/Image
+      type_description_hash: RIHS01_d31d41a9a4c4bc8eae9be757b0beed306564f7526c88ea6a4588fb9582527d47
+  version: 8

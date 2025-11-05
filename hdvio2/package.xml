@@ -30,6 +30,7 @@
   <depend>svo_cmake</depend>
   <depend>svo_common</depend>
   <depend>svo_msgs</depend>
+  <depend>agiros_msgs</depend>
   <depend>svo_tracker</depend>
   <depend>svo_ceres_backend</depend>
   <depend>tf2</depend>

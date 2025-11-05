@@ -17,6 +17,7 @@ find_package(yaml-cpp REQUIRED)
 find_package(glog REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
+find_package(OpenCV REQUIRED)
 
 include(SvoSetup)
 
@@ -54,7 +55,7 @@ set(SOURCES
   src/ncamera_yaml_serialization.cpp
   )
 
-add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
 target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
@@ -69,6 +70,7 @@ ament_target_dependencies(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   yaml-cpp
   glog::glog
+  ${OpenCV_LIBRARIES}
 )
 
 ################################################################################
@@ -107,6 +109,7 @@ ament_export_dependencies(
   glog
   eigen3_cmake_module
   Eigen3
+  OpenCV
 )
 
 ament_package()

@@ -79,8 +79,17 @@ void DynamicsNet::parseOnnxModel()
         config->setFlag(nvinfer1::BuilderFlag::kFP16);
     }
     
-    // generate TensorRT engine optimized for the target platform
-    engine_.reset(builder->buildEngineWithConfig(*network, *config));
+    // generate TensorRT engine optimized for the target platform (TensorRT 10+ API)
+    TRTUniquePtr<nvinfer1::IHostMemory> serialized_model{builder->buildSerializedNetwork(*network, *config)};
+    if (!serialized_model)
+    {
+        std::cout << "Failed to build serialized network\n";
+        return;
+    }
+    
+    // Deserialize the engine from the serialized model
+    TRTUniquePtr<nvinfer1::IRuntime> runtime{nvinfer1::createInferRuntime(gLogger)};
+    engine_.reset(runtime->deserializeCudaEngine(serialized_model->data(), serialized_model->size()));
     context_.reset(engine_->createExecutionContext());
 }
 

@@ -1,0 +1,59 @@
+-- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+ - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_equal_double --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml
+
+[==========] Running 20 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 10 tests from EigenChecks/0, where TypeParam = double
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Equal
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Equal (1 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_OtherSize
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_OtherSize (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Near5
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Near5 (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Equal
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Equal (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_OtherSize
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_OtherSize (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Near5
+[       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Near5 (0 ms)
+[----------] 10 tests from EigenChecks/0 (1 ms total)
+
+[----------] 10 tests from EigenChecks/1, where TypeParam = float
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Equal
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Equal (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom (1 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_OtherSize
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_OtherSize (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Near5
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Near5 (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Equal
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Equal (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_OtherSize
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_OtherSize (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Near5
+[       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Near5 (0 ms)
+[----------] 10 tests from EigenChecks/1 (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 20 tests from 2 test suites ran. (2 ms total)
+[  PASSED  ] 20 tests.
+
+
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml'
+-- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml'

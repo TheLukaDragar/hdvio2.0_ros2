@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>vikit_common</name>
+  <version>0.0.0</version>
+  <description>The vikit_common package</description>
+  <maintainer email="forster@ifi.uzh.ch">cforster</maintainer>
+  <license>RPG</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>cv_bridge</depend>
+  <depend>minkindr</depend>
+  <depend>rclcpp</depend>
+  <depend>svo_cmake</depend>
+  <depend>libopencv-dev</depend>
+  <depend>libyaml-cpp-dev</depend>
+  <depend>glog</depend>
+  <depend>eigen3_cmake_module</depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from svo_msgs/msg/Feature.msg
+// generated code does not contain a copyright notice
+
+
+module svo_msgs {
+  module msg {
+    struct Feature {
+      @verbatim (language="comment", text=
+        "x component of 3d point in camera frame")
+      float x;
+
+      @verbatim (language="comment", text=
+        "y component of 3d point in camera frame")
+      float y;
+
+      @verbatim (language="comment", text=
+        "z component of 3d point in camera frame")
+      float z;
+    };
+  };
+};

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvikit_common.a CMakeFiles/vikit_common.dir/src/homography.cpp.o CMakeFiles/vikit_common.dir/src/math_utils.cpp.o CMakeFiles/vikit_common.dir/src/performance_monitor.cpp.o CMakeFiles/vikit_common.dir/src/sample.cpp.o CMakeFiles/vikit_common.dir/src/user_input_thread.cpp.o CMakeFiles/vikit_common.dir/src/vision.cpp.o
+/usr/bin/ranlib libvikit_common.a

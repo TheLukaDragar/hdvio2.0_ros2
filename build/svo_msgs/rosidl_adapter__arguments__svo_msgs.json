@@ -1,0 +1,11 @@
+{
+  "package_name": "svo_msgs",
+  "non_idl_tuples": [
+    "/home/carbs/hdvio2.0/svo_msgs:msg/Command.msg",
+    "/home/carbs/hdvio2.0/svo_msgs:msg/DenseInput.msg",
+    "/home/carbs/hdvio2.0/svo_msgs:msg/DenseInputWithFeatures.msg",
+    "/home/carbs/hdvio2.0/svo_msgs:msg/Feature.msg",
+    "/home/carbs/hdvio2.0/svo_msgs:msg/Info.msg",
+    "/home/carbs/hdvio2.0/svo_msgs:msg/NbvTrajectory.msg"
+  ]
+}

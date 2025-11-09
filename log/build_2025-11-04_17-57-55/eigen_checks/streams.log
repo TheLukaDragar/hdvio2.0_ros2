@@ -1,0 +1,448 @@
+[0.011s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carbs/hdvio2.0/eigen_checks -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks
+[0.027s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.149s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.158s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[0.159s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.246s] -- Configuring done
+[0.293s] -- Generating done
+[0.308s] -- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks
+[0.315s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carbs/hdvio2.0/eigen_checks -DBUILD_TESTING=ON -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks
+[0.317s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24
+[0.368s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.369s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.372s] [35m[1mConsolidate compiler generated dependencies of target eigen_checks[0m
+[0.385s] [  7%] Built target gtest_main
+[0.389s] [ 15%] Built target gtest
+[0.390s] [ 23%] Built target eigen_checks
+[0.403s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_equal[0m
+[0.403s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_equal_double[0m
+[0.404s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_zero[0m
+[0.404s] [35m[1mConsolidate compiler generated dependencies of target test_glog_equal_double[0m
+[0.404s] [35m[1mConsolidate compiler generated dependencies of target test_glog_zero[0m
+[0.405s] [35m[1mConsolidate compiler generated dependencies of target test_glog_zero_sized_types[0m
+[0.405s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_zero_sized_types[0m
+[0.406s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_near[0m
+[0.406s] [35m[1mConsolidate compiler generated dependencies of target test_glog_near[0m
+[0.406s] [35m[1mConsolidate compiler generated dependencies of target test_glog_equal[0m
+[0.429s] [ 26%] [32mBuilding CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o[0m
+[0.429s] [ 30%] [32mBuilding CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o[0m
+[0.429s] [ 34%] [32mBuilding CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o[0m
+[0.432s] [ 38%] [32mBuilding CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o[0m
+[0.433s] [ 42%] [32mBuilding CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o[0m
+[0.433s] [ 46%] [32mBuilding CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o[0m
+[0.433s] [ 50%] [32mBuilding CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o[0m
+[0.434s] [ 57%] [32mBuilding CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o[0m
+[0.434s] [ 57%] [32mBuilding CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o[0m
+[0.438s] [ 61%] [32mBuilding CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o[0m
+[0.585s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:37:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.586s]    37 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_54_random, 1e-5));
+[0.586s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.586s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.586s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.586s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.586s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.586s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.586s]       | 
+[0.586s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:42:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.586s]    42 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_D4, 1e-5));
+[0.586s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.586s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.586s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.587s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.587s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.587s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.587s]       | 
+[0.587s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:47:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.587s]    47 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_54_near_e_minus_5, 1e-5));
+[0.587s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.587s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.587s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.587s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.587s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.587s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.588s]       | 
+[0.588s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:57:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.588s]    57 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));
+[0.588s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.588s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.588s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.588s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.588s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.588s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.588s]       | 
+[0.588s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:62:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.588s]    62 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));
+[0.588s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.589s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.589s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.589s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.589s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.589s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.589s]       | 
+[0.589s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:67:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.589s]    67 | [01;31m[K      CHE[m[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));
+[0.589s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.589s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.589s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.590s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[0.590s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.590s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.590s]       | 
+[0.590s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:39:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.590s]    39 | [01;31m[K         [m[K                      this->test_matrix_54_random));
+[0.590s]       | [01;31m[K^[m[K        
+[0.590s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.590s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.590s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.590s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.590s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.590s]       | 
+[0.591s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:45:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.591s]    45 | [01;31m[K         [m[K                      this->test_matrix_D4));
+[0.591s]       | [01;31m[K^[m[K        
+[0.591s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.591s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.591s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.591s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.591s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.591s]       | 
+[0.591s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:51:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.591s]    51 | [01;31m[K         [m[K                      this->test_matrix_54_near_e_minus_5));
+[0.591s]       | [01;31m[K^[m[K        
+[0.591s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.592s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.592s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.592s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.592s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.592s]       | 
+[0.592s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:63:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.592s]    63 | [01;31m[K         [m[K                      this->test_vector_5_random));
+[0.592s]       | [01;31m[K^[m[K        
+[0.592s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.592s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.593s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.593s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.593s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.593s]       | 
+[0.593s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:69:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.593s]    69 | [01;31m[K         [m[K                      this->test_vector_D));
+[0.593s]       | [01;31m[K^[m[K        
+[0.593s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.593s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.593s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.593s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.593s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.593s]       | 
+[0.593s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:75:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.594s]    75 | [01;31m[K         [m[K                      this->test_vector_5_near_e_minus_5));
+[0.594s]       | [01;31m[K^[m[K        
+[0.594s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.594s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.594s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[0.594s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.594s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.594s]       | 
+[0.594s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:44:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.594s]    44 | [01;31m[K      thi[m[Ks->ground_truth_matrix_54, this->test_matrix_54_random, 1e-8));
+[0.594s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.594s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.594s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.595s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25[m[K:
+[0.595s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.595s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.595s]       | 
+[0.595s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:50:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.595s]    50 | [01;31m[K         [m[K                     this->test_matrix_D4, 1e-8));
+[0.595s]       | [01;31m[K^[m[K        
+[0.595s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.595s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.595s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25[m[K:
+[0.595s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.595s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.595s]       | 
+[0.595s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:72:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.596s]    72 | [01;31m[K      thi[m[Ks->ground_truth_vector_5, this->test_vector_5_random, 1e-8));
+[0.596s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.596s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.596s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.596s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25[m[K:
+[0.596s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.596s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.596s]       | 
+[0.596s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:77:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.596s]    77 | [01;31m[K      thi[m[Ks->ground_truth_vector_5, this->test_vector_D, 1e-8));
+[0.596s]       | [01;31m[K^[m[K     [01;31m[K~~~[m[K
+[0.596s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.596s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.596s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25[m[K:
+[0.597s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.597s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.597s]       | 
+[0.597s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.597s]    34 | [01;31m[K  GLOG_TE[m[KST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[0.597s]       | [01;31m[K^[m[K [01;31m[K~~~~~~~[m[K
+[0.597s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.597s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.597s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25[m[K:
+[0.597s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.597s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.597s]       | 
+[0.597s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.598s]    41 | [01;31m[K  GLOG_TE[m[KST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[0.598s]       | [01;31m[K^[m[K [01;31m[K~~~~~~~[m[K
+[0.598s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.598s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.598s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25[m[K:
+[0.598s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.598s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.598s]       | 
+[0.598s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:39:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.598s]    39 | [01;31m[K         [m[K                             this->test_matrix_54_random));
+[0.598s]       | [01;31m[K^[m[K        
+[0.598s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.598s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.599s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.599s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.599s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.599s]       | 
+[0.599s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:45:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.599s]    45 | [01;31m[K         [m[K                             this->test_matrix_D4));
+[0.599s]       | [01;31m[K^[m[K        
+[0.599s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.599s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.599s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.599s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.599s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.599s]       | 
+[0.599s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:51:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.600s]    51 | [01;31m[K         [m[K                             this->test_matrix_54_near_e_minus_5));
+[0.600s]       | [01;31m[K^[m[K        
+[0.600s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.600s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.600s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.600s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.600s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.600s]       | 
+[0.600s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:63:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.600s]    63 | [01;31m[K         [m[K                             this->test_vector_5_random));
+[0.600s]       | [01;31m[K^[m[K        
+[0.600s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.600s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.600s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.601s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.601s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.601s]       | 
+[0.601s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:69:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.601s]    69 | [01;31m[K         [m[K                             this->test_vector_D));
+[0.601s]       | [01;31m[K^[m[K        
+[0.601s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.601s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.601s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.601s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.601s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.601s]       | 
+[0.601s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:75:1:[m[K [01;31m[Kerror: [m[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2
+[0.601s]    75 | [01;31m[K         [m[K                             this->test_vector_5_near_e_minus_5));
+[0.602s]       | [01;31m[K^[m[K        
+[0.602s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64[m[K,
+[0.602s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[0.602s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[0.602s] [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:[m[K [01;36m[Knote: [m[Kmacro "EXPECT_DEATH" defined here
+[0.602s]   184 | # define EXPECT_DEATH(statement, regex) \
+[0.602s]       | 
+[1.693s] In file included from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:28[m[K:
+[1.693s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.693s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.693s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.694s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.694s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.694s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.694s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.699s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.699s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.699s]   133 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.699s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.699s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.700s]   133 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.700s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.705s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.705s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.705s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.705s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.705s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.705s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.705s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.711s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.711s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.712s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.712s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.712s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.712s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.712s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.717s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.718s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.718s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.718s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.718s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.718s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.718s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.724s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.724s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.724s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.724s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.724s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.724s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.724s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.736s] In file included from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:28[m[K:
+[1.736s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.736s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.736s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.736s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.736s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.736s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.736s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.739s] In file included from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:28[m[K:
+[1.739s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.740s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.740s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.740s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.740s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.740s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.740s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.742s] In file included from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:29[m[K:
+[1.742s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix_Test::TestBody()[m[K’:
+[1.742s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.742s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.742s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.742s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.742s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.742s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.743s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.743s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.743s]   133 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.743s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.743s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.743s]   133 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.743s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.746s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.746s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.746s]   133 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.746s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.746s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.746s]   133 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.746s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.748s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.748s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.749s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.749s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.749s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.749s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.749s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.749s] In file included from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:28[m[K:
+[1.750s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.750s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.750s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.750s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.750s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.750s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.750s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.752s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.752s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.752s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.752s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.753s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.753s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.753s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.755s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.755s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.756s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.756s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.756s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.756s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.756s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.756s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.756s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.756s]   133 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.756s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.756s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.757s]   133 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.757s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.758s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector_Test::TestBody()[m[K’:
+[1.758s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.758s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.758s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.758s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.758s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.758s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.759s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.759s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.759s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.759s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.759s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.760s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.760s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.762s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.762s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.762s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.762s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.762s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.762s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.762s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.764s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.764s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.764s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.764s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.764s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.764s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.764s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.765s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.766s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.766s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.766s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.766s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.766s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.766s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.768s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.768s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.768s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.768s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.768s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.768s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.768s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.770s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.770s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.770s]   133 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.770s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.770s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.770s]   133 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices have a different$
+[1.770s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.772s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.772s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;31m[Kerror: [m[K‘[01m[KEXPECT_DEATH[m[K’ was not declared in this scope
+[1.772s]   136 |   [01;31m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.772s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[1.772s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.772s]   136 |   [01;36m[KEXPECT_DEATH[m[K([&]() { X; }(), "^")  // ^The matrices are different$
+[1.772s]       |   [01;36m[K^~~~~~~~~~~~[m[K
+[1.982s] gmake[2]: *** [CMakeFiles/test_glog_zero_sized_types.dir/build.make:76: CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o] Error 1
+[1.982s] gmake[1]: *** [CMakeFiles/Makefile2:427: CMakeFiles/test_glog_zero_sized_types.dir/all] Error 2
+[1.982s] gmake[1]: *** Waiting for unfinished jobs....
+[2.162s] [ 65%] [32m[1mLinking CXX executable test_gtest_zero_sized_types[0m
+[2.312s] [ 65%] Built target test_gtest_zero_sized_types
+[2.586s] gmake[2]: *** [CMakeFiles/test_glog_equal.dir/build.make:76: CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o] Error 1
+[2.586s] gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/test_glog_equal.dir/all] Error 2
+[2.653s] gmake[2]: *** [CMakeFiles/test_glog_equal_double.dir/build.make:76: CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o] Error 1
+[2.653s] gmake[1]: *** [CMakeFiles/Makefile2:399: CMakeFiles/test_glog_equal_double.dir/all] Error 2
+[2.654s] gmake[2]: *** [CMakeFiles/test_glog_near.dir/build.make:76: CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o] Error 1
+[2.654s] gmake[1]: *** [CMakeFiles/Makefile2:315: CMakeFiles/test_glog_near.dir/all] Error 2
+[2.698s] gmake[2]: *** [CMakeFiles/test_glog_zero.dir/build.make:76: CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o] Error 1
+[2.699s] gmake[1]: *** [CMakeFiles/Makefile2:371: CMakeFiles/test_glog_zero.dir/all] Error 2
+[3.136s] [ 69%] [32m[1mLinking CXX executable test_gtest_equal[0m
+[3.245s] [ 73%] [32m[1mLinking CXX executable test_gtest_equal_double[0m
+[3.303s] [ 73%] Built target test_gtest_equal
+[3.423s] [ 73%] Built target test_gtest_equal_double
+[3.843s] [ 76%] [32m[1mLinking CXX executable test_gtest_near[0m
+[3.922s] [ 80%] [32m[1mLinking CXX executable test_gtest_zero[0m
+[4.035s] [ 80%] Built target test_gtest_near
+[4.118s] [ 80%] Built target test_gtest_zero
+[4.119s] gmake: *** [Makefile:146: all] Error 2
+[4.122s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24

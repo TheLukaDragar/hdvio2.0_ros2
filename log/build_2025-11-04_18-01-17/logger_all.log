@@ -1,0 +1,544 @@
+[0.079s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--base-paths', '/home/carbs/hdvio2.0', '--packages-select', 'vikit_common', 'vikit_cameras']
+[0.079s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['/home/carbs/hdvio2.0'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['vikit_common', 'vikit_cameras'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x709d5893bbe0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x709d5893b730>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x709d5893b730>>, mixin_verb=('build',))
+[0.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.108s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.108s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/carbs/hdvio2.0'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'ignore'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'ignore_ament_install'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['colcon_pkg']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'colcon_pkg'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['colcon_meta']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'colcon_meta'
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['ros']
+[0.108s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'ros'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['cmake', 'python']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'cmake'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'python'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extensions ['python_setup_py']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0) by extension 'python_setup_py'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/build) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/build) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/build) ignored
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/catkin_simple) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/catkin_simple' with type 'ros.catkin' and name 'catkin_simple'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/ceres_catkin) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/ceres_catkin' with type 'ros.catkin' and name 'ceres_catkin'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_catkin) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/eigen_catkin' with type 'ros.catkin' and name 'eigen_catkin'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extensions ['colcon_pkg']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extension 'colcon_pkg'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extensions ['colcon_meta']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extension 'colcon_meta'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extensions ['ros']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/eigen_checks) by extension 'ros'
+[0.123s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/eigen_checks' with type 'ros.ament_cmake' and name 'eigen_checks'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/fast_neon) by extension 'ros'
+[0.124s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/fast_neon' with type 'ros.catkin' and name 'fast'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extension 'ignore_ament_install'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extensions ['colcon_pkg']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extension 'colcon_pkg'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extensions ['colcon_meta']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extension 'colcon_meta'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extensions ['ros']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/gflags_catkin) by extension 'ros'
+[0.125s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/gflags_catkin' with type 'ros.catkin' and name 'gflags_catkin'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extensions ['ignore', 'ignore_ament_install']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extension 'ignore'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extension 'ignore_ament_install'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extensions ['colcon_pkg']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extension 'colcon_pkg'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extensions ['colcon_meta']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extension 'colcon_meta'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extensions ['ros']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/glog_catkin) by extension 'ros'
+[0.125s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/glog_catkin' with type 'ros.catkin' and name 'glog_catkin'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extensions ['ignore', 'ignore_ament_install']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extension 'ignore'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extension 'ignore_ament_install'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extensions ['colcon_pkg']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extension 'colcon_pkg'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extensions ['colcon_meta']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extension 'colcon_meta'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extensions ['ros']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/hdvio2) by extension 'ros'
+[0.128s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/hdvio2' with type 'ros.catkin' and name 'hdvio2'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'ignore_ament_install'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['colcon_pkg']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'colcon_pkg'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['colcon_meta']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'colcon_meta'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['ros']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'ros'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['cmake', 'python']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'cmake'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'python'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extensions ['python_setup_py']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/img) by extension 'python_setup_py'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/install) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/install) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/install) ignored
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/log) by extensions ['ignore', 'ignore_ament_install']
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/log) by extension 'ignore'
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/log) ignored
+[0.128s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['ignore', 'ignore_ament_install']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'ignore'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'ignore_ament_install'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['colcon_pkg']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'colcon_pkg'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['colcon_meta']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'colcon_meta'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['ros']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'ros'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['cmake', 'python']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'cmake'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'python'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extensions ['python_setup_py']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr) by extension 'python_setup_py'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extensions ['ignore', 'ignore_ament_install']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extension 'ignore'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extension 'ignore_ament_install'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extensions ['colcon_pkg']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extension 'colcon_pkg'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extensions ['colcon_meta']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extension 'colcon_meta'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extensions ['ros']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr) by extension 'ros'
+[0.130s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/minkindr/minkindr' with type 'ros.ament_cmake' and name 'minkindr'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extension 'ignore'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extension 'ignore_ament_install'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extensions ['colcon_pkg']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extension 'colcon_pkg'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extensions ['colcon_meta']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extension 'colcon_meta'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extensions ['ros']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr/minkindr_python) by extension 'ros'
+[0.131s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/minkindr/minkindr_python' with type 'ros.catkin' and name 'minkindr_python'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'ignore_ament_install'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['colcon_pkg']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'colcon_pkg'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['colcon_meta']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'colcon_meta'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['ros']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'ros'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['cmake', 'python']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'cmake'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'python'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extensions ['python_setup_py']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros) by extension 'python_setup_py'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extension 'ignore_ament_install'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extensions ['colcon_pkg']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extension 'colcon_pkg'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extensions ['colcon_meta']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extension 'colcon_meta'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extensions ['ros']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions) by extension 'ros'
+[0.132s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions' with type 'ros.catkin' and name 'minkindr_conversions'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extensions ['ignore', 'ignore_ament_install']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extension 'ignore'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extension 'ignore_ament_install'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extensions ['colcon_pkg']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extension 'colcon_pkg'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extensions ['colcon_meta']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extension 'colcon_meta'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extensions ['ros']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/opengv) by extension 'ros'
+[0.133s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/opengv' with type 'ros.catkin' and name 'opengv'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extensions ['ignore', 'ignore_ament_install']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extension 'ignore'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extension 'ignore_ament_install'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extensions ['colcon_pkg']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extension 'colcon_pkg'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extensions ['colcon_meta']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extension 'colcon_meta'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extensions ['ros']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/rpg_common) by extension 'ros'
+[0.134s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/rpg_common' with type 'ros.catkin' and name 'rpg_common'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extension 'colcon_meta'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extensions ['ros']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo) by extension 'ros'
+[0.136s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo' with type 'ros.catkin' and name 'svo'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_benchmarking) by extension 'ros'
+[0.137s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_benchmarking' with type 'ros.catkin' and name 'svo_benchmarking'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_ceres_backend) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_ceres_backend' with type 'ros.catkin' and name 'svo_ceres_backend'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_cmake) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_cmake' with type 'ros.ament_cmake' and name 'svo_cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_common) by extension 'ros'
+[0.140s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_common' with type 'ros.catkin' and name 'svo_common'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_direct) by extension 'ros'
+[0.141s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_direct' with type 'ros.catkin' and name 'svo_direct'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_img_align) by extension 'ros'
+[0.142s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_img_align' with type 'ros.catkin' and name 'svo_img_align'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_msgs) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_msgs' with type 'ros.ament_cmake' and name 'svo_msgs'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_test_utils) by extension 'ros'
+[0.144s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_test_utils' with type 'ros.catkin' and name 'svo_test_utils'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_tracker) by extension 'ros'
+[0.145s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_tracker' with type 'ros.catkin' and name 'svo_tracker'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/svo_vio_common) by extension 'ros'
+[0.146s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/svo_vio_common' with type 'ros.catkin' and name 'svo_vio_common'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'ignore'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'ignore_ament_install'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['colcon_pkg']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'colcon_pkg'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['colcon_meta']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'colcon_meta'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['ros']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'ros'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['cmake', 'python']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'cmake'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'python'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extensions ['python_setup_py']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit) by extension 'python_setup_py'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extension 'ignore_ament_install'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extensions ['colcon_pkg']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extension 'colcon_pkg'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extensions ['colcon_meta']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extension 'colcon_meta'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extensions ['ros']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_cameras) by extension 'ros'
+[0.147s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/vikit/vikit_cameras' with type 'ros.ament_cmake' and name 'vikit_cameras'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_common) by extension 'ros'
+[0.148s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/vikit/vikit_common' with type 'ros.ament_cmake' and name 'vikit_common'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_py) by extension 'ros'
+[0.149s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/vikit/vikit_py' with type 'ros.catkin' and name 'vikit_py'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_ros) by extension 'ros'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/vikit/vikit_ros' with type 'ros.catkin' and name 'vikit_ros'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(/home/carbs/hdvio2.0/vikit/vikit_solver) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package '/home/carbs/hdvio2.0/vikit/vikit_solver' with type 'ros.catkin' and name 'vikit_solver'
+[0.151s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'catkin_simple' in '/home/carbs/hdvio2.0/catkin_simple'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'eigen_checks' in '/home/carbs/hdvio2.0/eigen_checks'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_cmake' in '/home/carbs/hdvio2.0/svo_cmake'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_msgs' in '/home/carbs/hdvio2.0/svo_msgs'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vikit_py' in '/home/carbs/hdvio2.0/vikit/vikit_py'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'eigen_catkin' in '/home/carbs/hdvio2.0/eigen_catkin'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'fast' in '/home/carbs/hdvio2.0/fast_neon'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'gflags_catkin' in '/home/carbs/hdvio2.0/gflags_catkin'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'minkindr' in '/home/carbs/hdvio2.0/minkindr/minkindr'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_benchmarking' in '/home/carbs/hdvio2.0/svo_benchmarking'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'glog_catkin' in '/home/carbs/hdvio2.0/glog_catkin'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'opengv' in '/home/carbs/hdvio2.0/opengv'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'ceres_catkin' in '/home/carbs/hdvio2.0/ceres_catkin'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'minkindr_conversions' in '/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'minkindr_python' in '/home/carbs/hdvio2.0/minkindr/minkindr_python'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'rpg_common' in '/home/carbs/hdvio2.0/rpg_common'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vikit_ros' in '/home/carbs/hdvio2.0/vikit/vikit_ros'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'vikit_solver' in '/home/carbs/hdvio2.0/vikit/vikit_solver'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_common' in '/home/carbs/hdvio2.0/svo_common'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_test_utils' in '/home/carbs/hdvio2.0/svo_test_utils'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_vio_common' in '/home/carbs/hdvio2.0/svo_vio_common'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_direct' in '/home/carbs/hdvio2.0/svo_direct'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_img_align' in '/home/carbs/hdvio2.0/svo_img_align'
+[0.174s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_tracker' in '/home/carbs/hdvio2.0/svo_tracker'
+[0.175s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo' in '/home/carbs/hdvio2.0/svo'
+[0.175s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'svo_ceres_backend' in '/home/carbs/hdvio2.0/svo_ceres_backend'
+[0.175s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'hdvio2' in '/home/carbs/hdvio2.0/hdvio2'
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.175s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.176s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/carbs/hdvio2.0/eigen_checks/install
+[0.176s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/carbs/hdvio2.0/install
+[0.178s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common', 'merge_install': False, 'path': '/home/carbs/hdvio2.0/vikit/vikit_common', 'symlink_install': False, 'test_result_base': None}
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'vikit_cameras' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_cameras' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras', 'merge_install': False, 'path': '/home/carbs/hdvio2.0/vikit/vikit_cameras', 'symlink_install': False, 'test_result_base': None}
+[0.206s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.207s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.207s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carbs/hdvio2.0/vikit/vikit_common' with build type 'ament_cmake'
+[0.207s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carbs/hdvio2.0/vikit/vikit_common'
+[0.210s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.210s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.210s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_common -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common
+[1.741s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common' returned '0': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_common -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common
+[1.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_common -- -j24 -l24
+[9.670s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common' returned '0': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_common -- -j24 -l24
+[9.686s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_common
+[9.710s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_common)
+[9.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common' returned '0': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_common
+[9.714s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common' for CMake module files
+[9.714s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common' for CMake config files
+[9.715s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'cmake_prefix_path')
+[9.715s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.ps1'
+[9.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.dsv'
+[9.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.sh'
+[9.718s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/bin'
+[9.728s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/pkgconfig/vikit_common.pc'
+[9.729s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/python3.10/site-packages'
+[9.729s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/bin'
+[9.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.ps1'
+[9.731s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.dsv'
+[9.732s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.sh'
+[9.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.bash'
+[9.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.zsh'
+[9.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/colcon-core/packages/vikit_common)
+[9.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_common)
+[9.736s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common' for CMake module files
+[9.737s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common' for CMake config files
+[9.737s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'cmake_prefix_path')
+[9.737s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.ps1'
+[9.738s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.dsv'
+[9.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/hook/cmake_prefix_path.sh'
+[9.739s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib'
+[9.739s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/bin'
+[9.740s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/pkgconfig/vikit_common.pc'
+[9.740s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/python3.10/site-packages'
+[9.740s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/bin'
+[9.741s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.ps1'
+[9.741s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.dsv'
+[9.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.sh'
+[9.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.bash'
+[9.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.zsh'
+[9.744s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/colcon-core/packages/vikit_common)
+[9.744s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/carbs/hdvio2.0/vikit/vikit_cameras' with build type 'ament_cmake'
+[9.744s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/carbs/hdvio2.0/vikit/vikit_cameras'
+[9.745s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.745s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_cameras -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras
+[11.284s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_cameras -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras
+[11.286s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras -- -j24 -l24
+[21.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras -- -j24 -l24
+[21.070s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras
+[21.090s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_cameras)
+[21.090s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras' for CMake module files
+[21.091s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras
+[21.091s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras' for CMake config files
+[21.092s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_cameras', 'cmake_prefix_path')
+[21.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.ps1'
+[21.092s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.dsv'
+[21.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.sh'
+[21.093s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib'
+[21.094s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/bin'
+[21.094s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/pkgconfig/vikit_cameras.pc'
+[21.094s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/python3.10/site-packages'
+[21.094s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/bin'
+[21.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.ps1'
+[21.095s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.dsv'
+[21.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.sh'
+[21.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.bash'
+[21.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.zsh'
+[21.097s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/colcon-core/packages/vikit_cameras)
+[21.098s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_cameras)
+[21.098s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras' for CMake module files
+[21.098s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras' for CMake config files
+[21.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_cameras', 'cmake_prefix_path')
+[21.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.ps1'
+[21.100s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.dsv'
+[21.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/hook/cmake_prefix_path.sh'
+[21.101s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib'
+[21.101s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/bin'
+[21.101s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/pkgconfig/vikit_cameras.pc'
+[21.101s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/python3.10/site-packages'
+[21.101s] Level 1:colcon.colcon_core.environment:checking '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/bin'
+[21.102s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.ps1'
+[21.102s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.dsv'
+[21.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.sh'
+[21.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.bash'
+[21.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.zsh'
+[21.104s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/colcon-core/packages/vikit_cameras)
+[21.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[21.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[21.105s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[21.105s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[21.112s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[21.113s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[21.113s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[21.122s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[21.122s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carbs/hdvio2.0/eigen_checks/install/local_setup.ps1'
+[21.124s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/carbs/hdvio2.0/eigen_checks/install/_local_setup_util_ps1.py'
+[21.126s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carbs/hdvio2.0/eigen_checks/install/setup.ps1'
+[21.127s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carbs/hdvio2.0/eigen_checks/install/local_setup.sh'
+[21.128s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/carbs/hdvio2.0/eigen_checks/install/_local_setup_util_sh.py'
+[21.129s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carbs/hdvio2.0/eigen_checks/install/setup.sh'
+[21.130s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carbs/hdvio2.0/eigen_checks/install/local_setup.bash'
+[21.131s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carbs/hdvio2.0/eigen_checks/install/setup.bash'
+[21.133s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/carbs/hdvio2.0/eigen_checks/install/local_setup.zsh'
+[21.133s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/carbs/hdvio2.0/eigen_checks/install/setup.zsh'

@@ -1,0 +1,49 @@
+[0.150s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'test', '--packages-select', 'eigen_checks', '--event-handlers', 'console_direct+']
+[0.150s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='test', build_base='build', install_base='install', merge_install=False, test_result_base=None, retest_until_fail=0, retest_until_pass=0, abort_on_error=False, return_code_on_test_failure=False, executor='parallel', parallel_workers=24, event_handlers=['console_direct+'], ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['eigen_checks'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], ctest_args=None, python_testing=None, pytest_args=None, pytest_with_coverage=False, unittest_args=None, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7e4409184cd0>, verb_extension=<colcon_core.verb.test.TestVerb object at 0x7e440914f790>, main=<bound method TestVerb.main of <colcon_core.verb.test.TestVerb object at 0x7e440914f790>>, mixin_verb=('test',))
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.179s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.180s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.180s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/carbs/hdvio2.0/eigen_checks'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.199s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'eigen_checks'
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.199s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.200s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'ctest_args' from command line to 'None'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'python_testing' from command line to 'None'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'pytest_args' from command line to 'None'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'pytest_with_coverage' from command line to 'False'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'unittest_args' from command line to 'None'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'retest_until_pass' from command line to '0'
+[0.201s] Level 5:colcon.colcon_core.verb:set package 'eigen_checks' test argument 'retest_until_fail' from command line to '0'
+[0.201s] DEBUG:colcon.colcon_core.verb.test:Testing package 'eigen_checks' with the following arguments: {'build_base': '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', 'ctest_args': None, 'install_base': '/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks', 'path': '/home/carbs/hdvio2.0/eigen_checks', 'pytest_args': None, 'pytest_with_coverage': False, 'python_testing': None, 'retest_until_fail': 0, 'retest_until_pass': 0, 'test_result_base': None, 'unittest_args': None}
+[0.201s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.202s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.202s] INFO:colcon.colcon_ros.task.ament_cmake.test:Testing ROS package in '/home/carbs/hdvio2.0/eigen_checks' with build type 'ament_cmake'
+[0.202s] INFO:colcon.colcon_cmake.task.cmake.test:Testing CMake package in '/home/carbs/hdvio2.0/eigen_checks'
+[0.204s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.204s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.204s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[4.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.624s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.624s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '0': CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[4.633s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.633s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.633s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.643s] DEBUG:colcon.colcon_core.event_reactor:joined thread

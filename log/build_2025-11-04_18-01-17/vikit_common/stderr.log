@@ -1,0 +1,10 @@
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (YamlCpp)
+  does not match the name of the calling package (yaml-cpp).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:14 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m

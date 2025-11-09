@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o -o test_glog_zero_sized_types  gtest/libgtest_main.a gtest/libgtest.a libeigen_checks.a -pthread /usr/lib/x86_64-linux-gnu/libglog.so.0.4.0 /usr/lib/x86_64-linux-gnu/libgflags.so.2.2.2 -lpthread /usr/lib/x86_64-linux-gnu/libunwind.so 

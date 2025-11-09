@@ -1,0 +1,532 @@
+[0.000000] (-) TimerEvent: {}
+[0.000336] (-) JobUnselected: {'identifier': 'catkin_simple'}
+[0.000520] (-) JobUnselected: {'identifier': 'ceres_catkin'}
+[0.000605] (-) JobUnselected: {'identifier': 'eigen_catkin'}
+[0.000692] (-) JobUnselected: {'identifier': 'eigen_checks'}
+[0.000717] (-) JobUnselected: {'identifier': 'fast'}
+[0.000740] (-) JobUnselected: {'identifier': 'gflags_catkin'}
+[0.000776] (-) JobUnselected: {'identifier': 'glog_catkin'}
+[0.000847] (-) JobUnselected: {'identifier': 'hdvio2'}
+[0.000874] (-) JobUnselected: {'identifier': 'minkindr'}
+[0.000933] (-) JobUnselected: {'identifier': 'minkindr_conversions'}
+[0.000971] (-) JobUnselected: {'identifier': 'minkindr_python'}
+[0.000994] (-) JobUnselected: {'identifier': 'opengv'}
+[0.001015] (-) JobUnselected: {'identifier': 'rpg_common'}
+[0.001086] (-) JobUnselected: {'identifier': 'svo'}
+[0.001117] (-) JobUnselected: {'identifier': 'svo_benchmarking'}
+[0.001327] (-) JobUnselected: {'identifier': 'svo_ceres_backend'}
+[0.001363] (-) JobUnselected: {'identifier': 'svo_cmake'}
+[0.001433] (-) JobUnselected: {'identifier': 'svo_common'}
+[0.001457] (-) JobUnselected: {'identifier': 'svo_direct'}
+[0.001516] (-) JobUnselected: {'identifier': 'svo_img_align'}
+[0.001554] (-) JobUnselected: {'identifier': 'svo_msgs'}
+[0.001576] (-) JobUnselected: {'identifier': 'svo_test_utils'}
+[0.001598] (-) JobUnselected: {'identifier': 'svo_tracker'}
+[0.001633] (-) JobUnselected: {'identifier': 'svo_vio_common'}
+[0.001667] (-) JobUnselected: {'identifier': 'vikit_py'}
+[0.001726] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.001802] (-) JobUnselected: {'identifier': 'vikit_solver'}
+[0.001829] (vikit_common) JobQueued: {'identifier': 'vikit_common', 'dependencies': OrderedDict([('eigen_checks', '/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks'), ('svo_cmake', '/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake'), ('minkindr', '/home/carbs/hdvio2.0/eigen_checks/install/minkindr')])}
+[0.001862] (vikit_cameras) JobQueued: {'identifier': 'vikit_cameras', 'dependencies': OrderedDict([('eigen_checks', '/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks'), ('svo_cmake', '/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake'), ('minkindr', '/home/carbs/hdvio2.0/eigen_checks/install/minkindr'), ('vikit_common', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common')])}
+[0.001945] (vikit_common) JobStarted: {'identifier': 'vikit_common'}
+[0.014971] (vikit_common) JobProgress: {'identifier': 'vikit_common', 'progress': 'cmake'}
+[0.015588] (vikit_common) Command: {'cmd': ['/usr/bin/cmake', '/home/carbs/hdvio2.0/vikit/vikit_common', '-DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[0.070093] (vikit_common) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099658] (-) TimerEvent: {}
+[0.129258] (vikit_common) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.141717] (vikit_common) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199736] (-) TimerEvent: {}
+[0.225536] (vikit_common) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.238030] (vikit_common) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.238459] (vikit_common) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.239068] (vikit_common) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.244056] (vikit_common) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299823] (-) TimerEvent: {}
+[0.338592] (vikit_common) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.348129] (vikit_common) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.348476] (vikit_common) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.349010] (vikit_common) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.353149] (vikit_common) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399919] (-) TimerEvent: {}
+[0.500141] (-) TimerEvent: {}
+[0.600366] (-) TimerEvent: {}
+[0.662022] (vikit_common) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700441] (-) TimerEvent: {}
+[0.765115] (vikit_common) StdoutLine: {'line': b'-- Found svo_cmake: 0.1.0 (/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake)\n'}
+[0.769631] (vikit_common) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[0.800509] (-) TimerEvent: {}
+[0.829933] (vikit_common) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.835070] (vikit_common) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.842697] (vikit_common) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.853499] (vikit_common) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.867955] (vikit_common) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900590] (-) TimerEvent: {}
+[0.917442] (vikit_common) StdoutLine: {'line': b'-- Found minkindr: 1.0.0 (/home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake)\n'}
+[0.937569] (vikit_common) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.981024] (vikit_common) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.984438] (vikit_common) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.000661] (-) TimerEvent: {}
+[1.097721] (vikit_common) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.100733] (-) TimerEvent: {}
+[1.128918] (vikit_common) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.174725] (vikit_common) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.185841] (vikit_common) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.200811] (-) TimerEvent: {}
+[1.276363] (vikit_common) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.276522] (vikit_common) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.300897] (-) TimerEvent: {}
+[1.369301] (vikit_common) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.370193] (vikit_common) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.400971] (-) TimerEvent: {}
+[1.413198] (vikit_common) StdoutLine: {'line': b'-- Found OpenCV: /usr (found version "4.5.4") \n'}
+[1.419791] (vikit_common) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[1.419981] (vikit_common) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (YamlCpp)\n'}
+[1.420134] (vikit_common) StderrLine: {'line': b'  does not match the name of the calling package (yaml-cpp).  This can lead\n'}
+[1.420280] (vikit_common) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[1.420414] (vikit_common) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[1.420548] (vikit_common) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.420680] (vikit_common) StderrLine: {'line': b'  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)\n'}
+[1.420814] (vikit_common) StderrLine: {'line': b'  CMakeLists.txt:14 (find_package)\n'}
+[1.420946] (vikit_common) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.421085] (vikit_common) StderrLine: {'line': b'\x1b[0m\n'}
+[1.421241] (vikit_common) StdoutLine: {'line': b'-- Found YamlCpp: /usr/include  \n'}
+[1.422398] (vikit_common) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.423369] (vikit_common) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.426138] (vikit_common) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.428362] (vikit_common) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.483552] (vikit_common) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.501059] (-) TimerEvent: {}
+[1.514328] (vikit_common) StdoutLine: {'line': b'-- Generating done\n'}
+[1.524478] (vikit_common) StdoutLine: {'line': b'-- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/vikit_common\n'}
+[1.533214] (vikit_common) CommandEnded: {'returncode': 0}
+[1.533688] (vikit_common) JobProgress: {'identifier': 'vikit_common', 'progress': 'build'}
+[1.534181] (vikit_common) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common', '--', '-j24', '-l24'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[1.601173] (-) TimerEvent: {}
+[1.601787] (vikit_common) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[1.602011] (vikit_common) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[1.603055] (vikit_common) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/homography.cpp.o\x1b[0m\n'}
+[1.603420] (vikit_common) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/performance_monitor.cpp.o\x1b[0m\n'}
+[1.605126] (vikit_common) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/vision.cpp.o\x1b[0m\n'}
+[1.606830] (vikit_common) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/math_utils.cpp.o\x1b[0m\n'}
+[1.607384] (vikit_common) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/sample.cpp.o\x1b[0m\n'}
+[1.608381] (vikit_common) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/vikit_common.dir/src/user_input_thread.cpp.o\x1b[0m\n'}
+[1.701305] (-) TimerEvent: {}
+[1.801706] (-) TimerEvent: {}
+[1.902053] (-) TimerEvent: {}
+[2.002378] (-) TimerEvent: {}
+[2.102708] (-) TimerEvent: {}
+[2.203054] (-) TimerEvent: {}
+[2.300816] (vikit_common) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[2.303124] (-) TimerEvent: {}
+[2.383312] (vikit_common) StdoutLine: {'line': b'[ 47%] Built target gtest_main\n'}
+[2.403229] (-) TimerEvent: {}
+[2.503512] (-) TimerEvent: {}
+[2.603767] (-) TimerEvent: {}
+[2.704016] (-) TimerEvent: {}
+[2.804281] (-) TimerEvent: {}
+[2.904557] (-) TimerEvent: {}
+[3.004853] (-) TimerEvent: {}
+[3.105128] (-) TimerEvent: {}
+[3.205340] (-) TimerEvent: {}
+[3.305514] (-) TimerEvent: {}
+[3.405689] (-) TimerEvent: {}
+[3.505880] (-) TimerEvent: {}
+[3.606038] (-) TimerEvent: {}
+[3.706250] (-) TimerEvent: {}
+[3.806419] (-) TimerEvent: {}
+[3.906653] (-) TimerEvent: {}
+[4.006890] (-) TimerEvent: {}
+[4.107085] (-) TimerEvent: {}
+[4.186315] (vikit_common) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX static library libvikit_common.a\x1b[0m\n'}
+[4.207155] (-) TimerEvent: {}
+[4.266208] (vikit_common) StdoutLine: {'line': b'[ 52%] Built target vikit_common\n'}
+[4.288301] (vikit_common) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/vikit_test_timer.dir/test/test_timer.cpp.o\x1b[0m\n'}
+[4.297629] (vikit_common) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/vikit_test_common.dir/test/test_common.cpp.o\x1b[0m\n'}
+[4.307227] (-) TimerEvent: {}
+[4.407455] (-) TimerEvent: {}
+[4.507776] (-) TimerEvent: {}
+[4.608137] (-) TimerEvent: {}
+[4.679542] (vikit_common) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX executable vikit_test_timer\x1b[0m\n'}
+[4.708228] (-) TimerEvent: {}
+[4.808465] (-) TimerEvent: {}
+[4.903759] (vikit_common) StdoutLine: {'line': b'[ 68%] Built target vikit_test_timer\n'}
+[4.908547] (-) TimerEvent: {}
+[5.008798] (-) TimerEvent: {}
+[5.109031] (-) TimerEvent: {}
+[5.209270] (-) TimerEvent: {}
+[5.309506] (-) TimerEvent: {}
+[5.409760] (-) TimerEvent: {}
+[5.510024] (-) TimerEvent: {}
+[5.610255] (-) TimerEvent: {}
+[5.615689] (vikit_common) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX executable vikit_test_common\x1b[0m\n'}
+[5.710370] (-) TimerEvent: {}
+[5.810701] (-) TimerEvent: {}
+[5.849061] (vikit_common) StdoutLine: {'line': b'[ 73%] Built target vikit_test_common\n'}
+[5.910772] (-) TimerEvent: {}
+[6.010983] (-) TimerEvent: {}
+[6.111228] (-) TimerEvent: {}
+[6.211471] (-) TimerEvent: {}
+[6.311715] (-) TimerEvent: {}
+[6.411959] (-) TimerEvent: {}
+[6.512212] (-) TimerEvent: {}
+[6.612444] (-) TimerEvent: {}
+[6.712688] (-) TimerEvent: {}
+[6.812929] (-) TimerEvent: {}
+[6.913172] (-) TimerEvent: {}
+[7.013416] (-) TimerEvent: {}
+[7.113661] (-) TimerEvent: {}
+[7.136889] (vikit_common) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[7.213756] (-) TimerEvent: {}
+[7.234233] (vikit_common) StdoutLine: {'line': b'[ 78%] Built target gtest\n'}
+[7.258577] (vikit_common) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/homography.dir/test/test_homography.cpp.o\x1b[0m\n'}
+[7.259594] (vikit_common) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding CXX object CMakeFiles/math_utils.dir/test/test_math_utils.cpp.o\x1b[0m\n'}
+[7.313855] (-) TimerEvent: {}
+[7.414157] (-) TimerEvent: {}
+[7.514474] (-) TimerEvent: {}
+[7.614806] (-) TimerEvent: {}
+[7.715163] (-) TimerEvent: {}
+[7.815494] (-) TimerEvent: {}
+[7.915827] (-) TimerEvent: {}
+[8.016160] (-) TimerEvent: {}
+[8.116490] (-) TimerEvent: {}
+[8.216818] (-) TimerEvent: {}
+[8.317164] (-) TimerEvent: {}
+[8.417508] (-) TimerEvent: {}
+[8.517848] (-) TimerEvent: {}
+[8.618182] (-) TimerEvent: {}
+[8.718508] (-) TimerEvent: {}
+[8.818837] (-) TimerEvent: {}
+[8.919169] (-) TimerEvent: {}
+[9.019499] (-) TimerEvent: {}
+[9.119831] (-) TimerEvent: {}
+[9.220165] (-) TimerEvent: {}
+[9.250142] (vikit_common) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX executable homography\x1b[0m\n'}
+[9.276434] (vikit_common) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable math_utils\x1b[0m\n'}
+[9.320245] (-) TimerEvent: {}
+[9.412777] (vikit_common) StdoutLine: {'line': b'[100%] Built target homography\n'}
+[9.420319] (-) TimerEvent: {}
+[9.443662] (vikit_common) StdoutLine: {'line': b'[100%] Built target math_utils\n'}
+[9.462549] (vikit_common) CommandEnded: {'returncode': 0}
+[9.463467] (vikit_common) JobProgress: {'identifier': 'vikit_common', 'progress': 'install'}
+[9.477612] (vikit_common) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_common'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[9.491232] (vikit_common) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[9.491467] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/libvikit_common.a\n'}
+[9.492118] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/vikit_common/vikit_test_timer\n'}
+[9.492696] (vikit_common) StdoutLine: {'line': b'-- Set runtime path of "/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/vikit_common/vikit_test_timer" to ""\n'}
+[9.492868] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/vikit_common/vikit_test_common\n'}
+[9.493400] (vikit_common) StdoutLine: {'line': b'-- Set runtime path of "/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib/vikit_common/vikit_test_common" to ""\n'}
+[9.493565] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include\n'}
+[9.493721] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit\n'}
+[9.493851] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/user_input_thread.h\n'}
+[9.494014] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/homography_decomp.h\n'}
+[9.494182] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/blender_utils.h\n'}
+[9.494411] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/csv_utils.h\n'}
+[9.494575] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/math_utils.h\n'}
+[9.494776] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/performance_monitor.h\n'}
+[9.494969] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/path_utils.h\n'}
+[9.495169] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/homography.h\n'}
+[9.495387] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/sample.h\n'}
+[9.495580] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/backtrace.h\n'}
+[9.495775] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/timer.h\n'}
+[9.495972] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/vision.h\n'}
+[9.496279] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/vikit/ringbuffer.h\n'}
+[9.496467] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam\n'}
+[9.496621] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common\n'}
+[9.496770] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/numdiff-jacobian-tester.h\n'}
+[9.496934] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/entrypoint.h\n'}
+[9.497112] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/yaml-serialization.h\n'}
+[9.497296] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/macros.h\n'}
+[9.497450] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/yaml-serialization-eigen.h\n'}
+[9.497601] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/pose-types.h\n'}
+[9.497751] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/include/aslam/common/memory.h\n'}
+[9.497902] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/library_path.sh\n'}
+[9.498035] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/library_path.dsv\n'}
+[9.498220] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/ament_index/resource_index/package_run_dependencies/vikit_common\n'}
+[9.498403] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/ament_index/resource_index/parent_prefix_path/vikit_common\n'}
+[9.498555] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/ament_prefix_path.sh\n'}
+[9.498706] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/ament_prefix_path.dsv\n'}
+[9.498850] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/path.sh\n'}
+[9.498989] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/environment/path.dsv\n'}
+[9.499160] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/local_setup.bash\n'}
+[9.499317] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/local_setup.sh\n'}
+[9.499468] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/local_setup.zsh\n'}
+[9.499634] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/local_setup.dsv\n'}
+[9.499765] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.dsv\n'}
+[9.499915] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/ament_index/resource_index/packages/vikit_common\n'}
+[9.500047] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[9.500222] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[9.500397] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[9.500549] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/vikit_commonConfig.cmake\n'}
+[9.500700] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/vikit_commonConfig-version.cmake\n'}
+[9.500831] (vikit_common) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/package.xml\n'}
+[9.502573] (vikit_common) CommandEnded: {'returncode': 0}
+[9.520734] (-) TimerEvent: {}
+[9.537049] (vikit_common) JobEnded: {'identifier': 'vikit_common', 'rc': 0}
+[9.538402] (vikit_cameras) JobStarted: {'identifier': 'vikit_cameras'}
+[9.554192] (vikit_cameras) JobProgress: {'identifier': 'vikit_cameras', 'progress': 'cmake'}
+[9.554705] (vikit_cameras) Command: {'cmd': ['/usr/bin/cmake', '/home/carbs/hdvio2.0/vikit/vikit_cameras', '-DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[9.616644] (vikit_cameras) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[9.620810] (-) TimerEvent: {}
+[9.684259] (vikit_cameras) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[9.696145] (vikit_cameras) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[9.720897] (-) TimerEvent: {}
+[9.793789] (vikit_cameras) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[9.799922] (vikit_cameras) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[9.800141] (vikit_cameras) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[9.800429] (vikit_cameras) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[9.802825] (vikit_cameras) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[9.820983] (-) TimerEvent: {}
+[9.909941] (vikit_cameras) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[9.916189] (vikit_cameras) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[9.916414] (vikit_cameras) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[9.916777] (vikit_cameras) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[9.919680] (vikit_cameras) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[9.921047] (-) TimerEvent: {}
+[10.021273] (-) TimerEvent: {}
+[10.121556] (-) TimerEvent: {}
+[10.216877] (vikit_cameras) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[10.221613] (-) TimerEvent: {}
+[10.321785] (-) TimerEvent: {}
+[10.322956] (vikit_cameras) StdoutLine: {'line': b'-- Found svo_cmake: 0.1.0 (/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake)\n'}
+[10.323670] (vikit_cameras) StdoutLine: {'line': b'-- Found eigen_checks: 0.0.1 (/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake)\n'}
+[10.343528] (vikit_cameras) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[10.389481] (vikit_cameras) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[10.395048] (vikit_cameras) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[10.403094] (vikit_cameras) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[10.414595] (vikit_cameras) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[10.421850] (-) TimerEvent: {}
+[10.430193] (vikit_cameras) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.480344] (vikit_cameras) StdoutLine: {'line': b'-- Found minkindr: 1.0.0 (/home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake)\n'}
+[10.481900] (vikit_cameras) StdoutLine: {'line': b'-- Found vikit_common: 0.0.0 (/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake)\n'}
+[10.521004] (vikit_cameras) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[10.521920] (-) TimerEvent: {}
+[10.523888] (vikit_cameras) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.622024] (-) TimerEvent: {}
+[10.629129] (vikit_cameras) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[10.667590] (vikit_cameras) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[10.715589] (vikit_cameras) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[10.722091] (-) TimerEvent: {}
+[10.725444] (vikit_cameras) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[10.803242] (vikit_cameras) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[10.803532] (vikit_cameras) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[10.822181] (-) TimerEvent: {}
+[10.883399] (vikit_cameras) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[10.884764] (vikit_cameras) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[10.922264] (-) TimerEvent: {}
+[10.949348] (vikit_cameras) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[10.949619] (vikit_cameras) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (YamlCpp)\n'}
+[10.949764] (vikit_cameras) StderrLine: {'line': b'  does not match the name of the calling package (yaml-cpp).  This can lead\n'}
+[10.949898] (vikit_cameras) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[10.950030] (vikit_cameras) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[10.950198] (vikit_cameras) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[10.950344] (vikit_cameras) StderrLine: {'line': b'  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)\n'}
+[10.950479] (vikit_cameras) StderrLine: {'line': b'  /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[10.950614] (vikit_cameras) StderrLine: {'line': b'  /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/vikit_commonConfig.cmake:41 (include)\n'}
+[10.950763] (vikit_cameras) StderrLine: {'line': b'  CMakeLists.txt:13 (find_package)\n'}
+[10.950899] (vikit_cameras) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[10.951034] (vikit_cameras) StderrLine: {'line': b'\x1b[0m\n'}
+[10.951188] (vikit_cameras) StdoutLine: {'line': b'-- Found YamlCpp: /usr/include  \n'}
+[10.956442] (vikit_cameras) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):\n'}
+[10.956603] (vikit_cameras) StderrLine: {'line': b'  The package name passed to `find_package_handle_standard_args` (YamlCpp)\n'}
+[10.956737] (vikit_cameras) StderrLine: {'line': b'  does not match the name of the calling package (yaml-cpp).  This can lead\n'}
+[10.956879] (vikit_cameras) StderrLine: {'line': b'  to problems in calling code that expects `find_package` result variables\n'}
+[10.957010] (vikit_cameras) StderrLine: {'line': b'  (e.g., `_FOUND`) to follow a certain pattern.\n'}
+[10.957159] (vikit_cameras) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[10.957301] (vikit_cameras) StderrLine: {'line': b'  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)\n'}
+[10.957434] (vikit_cameras) StderrLine: {'line': b'  CMakeLists.txt:14 (find_package)\n'}
+[10.957566] (vikit_cameras) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[10.957697] (vikit_cameras) StderrLine: {'line': b'\x1b[0m\n'}
+[10.958441] (vikit_cameras) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[10.967149] (vikit_cameras) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[10.969523] (vikit_cameras) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[11.022352] (-) TimerEvent: {}
+[11.031857] (vikit_cameras) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.036637] (vikit_cameras) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):\n'}
+[11.036822] (vikit_cameras) StderrLine: {'line': b'  Policy CMP0115 is not set: Source file extensions must be explicit.  Run\n'}
+[11.036960] (vikit_cameras) StderrLine: {'line': b'  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy\n'}
+[11.037108] (vikit_cameras) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[11.037261] (vikit_cameras) StderrLine: {'line': b'\n'}
+[11.037396] (vikit_cameras) StderrLine: {'line': b'  File:\n'}
+[11.037528] (vikit_cameras) StderrLine: {'line': b'\n'}
+[11.037660] (vikit_cameras) StderrLine: {'line': b'    /home/carbs/hdvio2.0/vikit/vikit_cameras/test/test_cameras.cpp\n'}
+[11.037794] (vikit_cameras) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[11.037928] (vikit_cameras) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)\n'}
+[11.038062] (vikit_cameras) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)\n'}
+[11.038218] (vikit_cameras) StderrLine: {'line': b'  CMakeLists.txt:78 (ament_add_gtest)\n'}
+[11.038356] (vikit_cameras) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[11.038488] (vikit_cameras) StderrLine: {'line': b'\x1b[0m\n'}
+[11.061834] (vikit_cameras) StdoutLine: {'line': b'-- Generating done\n'}
+[11.067746] (vikit_cameras) StdoutLine: {'line': b'-- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras\n'}
+[11.076462] (vikit_cameras) CommandEnded: {'returncode': 0}
+[11.077288] (vikit_cameras) JobProgress: {'identifier': 'vikit_cameras', 'progress': 'build'}
+[11.077625] (vikit_cameras) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras', '--', '-j24', '-l24'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[11.122428] (-) TimerEvent: {}
+[11.149070] (vikit_cameras) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[11.155024] (vikit_cameras) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[11.155348] (vikit_cameras) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/ncamera.cpp.o\x1b[0m\n'}
+[11.155643] (vikit_cameras) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_yaml_serialization.cpp.o\x1b[0m\n'}
+[11.155815] (vikit_cameras) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/omni_geometry.cpp.o\x1b[0m\n'}
+[11.156362] (vikit_cameras) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/ncamera_yaml_serialization.cpp.o\x1b[0m\n'}
+[11.156940] (vikit_cameras) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/omni_projection.cpp.o\x1b[0m\n'}
+[11.157115] (vikit_cameras) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_factory.cpp.o\x1b[0m\n'}
+[11.158487] (vikit_cameras) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_geometry_base.cpp.o\x1b[0m\n'}
+[11.158825] (vikit_cameras) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/equidistant_fisheye_geometry.cpp.o\x1b[0m\n'}
+[11.159006] (vikit_cameras) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/equidistant_fisheye_projection.cpp.o\x1b[0m\n'}
+[11.222546] (-) TimerEvent: {}
+[11.322886] (-) TimerEvent: {}
+[11.423285] (-) TimerEvent: {}
+[11.523677] (-) TimerEvent: {}
+[11.624059] (-) TimerEvent: {}
+[11.724438] (-) TimerEvent: {}
+[11.824871] (-) TimerEvent: {}
+[11.881596] (vikit_cameras) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[11.925011] (-) TimerEvent: {}
+[11.956660] (vikit_cameras) StdoutLine: {'line': b'[ 75%] Built target gtest_main\n'}
+[12.025117] (-) TimerEvent: {}
+[12.125463] (-) TimerEvent: {}
+[12.225851] (-) TimerEvent: {}
+[12.326196] (-) TimerEvent: {}
+[12.426583] (-) TimerEvent: {}
+[12.526932] (-) TimerEvent: {}
+[12.627299] (-) TimerEvent: {}
+[12.727662] (-) TimerEvent: {}
+[12.828007] (-) TimerEvent: {}
+[12.928364] (-) TimerEvent: {}
+[13.028697] (-) TimerEvent: {}
+[13.129039] (-) TimerEvent: {}
+[13.229388] (-) TimerEvent: {}
+[13.329729] (-) TimerEvent: {}
+[13.430054] (-) TimerEvent: {}
+[13.530368] (-) TimerEvent: {}
+[13.630626] (-) TimerEvent: {}
+[13.730871] (-) TimerEvent: {}
+[13.831088] (-) TimerEvent: {}
+[13.931327] (-) TimerEvent: {}
+[14.031544] (-) TimerEvent: {}
+[14.131795] (-) TimerEvent: {}
+[14.232055] (-) TimerEvent: {}
+[14.332310] (-) TimerEvent: {}
+[14.432583] (-) TimerEvent: {}
+[14.532871] (-) TimerEvent: {}
+[14.633159] (-) TimerEvent: {}
+[14.733447] (-) TimerEvent: {}
+[14.776504] (vikit_cameras) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX static library libvikit_cameras.a\x1b[0m\n'}
+[14.833523] (-) TimerEvent: {}
+[14.863427] (vikit_cameras) StdoutLine: {'line': b'[ 81%] Built target vikit_cameras\n'}
+[14.933602] (-) TimerEvent: {}
+[15.033847] (-) TimerEvent: {}
+[15.134125] (-) TimerEvent: {}
+[15.234383] (-) TimerEvent: {}
+[15.334637] (-) TimerEvent: {}
+[15.434896] (-) TimerEvent: {}
+[15.535187] (-) TimerEvent: {}
+[15.635494] (-) TimerEvent: {}
+[15.735763] (-) TimerEvent: {}
+[15.836029] (-) TimerEvent: {}
+[15.936323] (-) TimerEvent: {}
+[16.036592] (-) TimerEvent: {}
+[16.136858] (-) TimerEvent: {}
+[16.237122] (-) TimerEvent: {}
+[16.337375] (-) TimerEvent: {}
+[16.437635] (-) TimerEvent: {}
+[16.537895] (-) TimerEvent: {}
+[16.638147] (-) TimerEvent: {}
+[16.738404] (-) TimerEvent: {}
+[16.838666] (-) TimerEvent: {}
+[16.918836] (vikit_cameras) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[16.938769] (-) TimerEvent: {}
+[16.996341] (vikit_cameras) StdoutLine: {'line': b'[ 87%] Built target gtest\n'}
+[17.021721] (vikit_cameras) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding CXX object CMakeFiles/vikit_cameras_tests.dir/test/test_cameras.cpp.o\x1b[0m\n'}
+[17.038833] (-) TimerEvent: {}
+[17.139040] (-) TimerEvent: {}
+[17.239299] (-) TimerEvent: {}
+[17.339619] (-) TimerEvent: {}
+[17.439887] (-) TimerEvent: {}
+[17.540072] (-) TimerEvent: {}
+[17.640269] (-) TimerEvent: {}
+[17.740455] (-) TimerEvent: {}
+[17.840638] (-) TimerEvent: {}
+[17.940837] (-) TimerEvent: {}
+[18.041076] (-) TimerEvent: {}
+[18.141322] (-) TimerEvent: {}
+[18.241530] (-) TimerEvent: {}
+[18.341713] (-) TimerEvent: {}
+[18.441895] (-) TimerEvent: {}
+[18.542115] (-) TimerEvent: {}
+[18.642338] (-) TimerEvent: {}
+[18.742561] (-) TimerEvent: {}
+[18.842785] (-) TimerEvent: {}
+[18.943006] (-) TimerEvent: {}
+[19.043242] (-) TimerEvent: {}
+[19.143440] (-) TimerEvent: {}
+[19.243673] (-) TimerEvent: {}
+[19.343954] (-) TimerEvent: {}
+[19.444222] (-) TimerEvent: {}
+[19.544452] (-) TimerEvent: {}
+[19.644662] (-) TimerEvent: {}
+[19.744846] (-) TimerEvent: {}
+[19.845017] (-) TimerEvent: {}
+[19.945228] (-) TimerEvent: {}
+[20.045396] (-) TimerEvent: {}
+[20.145585] (-) TimerEvent: {}
+[20.245778] (-) TimerEvent: {}
+[20.345965] (-) TimerEvent: {}
+[20.386079] (vikit_cameras) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable vikit_cameras_tests\x1b[0m\n'}
+[20.446056] (-) TimerEvent: {}
+[20.546278] (-) TimerEvent: {}
+[20.646508] (-) TimerEvent: {}
+[20.746862] (-) TimerEvent: {}
+[20.841151] (vikit_cameras) StdoutLine: {'line': b'[100%] Built target vikit_cameras_tests\n'}
+[20.846929] (-) TimerEvent: {}
+[20.859973] (vikit_cameras) CommandEnded: {'returncode': 0}
+[20.860812] (vikit_cameras) JobProgress: {'identifier': 'vikit_cameras', 'progress': 'install'}
+[20.861208] (vikit_cameras) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[20.872802] (vikit_cameras) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[20.873028] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/libvikit_cameras.a\n'}
+[20.874891] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include\n'}
+[20.875094] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit\n'}
+[20.875322] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras.h\n'}
+[20.875483] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras\n'}
+[20.875645] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_geometry_base.h\n'}
+[20.875802] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_geometry.h\n'}
+[20.875964] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/omni_projection.h\n'}
+[20.876129] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation\n'}
+[20.876319] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/pinhole_projection.hpp\n'}
+[20.876487] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/camera_geometry_base.hpp\n'}
+[20.876651] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/camera_geometry.hpp\n'}
+[20.876813] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/pinhole_projection.h\n'}
+[20.876971] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_fisheye_geometry.h\n'}
+[20.877136] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/atan_distortion.h\n'}
+[20.877312] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/omni_geometry.h\n'}
+[20.877480] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_factory.h\n'}
+[20.877639] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml\n'}
+[20.877796] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml/ncamera-yaml-serialization.h\n'}
+[20.877952] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml/camera-yaml-serialization.h\n'}
+[20.878117] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/radial_tangential_distortion.h\n'}
+[20.878298] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/no_distortion.h\n'}
+[20.878455] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_fisheye_projection.h\n'}
+[20.878612] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_distortion.h\n'}
+[20.878769] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/ncamera.h\n'}
+[20.878928] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/library_path.sh\n'}
+[20.879082] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/library_path.dsv\n'}
+[20.879262] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/package_run_dependencies/vikit_cameras\n'}
+[20.879422] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/parent_prefix_path/vikit_cameras\n'}
+[20.879578] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/ament_prefix_path.sh\n'}
+[20.879734] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/ament_prefix_path.dsv\n'}
+[20.879893] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/path.sh\n'}
+[20.880066] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/path.dsv\n'}
+[20.880245] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.bash\n'}
+[20.880408] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.sh\n'}
+[20.880569] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.zsh\n'}
+[20.880732] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.dsv\n'}
+[20.880883] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.dsv\n'}
+[20.881034] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/packages/vikit_cameras\n'}
+[20.881211] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[20.881369] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[20.881522] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[20.881946] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig.cmake\n'}
+[20.882764] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig-version.cmake\n'}
+[20.883152] (vikit_cameras) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.xml\n'}
+[20.883319] (vikit_cameras) CommandEnded: {'returncode': 0}
+[20.897580] (vikit_cameras) JobEnded: {'identifier': 'vikit_cameras', 'rc': 0}
+[20.898361] (-) EventReactorShutdown: {}

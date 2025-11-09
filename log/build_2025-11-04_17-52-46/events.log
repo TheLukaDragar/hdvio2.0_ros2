@@ -1,0 +1,539 @@
+[0.000000] (-) TimerEvent: {}
+[0.000442] (eigen_checks) JobQueued: {'identifier': 'eigen_checks', 'dependencies': OrderedDict()}
+[0.000476] (eigen_checks) JobStarted: {'identifier': 'eigen_checks'}
+[0.007820] (eigen_checks) JobProgress: {'identifier': 'eigen_checks', 'progress': 'cmake'}
+[0.008365] (eigen_checks) Command: {'cmd': ['/usr/bin/cmake', '/home/carbs/hdvio2.0/eigen_checks', '-DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[0.066983] (eigen_checks) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099564] (-) TimerEvent: {}
+[0.124235] (eigen_checks) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.136236] (eigen_checks) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199671] (-) TimerEvent: {}
+[0.216019] (eigen_checks) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.229985] (eigen_checks) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.230404] (eigen_checks) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.231023] (eigen_checks) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.236183] (eigen_checks) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299751] (-) TimerEvent: {}
+[0.345580] (eigen_checks) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.358468] (eigen_checks) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.358918] (eigen_checks) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.359646] (eigen_checks) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.364259] (eigen_checks) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399829] (-) TimerEvent: {}
+[0.500019] (-) TimerEvent: {}
+[0.600266] (-) TimerEvent: {}
+[0.672076] (eigen_checks) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.700350] (-) TimerEvent: {}
+[0.773099] (eigen_checks) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.792601] (eigen_checks) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.800427] (-) TimerEvent: {}
+[0.809284] (eigen_checks) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.900519] (-) TimerEvent: {}
+[0.906430] (eigen_checks) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.906774] (eigen_checks) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.000616] (-) TimerEvent: {}
+[1.003576] (eigen_checks) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.005331] (eigen_checks) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.008594] (eigen_checks) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[1.012721] (eigen_checks) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[1.100701] (-) TimerEvent: {}
+[1.105205] (eigen_checks) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.141300] (eigen_checks) StdoutLine: {'line': b'-- Generating done\n'}
+[1.151985] (eigen_checks) StdoutLine: {'line': b'-- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks\n'}
+[1.157521] (eigen_checks) CommandEnded: {'returncode': 0}
+[1.158131] (eigen_checks) JobProgress: {'identifier': 'eigen_checks', 'progress': 'build'}
+[1.159139] (eigen_checks) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', '--', '-j24', '-l24'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[1.200807] (-) TimerEvent: {}
+[1.220463] (eigen_checks) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/eigen_checks.dir/src/eigen-checks.cc.o\x1b[0m\n'}
+[1.220860] (eigen_checks) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[1.222287] (eigen_checks) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[1.239782] (eigen_checks) StdoutLine: {'line': b'[ 15%] \x1b[32m\x1b[1mLinking CXX static library libeigen_checks.a\x1b[0m\n'}
+[1.300901] (-) TimerEvent: {}
+[1.401119] (-) TimerEvent: {}
+[1.458914] (eigen_checks) StdoutLine: {'line': b'[ 15%] Built target eigen_checks\n'}
+[1.501238] (-) TimerEvent: {}
+[1.601490] (-) TimerEvent: {}
+[1.701684] (-) TimerEvent: {}
+[1.801883] (-) TimerEvent: {}
+[1.880617] (eigen_checks) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[1.901987] (-) TimerEvent: {}
+[1.950729] (eigen_checks) StdoutLine: {'line': b'[ 19%] Built target gtest_main\n'}
+[2.002081] (-) TimerEvent: {}
+[2.102340] (-) TimerEvent: {}
+[2.202677] (-) TimerEvent: {}
+[2.302987] (-) TimerEvent: {}
+[2.403293] (-) TimerEvent: {}
+[2.503603] (-) TimerEvent: {}
+[2.603877] (-) TimerEvent: {}
+[2.704114] (-) TimerEvent: {}
+[2.804283] (-) TimerEvent: {}
+[2.904493] (-) TimerEvent: {}
+[3.004719] (-) TimerEvent: {}
+[3.104946] (-) TimerEvent: {}
+[3.205201] (-) TimerEvent: {}
+[3.305481] (-) TimerEvent: {}
+[3.405714] (-) TimerEvent: {}
+[3.465501] (eigen_checks) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[3.505797] (-) TimerEvent: {}
+[3.582677] (eigen_checks) StdoutLine: {'line': b'[ 23%] Built target gtest\n'}
+[3.605927] (-) TimerEvent: {}
+[3.607590] (eigen_checks) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o\x1b[0m\n'}
+[3.607730] (eigen_checks) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o\x1b[0m\n'}
+[3.607828] (eigen_checks) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o\x1b[0m\n'}
+[3.607890] (eigen_checks) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o\x1b[0m\n'}
+[3.607947] (eigen_checks) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o\x1b[0m\n'}
+[3.608133] (eigen_checks) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o\x1b[0m\n'}
+[3.608502] (eigen_checks) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o\x1b[0m\n'}
+[3.608864] (eigen_checks) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o\x1b[0m\n'}
+[3.609918] (eigen_checks) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o\x1b[0m\n'}
+[3.610178] (eigen_checks) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o\x1b[0m\n'}
+[3.706075] (-) TimerEvent: {}
+[3.763218] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:44:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.763594] (eigen_checks) StderrLine: {'line': b'   44 | \x1b[01;31m\x1b[K      thi\x1b[m\x1b[Ks->ground_truth_matrix_54, this->test_matrix_54_random, 1e-8));\n'}
+[3.763683] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.763760] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.763834] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.763908] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25\x1b[m\x1b[K:\n'}
+[3.763997] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.764091] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.764169] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.764247] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:50:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.764327] (eigen_checks) StderrLine: {'line': b'   50 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                     this->test_matrix_D4, 1e-8));\n'}
+[3.764405] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.764482] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.764562] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.764677] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25\x1b[m\x1b[K:\n'}
+[3.764758] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.764834] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.764908] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.764985] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:72:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.765232] (eigen_checks) StderrLine: {'line': b'   72 | \x1b[01;31m\x1b[K      thi\x1b[m\x1b[Ks->ground_truth_vector_5, this->test_vector_5_random, 1e-8));\n'}
+[3.765311] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.765387] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.765464] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.765540] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25\x1b[m\x1b[K:\n'}
+[3.765617] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.765693] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.765768] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.765836] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:77:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.765908] (eigen_checks) StderrLine: {'line': b'   77 | \x1b[01;31m\x1b[K      thi\x1b[m\x1b[Ks->ground_truth_vector_5, this->test_vector_D, 1e-8));\n'}
+[3.765989] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.766074] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.766147] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.766225] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25\x1b[m\x1b[K:\n'}
+[3.766301] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.766682] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.766761] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.766837] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:39:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.766915] (eigen_checks) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_matrix_54_random));\n'}
+[3.767264] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.767355] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.767429] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.767502] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.767583] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.767653] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.767722] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.767790] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:45:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.767869] (eigen_checks) StderrLine: {'line': b'   45 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_matrix_D4));\n'}
+[3.767938] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.768025] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.768098] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.768169] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.768238] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.768308] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.768376] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.768446] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:51:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.768515] (eigen_checks) StderrLine: {'line': b'   51 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_matrix_54_near_e_minus_5));\n'}
+[3.768589] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.768659] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.768730] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.768801] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.768888] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.768953] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.769028] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.769086] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:63:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.769143] (eigen_checks) StderrLine: {'line': b'   63 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_vector_5_random));\n'}
+[3.769198] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.769252] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.769306] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.769360] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.769414] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.769472] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.769531] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.769588] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:69:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.769646] (eigen_checks) StderrLine: {'line': b'   69 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_vector_D));\n'}
+[3.769704] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.769761] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.769818] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.769875] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.769933] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.770015] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.770090] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.770157] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.770227] (eigen_checks) StderrLine: {'line': b'   34 | \x1b[01;31m\x1b[K  GLOG_TE\x1b[m\x1b[KST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));\n'}
+[3.770297] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K \x1b[01;31m\x1b[K~~~~~~~\x1b[m\x1b[K\n'}
+[3.770373] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:75:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.770445] (eigen_checks) StderrLine: {'line': b'   75 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                             this->test_vector_5_near_e_minus_5));\n'}
+[3.770522] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.770591] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.770659] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.770727] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25\x1b[m\x1b[K:\n'}
+[3.770794] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.770870] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.770939] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.771022] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.771094] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.771163] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25\x1b[m\x1b[K:\n'}
+[3.771232] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.771303] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.771369] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.771441] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:37:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.771514] (eigen_checks) StderrLine: {'line': b'   37 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_54_random, 1e-5));\n'}
+[3.771589] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.771661] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.771733] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.771803] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.771882] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.771954] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.772039] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.772112] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.772183] (eigen_checks) StderrLine: {'line': b'   41 | \x1b[01;31m\x1b[K  GLOG_TE\x1b[m\x1b[KST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));\n'}
+[3.772251] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K \x1b[01;31m\x1b[K~~~~~~~\x1b[m\x1b[K\n'}
+[3.772320] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.772390] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.772467] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25\x1b[m\x1b[K:\n'}
+[3.772537] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.772610] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.772681] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.772750] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:42:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.772821] (eigen_checks) StderrLine: {'line': b'   42 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_D4, 1e-5));\n'}
+[3.772892] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.772964] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.773052] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.773123] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.773193] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.773264] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.773343] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.773415] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:39:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.773485] (eigen_checks) StderrLine: {'line': b'   39 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_matrix_54_random));\n'}
+[3.773554] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.773627] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.773696] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.773768] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.773840] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.773911] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.773989] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.774070] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:47:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.774143] (eigen_checks) StderrLine: {'line': b'   47 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->test_matrix_54_near_e_minus_5, 1e-5));\n'}
+[3.774221] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.774292] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.774371] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.774443] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.774513] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.774582] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.774652] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.774722] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:45:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.774794] (eigen_checks) StderrLine: {'line': b'   45 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_matrix_D4));\n'}
+[3.774864] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.774934] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.775018] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.775094] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.775165] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.775244] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.775316] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.775386] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:51:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.775455] (eigen_checks) StderrLine: {'line': b'   51 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_matrix_54_near_e_minus_5));\n'}
+[3.775525] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.775594] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:57:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.775672] (eigen_checks) StderrLine: {'line': b'   57 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));\n'}
+[3.775742] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.775813] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.775884] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.775956] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.776044] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.776117] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.776186] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.776256] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.776333] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.776408] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.776479] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.776552] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.776623] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.776693] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:62:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.776763] (eigen_checks) StderrLine: {'line': b'   62 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));\n'}
+[3.776833] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.776905] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.776984] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.777066] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.777138] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.777208] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.777278] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.777348] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:63:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.777420] (eigen_checks) StderrLine: {'line': b'   63 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_vector_5_random));\n'}
+[3.777490] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.777560] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.777637] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.777709] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.777780] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.777844] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.777914] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.777994] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:67:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.778072] (eigen_checks) StderrLine: {'line': b'   67 | \x1b[01;31m\x1b[K      CHE\x1b[m\x1b[KCK_EIGEN_MATRIX_ZERO(this->ground_truth_vector_5, 1e-5));\n'}
+[3.778145] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K     \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[3.778217] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.778296] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.778369] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25\x1b[m\x1b[K:\n'}
+[3.778439] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.778509] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.778587] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.778658] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:69:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.778728] (eigen_checks) StderrLine: {'line': b'   69 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_vector_D));\n'}
+[3.778798] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.778868] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.778940] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.779025] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.779100] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.779171] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.779240] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.779308] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:75:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kmacro "EXPECT_DEATH" passed 3 arguments, but takes just 2\n'}
+[3.779380] (eigen_checks) StderrLine: {'line': b'   75 | \x1b[01;31m\x1b[K         \x1b[m\x1b[K                      this->test_vector_5_near_e_minus_5));\n'}
+[3.779457] (eigen_checks) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K        \n'}
+[3.779527] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:64\x1b[m\x1b[K,\n'}
+[3.779598] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29\x1b[m\x1b[K,\n'}
+[3.779668] (eigen_checks) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25\x1b[m\x1b[K:\n'}
+[3.779740] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest-death-test.h:184:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kmacro "EXPECT_DEATH" defined here\n'}
+[3.779810] (eigen_checks) StderrLine: {'line': b'  184 | # define EXPECT_DEATH(statement, regex) \\\n'}
+[3.779880] (eigen_checks) StderrLine: {'line': b'      | \n'}
+[3.806201] (-) TimerEvent: {}
+[3.906596] (-) TimerEvent: {}
+[4.007021] (-) TimerEvent: {}
+[4.107421] (-) TimerEvent: {}
+[4.207795] (-) TimerEvent: {}
+[4.308140] (-) TimerEvent: {}
+[4.408508] (-) TimerEvent: {}
+[4.508866] (-) TimerEvent: {}
+[4.609248] (-) TimerEvent: {}
+[4.709611] (-) TimerEvent: {}
+[4.809991] (-) TimerEvent: {}
+[4.866011] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:28\x1b[m\x1b[K:\n'}
+[4.866208] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.866306] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.866381] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.866454] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.866526] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.866599] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.866672] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.871604] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.871738] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.871829] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.871902] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.871976] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.872055] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.872122] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.879020] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.879204] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.879274] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.879344] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.879404] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.879466] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.879527] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.884942] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.885137] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.885207] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.885273] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.885337] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.885404] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.885477] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.888354] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:28\x1b[m\x1b[K:\n'}
+[4.888462] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.888541] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.888623] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.888701] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.888780] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.888856] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.888935] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.889092] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:28\x1b[m\x1b[K:\n'}
+[4.889174] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.889249] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.889326] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.889396] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.889467] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.889552] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.889624] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.889996] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:28\x1b[m\x1b[K:\n'}
+[4.890088] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.890172] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.890245] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.890312] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.890384] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.890456] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.890526] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.894541] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.894646] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.894719] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.894795] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.894871] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.895009] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.895089] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.895159] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.895231] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.895315] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.895384] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.895451] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.895531] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.895599] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.896230] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.896328] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.896401] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.896464] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.896532] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.896602] (eigen_checks) StderrLine: {'line': b'  133 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices have a different$\n'}
+[4.896668] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.900678] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.900798] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.900909] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.900975] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.901051] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.901119] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.901186] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.901255] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.901326] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.901408] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.901478] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.901548] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.901625] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.901695] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.902387] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.902479] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.902551] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.902619] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.902687] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.902755] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.902824] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.904945] (eigen_checks) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:29\x1b[m\x1b[K:\n'}
+[4.905071] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix_Test::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.905149] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.905221] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.905291] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.905364] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.905439] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.905508] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.907654] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.907748] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.907819] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.907941] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.908028] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.908101] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.908166] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.908234] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.908303] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.908371] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.908440] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.908509] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.908578] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.908647] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.909432] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.909523] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.909603] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.909671] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.909738] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.909808] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.909873] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.909988] (-) TimerEvent: {}
+[4.914072] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.914200] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.914282] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.914414] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.914486] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.914566] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.914646] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.914716] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.914786] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.914855] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.914923] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.915008] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.915087] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.915159] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.915593] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.915722] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.915812] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.915894] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.915988] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.916090] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.916171] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.920326] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.920475] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.920590] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.920783] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.920893] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.921081] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.921185] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.921270] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.921354] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.921437] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.921529] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.921607] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.921760] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.921870] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.921951] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector_Test::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.922053] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.922146] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.922225] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.922303] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.922382] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.922461] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.922539] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.922627] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEXPECT_DEATH\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.922706] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;31m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.922792] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.922870] (eigen_checks) StderrLine: {'line': b'\x1b[01m\x1b[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.922949] (eigen_checks) StderrLine: {'line': b'  136 |   \x1b[01;36m\x1b[KEXPECT_DEATH\x1b[m\x1b[K(X, "^")  // ^The matrices are different$\n'}
+[4.923045] (eigen_checks) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.010123] (-) TimerEvent: {}
+[5.110515] (-) TimerEvent: {}
+[5.138766] (eigen_checks) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_glog_zero_sized_types.dir/build.make:76: CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o] Error 1\n'}
+[5.139078] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:427: CMakeFiles/test_glog_zero_sized_types.dir/all] Error 2\n'}
+[5.139188] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[5.210635] (-) TimerEvent: {}
+[5.310988] (-) TimerEvent: {}
+[5.335546] (eigen_checks) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX executable test_gtest_zero_sized_types\x1b[0m\n'}
+[5.411080] (-) TimerEvent: {}
+[5.494119] (eigen_checks) StdoutLine: {'line': b'[ 65%] Built target test_gtest_zero_sized_types\n'}
+[5.511164] (-) TimerEvent: {}
+[5.611516] (-) TimerEvent: {}
+[5.711932] (-) TimerEvent: {}
+[5.755931] (eigen_checks) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_glog_near.dir/build.make:76: CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o] Error 1\n'}
+[5.756295] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:315: CMakeFiles/test_glog_near.dir/all] Error 2\n'}
+[5.786137] (eigen_checks) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_glog_equal_double.dir/build.make:76: CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o] Error 1\n'}
+[5.786456] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:399: CMakeFiles/test_glog_equal_double.dir/all] Error 2\n'}
+[5.806475] (eigen_checks) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_glog_equal.dir/build.make:76: CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o] Error 1\n'}
+[5.806823] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/test_glog_equal.dir/all] Error 2\n'}
+[5.812000] (-) TimerEvent: {}
+[5.865069] (eigen_checks) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_glog_zero.dir/build.make:76: CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o] Error 1\n'}
+[5.865271] (eigen_checks) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:371: CMakeFiles/test_glog_zero.dir/all] Error 2\n'}
+[5.912113] (-) TimerEvent: {}
+[6.012421] (-) TimerEvent: {}
+[6.112796] (-) TimerEvent: {}
+[6.213102] (-) TimerEvent: {}
+[6.313353] (-) TimerEvent: {}
+[6.376144] (eigen_checks) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX executable test_gtest_equal_double\x1b[0m\n'}
+[6.381951] (eigen_checks) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX executable test_gtest_equal\x1b[0m\n'}
+[6.413455] (-) TimerEvent: {}
+[6.513760] (-) TimerEvent: {}
+[6.551185] (eigen_checks) StdoutLine: {'line': b'[ 73%] Built target test_gtest_equal_double\n'}
+[6.554488] (eigen_checks) StdoutLine: {'line': b'[ 73%] Built target test_gtest_equal\n'}
+[6.613828] (-) TimerEvent: {}
+[6.714052] (-) TimerEvent: {}
+[6.814253] (-) TimerEvent: {}
+[6.914449] (-) TimerEvent: {}
+[7.000770] (eigen_checks) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX executable test_gtest_near\x1b[0m\n'}
+[7.014525] (-) TimerEvent: {}
+[7.043450] (eigen_checks) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable test_gtest_zero\x1b[0m\n'}
+[7.114609] (-) TimerEvent: {}
+[7.182800] (eigen_checks) StdoutLine: {'line': b'[ 80%] Built target test_gtest_near\n'}
+[7.214698] (-) TimerEvent: {}
+[7.228431] (eigen_checks) StdoutLine: {'line': b'[ 80%] Built target test_gtest_zero\n'}
+[7.230271] (eigen_checks) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[7.233432] (eigen_checks) CommandEnded: {'returncode': 2}
+[7.244440] (eigen_checks) JobEnded: {'identifier': 'eigen_checks', 'rc': 2}
+[7.254839] (-) EventReactorShutdown: {}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="16" failures="0" disabled="0" errors="0" time="0.962" timestamp="2025-11-04T17:58:49" name="AllTests">
+  <testsuite name="EigenChecks/0" tests="8" failures="0" disabled="0" errors="0" time="0.474" timestamp="2025-11-04T17:58:49">
+    <testcase name="EigenMatrixEqualGLog_Matrix_Equal" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:49" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_NonEqualRandom" type_param="double" status="run" result="completed" time="0.074" timestamp="2025-11-04T17:58:49" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_OtherSize" type_param="double" status="run" result="completed" time="0.085" timestamp="2025-11-04T17:58:49" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_Near5" type_param="double" status="run" result="completed" time="0.078" timestamp="2025-11-04T17:58:49" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Vector_Equal" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Vector_NonEqualRandom" type_param="double" status="run" result="completed" time="0.077" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Vector_OtherSize" type_param="double" status="run" result="completed" time="0.075" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixEqualGLog_Vector_Near5" type_param="double" status="run" result="completed" time="0.084" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/0" />
+  </testsuite>
+  <testsuite name="EigenChecks/1" tests="8" failures="0" disabled="0" errors="0" time="0.488" timestamp="2025-11-04T17:58:50">
+    <testcase name="EigenMatrixEqualGLog_Matrix_Equal" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_NonEqualRandom" type_param="float" status="run" result="completed" time="0.084" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_OtherSize" type_param="float" status="run" result="completed" time="0.079" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Matrix_Near5" type_param="float" status="run" result="completed" time="0.084" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Vector_Equal" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Vector_NonEqualRandom" type_param="float" status="run" result="completed" time="0.082" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Vector_OtherSize" type_param="float" status="run" result="completed" time="0.082" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixEqualGLog_Vector_Near5" type_param="float" status="run" result="completed" time="0.077" timestamp="2025-11-04T17:58:50" classname="eigen_checks.EigenChecks/1" />
+  </testsuite>
+</testsuites>

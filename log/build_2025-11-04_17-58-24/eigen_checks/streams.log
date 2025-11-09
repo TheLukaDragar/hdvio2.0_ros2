@@ -1,0 +1,259 @@
+[0.009s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24
+[0.072s] [  7%] Built target eigen_checks
+[0.074s] [ 15%] Built target gtest_main
+[0.074s] [ 23%] Built target gtest
+[0.098s] Consolidate compiler generated dependencies of target test_gtest_equal
+[0.098s] Consolidate compiler generated dependencies of target test_glog_near
+[0.099s] Consolidate compiler generated dependencies of target test_glog_equal
+[0.100s] Consolidate compiler generated dependencies of target test_glog_zero
+[0.100s] Consolidate compiler generated dependencies of target test_gtest_near
+[0.101s] Consolidate compiler generated dependencies of target test_gtest_zero
+[0.101s] Consolidate compiler generated dependencies of target test_glog_zero_sized_types
+[0.101s] Consolidate compiler generated dependencies of target test_gtest_zero_sized_types
+[0.102s] Consolidate compiler generated dependencies of target test_gtest_equal_double
+[0.104s] Consolidate compiler generated dependencies of target test_glog_equal_double
+[0.113s] [ 30%] Building CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o
+[0.113s] [ 30%] Building CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o
+[0.114s] [ 34%] Building CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o
+[0.115s] [ 38%] Building CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o
+[0.115s] [ 42%] Building CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o
+[0.115s] [ 46%] Building CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o
+[0.115s] [ 50%] Building CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o
+[0.115s] [ 53%] Building CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o
+[0.117s] [ 57%] Building CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o
+[0.118s] [ 61%] Building CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o
+[1.394s] In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,
+[1.394s]                  from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,
+[1.395s]                  from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25:
+[1.395s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.395s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.395s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.395s]       |                ^
+[1.395s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.395s]    36 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.396s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.396s] In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,
+[1.396s]                  from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,
+[1.396s]                  from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25:
+[1.396s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.396s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.396s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.396s]       |                ^
+[1.397s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.397s]    37 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.397s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.397s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.397s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.397s]   134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$
+[1.397s]       |                ^
+[1.398s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE’
+[1.398s]    41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(
+[1.398s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.398s] In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,
+[1.398s]                  from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,
+[1.398s]                  from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25:
+[1.398s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function ‘virtual void EigenChecks_EigenMatrixNearGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.398s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.399s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.399s]       |                ^
+[1.399s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.399s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(
+[1.399s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.399s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.399s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.399s]   134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$
+[1.399s]       |                ^
+[1.399s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE’
+[1.399s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(
+[1.400s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.400s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.400s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.400s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.400s]       |                ^
+[1.400s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.400s]    46 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.400s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.400s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function ‘virtual void EigenChecks_EigenMatrixNearGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.400s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.400s]   134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$
+[1.401s]       |                ^
+[1.401s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE’
+[1.401s]    48 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(
+[1.401s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.401s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.401s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.401s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.401s]       |                ^
+[1.401s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.401s]    49 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.401s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.401s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.402s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.402s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.402s]       |                ^
+[1.402s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.402s]    56 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.402s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.402s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.402s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.402s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.402s]       |                ^
+[1.402s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.402s]    61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.403s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.403s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.403s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.403s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.403s]       |                ^
+[1.403s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.403s]    61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.403s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.403s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function ‘virtual void EigenChecks_EigenMatrixNearGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.403s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.403s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.404s]       |                ^
+[1.404s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.404s]    71 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(
+[1.404s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.404s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function ‘virtual void EigenChecks_EigenMatrixZeroGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.404s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.404s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.404s]       |                ^
+[1.404s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.404s]    66 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.404s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.404s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.405s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.405s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.405s]       |                ^
+[1.405s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.405s]    67 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.405s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.405s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function ‘virtual void EigenChecks_EigenMatrixNearGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.405s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.405s]   134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$
+[1.405s]       |                ^
+[1.405s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE’
+[1.405s]    76 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(CHECK_EIGEN_MATRIX_NEAR(
+[1.406s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.406s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.406s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.406s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.406s]       |                ^
+[1.406s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.406s]    73 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.406s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.417s] In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,
+[1.417s]                  from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,
+[1.417s]                  from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25:
+[1.417s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.418s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.418s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.418s]       |                ^
+[1.418s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.418s]    37 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.418s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.418s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.418s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.418s]   134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$
+[1.418s]       |                ^
+[1.419s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE’
+[1.419s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(
+[1.419s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.419s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.419s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.419s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.419s]       |                ^
+[1.419s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.419s]    49 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.419s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.420s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()’:
+[1.420s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.420s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.420s]       |                ^
+[1.421s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.421s]    61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.421s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.421s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()’:
+[1.421s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.421s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.421s]       |                ^
+[1.421s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.422s]    67 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.422s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.422s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()’:
+[1.422s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.422s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.422s]       |                ^
+[1.423s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.423s]    73 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(
+[1.423s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.466s] In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,
+[1.466s]                  from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,
+[1.466s]                  from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25:
+[1.466s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc: In member function ‘virtual void EigenChecks_EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix_Test::TestBody()’:
+[1.467s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.467s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.467s]       |                ^
+[1.467s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.467s]    34 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.467s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.482s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc: In member function ‘virtual void EigenChecks_EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector_Test::TestBody()’:
+[1.482s] /home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]
+[1.482s]   137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$
+[1.482s]       |                ^
+[1.482s] /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3: note: in expansion of macro ‘GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA’
+[1.482s]    41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.482s]       |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[1.893s] [ 65%] Linking CXX executable test_gtest_zero_sized_types
+[1.972s] [ 69%] Linking CXX executable test_glog_zero_sized_types
+[2.055s] [ 69%] Built target test_gtest_zero_sized_types
+[2.139s] [ 69%] Built target test_glog_zero_sized_types
+[2.977s] [ 73%] Linking CXX executable test_gtest_equal_double
+[3.004s] [ 76%] Linking CXX executable test_gtest_equal
+[3.161s] [ 76%] Built target test_gtest_equal_double
+[3.188s] [ 76%] Built target test_gtest_equal
+[3.573s] [ 80%] Linking CXX executable test_glog_zero
+[3.604s] [ 84%] Linking CXX executable test_gtest_near
+[3.619s] [ 88%] Linking CXX executable test_glog_equal
+[3.634s] [ 92%] Linking CXX executable test_glog_equal_double
+[3.658s] [ 96%] Linking CXX executable test_glog_near
+[3.694s] [100%] Linking CXX executable test_gtest_zero
+[3.782s] [100%] Built target test_glog_zero
+[3.814s] [100%] Built target test_gtest_near
+[3.830s] [100%] Built target test_glog_equal
+[3.838s] [100%] Built target test_glog_equal_double
+[3.893s] [100%] Built target test_glog_near
+[3.899s] [100%] Built target test_gtest_zero
+[3.916s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24
+[3.931s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks
+[3.942s] -- Install configuration: ""
+[3.942s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib/libeigen_checks.a
+[3.942s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include
+[3.942s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks
+[3.943s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/entrypoint.h
+[3.943s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal
+[3.943s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal/gtest-equal.h
+[3.943s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/gtest.h
+[3.943s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/glog.h
+[3.944s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.sh
+[3.944s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.dsv
+[3.944s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/package_run_dependencies/eigen_checks
+[3.944s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/parent_prefix_path/eigen_checks
+[3.944s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.sh
+[3.944s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.dsv
+[3.945s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.sh
+[3.945s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.dsv
+[3.945s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.bash
+[3.945s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.sh
+[3.945s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.zsh
+[3.945s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.dsv
+[3.945s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.dsv
+[3.945s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/packages/eigen_checks
+[3.946s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.946s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_libraries-extras.cmake
+[3.946s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.947s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig.cmake
+[3.947s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig-version.cmake
+[3.947s] -- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.xml
+[3.948s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks

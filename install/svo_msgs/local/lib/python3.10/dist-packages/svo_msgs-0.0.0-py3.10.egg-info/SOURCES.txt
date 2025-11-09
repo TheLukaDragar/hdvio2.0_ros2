@@ -1,0 +1,6 @@
+setup.py
+svo_msgs/__init__.py
+svo_msgs.egg-info/PKG-INFO
+svo_msgs.egg-info/SOURCES.txt
+svo_msgs.egg-info/dependency_links.txt
+svo_msgs.egg-info/top_level.txt

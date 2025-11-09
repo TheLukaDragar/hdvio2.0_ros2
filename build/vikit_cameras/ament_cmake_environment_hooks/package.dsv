@@ -1,0 +1,4 @@
+source;share/vikit_cameras/local_setup.bash
+source;share/vikit_cameras/local_setup.dsv
+source;share/vikit_cameras/local_setup.sh
+source;share/vikit_cameras/local_setup.zsh

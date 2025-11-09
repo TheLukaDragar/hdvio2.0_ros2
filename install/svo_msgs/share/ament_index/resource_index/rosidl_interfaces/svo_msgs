@@ -1,0 +1,12 @@
+msg/Command.idl
+msg/Command.msg
+msg/DenseInput.idl
+msg/DenseInput.msg
+msg/DenseInputWithFeatures.idl
+msg/DenseInputWithFeatures.msg
+msg/Feature.idl
+msg/Feature.msg
+msg/Info.idl
+msg/Info.msg
+msg/NbvTrajectory.idl
+msg/NbvTrajectory.msg

@@ -1,25 +1,49 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.8)
 project(minkindr)
 
-find_package(catkin_simple REQUIRED)
-catkin_simple(ALL_DEPS_REQUIRED)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
-find_package(Threads)
+find_package(ament_cmake REQUIRED)
+find_package(eigen3_cmake_module REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(eigen_checks REQUIRED)
+find_package(Threads REQUIRED)
+find_package(glog REQUIRED)
 
-catkin_add_gtest(${PROJECT_NAME}_tests 
-  test/test-main.cc
-  test/test-rotation.cc
-  test/test-sim3.cc
-  test/test-transformation.cc
-  test/test-transformation-2d.cc
+# Header-only library
+include_directories(include)
+
+# Tests
+if(BUILD_TESTING)
+  find_package(ament_cmake_gtest REQUIRED)
+  
+  ament_add_gtest(${PROJECT_NAME}_tests
+    test/test-main.cc
+    test/test-rotation.cc
+    test/test-sim3.cc
+    test/test-transformation.cc
+    test/test-transformation-2d.cc
+  )
+  target_include_directories(${PROJECT_NAME}_tests PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+  )
+  ament_target_dependencies(${PROJECT_NAME}_tests
+    Eigen3
+    eigen_checks
+  )
+  target_link_libraries(${PROJECT_NAME}_tests Threads::Threads glog::glog)
+endif()
+
+# Install
+install(DIRECTORY include/
+  DESTINATION include
 )
-target_link_libraries(${PROJECT_NAME}_tests ${catkin_LIBRARIES} 
-                                            ${CMAKE_THREAD_LIBS_INIT})
 
-# Add all files to show up in QtCreator.
-FILE(GLOB_RECURSE LibFiles "include/*")
-add_custom_target(headers SOURCES ${LibFiles})
+ament_export_include_directories(include)
+ament_export_dependencies(Eigen3 eigen_checks)
 
-cs_install()
-cs_export()
+ament_package()
 

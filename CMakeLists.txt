@@ -1,9 +1,13 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(catkin_simple)
 
-find_package(catkin REQUIRED)
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
-catkin_package(
-  CATKIN_DEPENDS catkin
-  CFG_EXTRAS catkin_simple-extras.cmake
-)
+find_package(ament_cmake REQUIRED)
+
+# This is a stub package for ROS2 compatibility
+# catkin_simple is not needed in ROS2 as ament_cmake provides similar functionality
+
+ament_package()

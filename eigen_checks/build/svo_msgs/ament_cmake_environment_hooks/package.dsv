@@ -1,0 +1,4 @@
+source;share/svo_msgs/local_setup.bash
+source;share/svo_msgs/local_setup.dsv
+source;share/svo_msgs/local_setup.sh
+source;share/svo_msgs/local_setup.zsh

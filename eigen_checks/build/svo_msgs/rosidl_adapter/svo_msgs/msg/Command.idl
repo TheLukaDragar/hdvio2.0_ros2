@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from svo_msgs/msg/Command.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+#include "std_msgs/msg/Header.idl"
+
+module svo_msgs {
+  module msg {
+    typedef double double__4[4];
+    struct Command {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Time")
+      @unit (value="s")
+      double t;
+
+      @verbatim (language="comment", text=
+        "If input is in terms of collective thrust & bodyrates or single rotor thrusts")
+      boolean is_single_rotor_thrust;
+
+      @verbatim (language="comment", text=
+        "Collective mass-normalized thrust")
+      @unit (value="m/s^2")
+      double collective_thrust;
+
+      @verbatim (language="comment", text=
+        "Angular rates in body frame")
+      @unit (value="rad/s")
+      geometry_msgs::msg::Vector3 bodyrates;
+
+      @verbatim (language="comment", text=
+        "Single rotor thrusts")
+      @unit (value="N")
+      double__4 thrusts;
+    };
+  };
+};

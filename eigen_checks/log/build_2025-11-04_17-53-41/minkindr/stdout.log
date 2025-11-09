@@ -1,0 +1,59 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.4.0") 
+-- Found eigen_checks: 0.0.1 (/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/minkindr
+-- Install configuration: ""
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/rotation-quaternion.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/position.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/transform-2d.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation/quat-sim-transform-inl.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation/angle-axis-inl.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation/transform-2d-inl.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation/rotation-quaternion-inl.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/implementation/quat-transformation-inl.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/angle-axis.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/quat-transformation.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/quat-sim-transform.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/include/kindr/minimal/common.h
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/ament_index/resource_index/package_run_dependencies/minkindr
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/ament_index/resource_index/parent_prefix_path/minkindr
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/environment/ament_prefix_path.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/environment/ament_prefix_path.dsv
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/environment/path.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/environment/path.dsv
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/local_setup.bash
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/local_setup.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/local_setup.zsh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/local_setup.dsv
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/package.dsv
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/ament_index/resource_index/packages/minkindr
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake/minkindrConfig.cmake
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake/minkindrConfig-version.cmake
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/package.xml

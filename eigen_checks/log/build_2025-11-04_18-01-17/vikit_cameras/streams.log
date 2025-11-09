@@ -1,0 +1,149 @@
+[0.018s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_cameras -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras
+[0.078s] -- The C compiler identification is GNU 11.4.0
+[0.146s] -- The CXX compiler identification is GNU 11.4.0
+[0.158s] -- Detecting C compiler ABI info
+[0.255s] -- Detecting C compiler ABI info - done
+[0.262s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.262s] -- Detecting C compile features
+[0.262s] -- Detecting C compile features - done
+[0.264s] -- Detecting CXX compiler ABI info
+[0.372s] -- Detecting CXX compiler ABI info - done
+[0.378s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.378s] -- Detecting CXX compile features
+[0.378s] -- Detecting CXX compile features - done
+[0.381s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.679s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.785s] -- Found svo_cmake: 0.1.0 (/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake)
+[0.785s] -- Found eigen_checks: 0.0.1 (/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake)
+[0.805s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[0.851s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.857s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.865s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.876s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.892s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.942s] -- Found minkindr: 1.0.0 (/home/carbs/hdvio2.0/eigen_checks/install/minkindr/share/minkindr/cmake)
+[0.944s] -- Found vikit_common: 0.0.0 (/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake)
+[0.983s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.986s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.091s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.129s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.177s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.187s] -- Looking for pthread.h
+[1.265s] -- Looking for pthread.h - found
+[1.265s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.345s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.346s] -- Found Threads: TRUE  
+[1.411s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.411s]   The package name passed to `find_package_handle_standard_args` (YamlCpp)
+[1.411s]   does not match the name of the calling package (yaml-cpp).  This can lead
+[1.412s]   to problems in calling code that expects `find_package` result variables
+[1.412s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.412s] Call Stack (most recent call first):
+[1.412s]   /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[1.412s]   /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.412s]   /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/vikit_commonConfig.cmake:41 (include)
+[1.412s]   CMakeLists.txt:13 (find_package)
+[1.413s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.413s] [0m
+[1.413s] -- Found YamlCpp: /usr/include  
+[1.418s] [33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+[1.418s]   The package name passed to `find_package_handle_standard_args` (YamlCpp)
+[1.418s]   does not match the name of the calling package (yaml-cpp).  This can lead
+[1.419s]   to problems in calling code that expects `find_package` result variables
+[1.419s]   (e.g., `_FOUND`) to follow a certain pattern.
+[1.419s] Call Stack (most recent call first):
+[1.419s]   /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+[1.419s]   CMakeLists.txt:14 (find_package)
+[1.419s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.419s] [0m
+[1.420s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.429s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.431s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.494s] -- Configuring done
+[1.498s] [33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):
+[1.498s]   Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+[1.499s]   "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+[1.499s]   command to set the policy and suppress this warning.
+[1.499s] 
+[1.499s]   File:
+[1.499s] 
+[1.499s]     /home/carbs/hdvio2.0/vikit/vikit_cameras/test/test_cameras.cpp
+[1.499s] Call Stack (most recent call first):
+[1.500s]   /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)
+[1.500s]   /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)
+[1.500s]   CMakeLists.txt:78 (ament_add_gtest)
+[1.500s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.500s] [0m
+[1.524s] -- Generating done
+[1.529s] -- Build files have been written to: /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras
+[1.538s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/carbs/hdvio2.0/vikit/vikit_cameras -DCMAKE_INSTALL_PREFIX=/home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras
+[1.540s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras -- -j24 -l24
+[1.611s] [  6%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.617s] [ 12%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.617s] [ 18%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/ncamera.cpp.o[0m
+[1.617s] [ 25%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_yaml_serialization.cpp.o[0m
+[1.617s] [ 31%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/omni_geometry.cpp.o[0m
+[1.618s] [ 37%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/ncamera_yaml_serialization.cpp.o[0m
+[1.619s] [ 43%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/omni_projection.cpp.o[0m
+[1.619s] [ 50%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_factory.cpp.o[0m
+[1.620s] [ 56%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/camera_geometry_base.cpp.o[0m
+[1.620s] [ 62%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/equidistant_fisheye_geometry.cpp.o[0m
+[1.621s] [ 68%] [32mBuilding CXX object CMakeFiles/vikit_cameras.dir/src/equidistant_fisheye_projection.cpp.o[0m
+[2.343s] [ 75%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.418s] [ 75%] Built target gtest_main
+[5.238s] [ 81%] [32m[1mLinking CXX static library libvikit_cameras.a[0m
+[5.325s] [ 81%] Built target vikit_cameras
+[7.381s] [ 87%] [32m[1mLinking CXX static library libgtest.a[0m
+[7.458s] [ 87%] Built target gtest
+[7.483s] [ 93%] [32mBuilding CXX object CMakeFiles/vikit_cameras_tests.dir/test/test_cameras.cpp.o[0m
+[10.848s] [100%] [32m[1mLinking CXX executable vikit_cameras_tests[0m
+[11.303s] [100%] Built target vikit_cameras_tests
+[11.322s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras -- -j24 -l24
+[11.324s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras
+[11.335s] -- Install configuration: "Release"
+[11.335s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/lib/libvikit_cameras.a
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras.h
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_geometry_base.h
+[11.337s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_geometry.h
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/omni_projection.h
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/pinhole_projection.hpp
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/camera_geometry_base.hpp
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/implementation/camera_geometry.hpp
+[11.338s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/pinhole_projection.h
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_fisheye_geometry.h
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/atan_distortion.h
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/omni_geometry.h
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/camera_factory.h
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml
+[11.339s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml/ncamera-yaml-serialization.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/yaml/camera-yaml-serialization.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/radial_tangential_distortion.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/no_distortion.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_fisheye_projection.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/equidistant_distortion.h
+[11.340s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/include/vikit/cameras/ncamera.h
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/library_path.sh
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/library_path.dsv
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/package_run_dependencies/vikit_cameras
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/parent_prefix_path/vikit_cameras
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/ament_prefix_path.sh
+[11.341s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/ament_prefix_path.dsv
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/path.sh
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/environment/path.dsv
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.bash
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.sh
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.zsh
+[11.342s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/local_setup.dsv
+[11.343s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.dsv
+[11.343s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/ament_index/resource_index/packages/vikit_cameras
+[11.343s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.343s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_libraries-extras.cmake
+[11.343s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.344s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig.cmake
+[11.345s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/cmake/vikit_camerasConfig-version.cmake
+[11.345s] -- Installing: /home/carbs/hdvio2.0/eigen_checks/install/vikit_cameras/share/vikit_cameras/package.xml
+[11.345s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras' returned '0': AMENT_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble LD_LIBRARY_PATH=/home/carbs/hdvio2.0/eigen_checks/install/vikit_common/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/carbs/hdvio2.0/eigen_checks/build/vikit_cameras

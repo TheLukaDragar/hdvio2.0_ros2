@@ -1,0 +1,33 @@
+[  7%] Built target eigen_checks
+[ 15%] Built target gtest_main
+[ 23%] Built target gtest
+[35m[1mConsolidate compiler generated dependencies of target test_gtest_equal[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gtest_zero[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gtest_near[0m
+[35m[1mConsolidate compiler generated dependencies of target test_glog_near[0m
+[35m[1mConsolidate compiler generated dependencies of target test_glog_equal_double[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gtest_equal_double[0m
+[35m[1mConsolidate compiler generated dependencies of target test_glog_equal[0m
+[35m[1mConsolidate compiler generated dependencies of target test_glog_zero[0m
+[35m[1mConsolidate compiler generated dependencies of target test_gtest_zero_sized_types[0m
+[35m[1mConsolidate compiler generated dependencies of target test_glog_zero_sized_types[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o[0m
+[ 65%] [32m[1mLinking CXX executable test_gtest_zero_sized_types[0m
+[ 65%] Built target test_gtest_zero_sized_types
+[ 69%] [32m[1mLinking CXX executable test_gtest_equal[0m
+[ 73%] [32m[1mLinking CXX executable test_gtest_equal_double[0m
+[ 73%] Built target test_gtest_equal
+[ 73%] Built target test_gtest_equal_double
+[ 76%] [32m[1mLinking CXX executable test_gtest_near[0m
+[ 80%] [32m[1mLinking CXX executable test_gtest_zero[0m
+[ 80%] Built target test_gtest_near
+[ 80%] Built target test_gtest_zero

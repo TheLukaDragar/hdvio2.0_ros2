@@ -1,0 +1,11 @@
+test_gtest_near 1 0.0679215
+test_gtest_equal 1 0.0574051
+test_gtest_zero 1 0.0646225
+test_gtest_equal_double 1 0.064714
+test_glog_near 1 0.720921
+test_glog_equal 1 1.03157
+test_glog_zero 1 1.01891
+test_glog_equal_double 1 1.0393
+test_glog_zero_sized_types 1 0.219239
+test_gtest_zero_sized_types 1 0.0619587
+---

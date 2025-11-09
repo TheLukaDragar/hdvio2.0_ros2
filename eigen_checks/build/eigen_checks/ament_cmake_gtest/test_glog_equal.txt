@@ -1,0 +1,51 @@
+-- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+ - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_equal --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml
+
+[==========] Running 16 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 8 tests from EigenChecks/0, where TypeParam = double
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Equal
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Equal (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_NonEqualRandom
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_NonEqualRandom (74 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_OtherSize
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_OtherSize (85 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Near5
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Near5 (78 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Equal
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Equal (0 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_NonEqualRandom
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_NonEqualRandom (77 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_OtherSize
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_OtherSize (75 ms)
+[ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Near5
+[       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Near5 (84 ms)
+[----------] 8 tests from EigenChecks/0 (474 ms total)
+
+[----------] 8 tests from EigenChecks/1, where TypeParam = float
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Equal
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Equal (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_NonEqualRandom
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_NonEqualRandom (84 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_OtherSize
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_OtherSize (79 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Near5
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Near5 (84 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Equal
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Equal (0 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_NonEqualRandom
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_NonEqualRandom (82 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_OtherSize
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_OtherSize (82 ms)
+[ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Near5
+[       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Near5 (77 ms)
+[----------] 8 tests from EigenChecks/1 (488 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 2 test suites ran. (962 ms total)
+[  PASSED  ] 16 tests.
+
+
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml'
+-- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml'

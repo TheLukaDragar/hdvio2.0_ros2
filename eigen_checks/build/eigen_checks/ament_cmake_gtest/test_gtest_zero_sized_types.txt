@@ -1,0 +1,20 @@
+-- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+ - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_zero_sized_types --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml
+
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from EigenChecks
+[ RUN      ] EigenChecks.EigenMatrixEqualGtest_Zero_Sized_Dynamic_Matrix
+[       OK ] EigenChecks.EigenMatrixEqualGtest_Zero_Sized_Dynamic_Matrix (0 ms)
+[ RUN      ] EigenChecks.EigenVectorEqualGtest_Zero_Sized_Dynamic_Vector
+[       OK ] EigenChecks.EigenVectorEqualGtest_Zero_Sized_Dynamic_Vector (0 ms)
+[----------] 2 tests from EigenChecks (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+
+
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml'
+-- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml'

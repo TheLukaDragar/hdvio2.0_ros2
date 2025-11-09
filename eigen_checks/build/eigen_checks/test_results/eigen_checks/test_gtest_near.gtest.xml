@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="20" failures="0" disabled="0" errors="0" time="0.002" timestamp="2025-11-04T17:58:48" name="AllTests">
+  <testsuite name="EigenChecks/0" tests="10" failures="0" disabled="0" errors="0" time="0.001" timestamp="2025-11-04T17:58:48">
+    <testcase name="EigenMatrixNearGTest_Matrix_Equal" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Matrix_EqualFloatingPoint" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Matrix_NonEqualRandom" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Matrix_OtherSize" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Matrix_Near5" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Vector_Equal" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Vector_EqualFloatingPoint" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Vector_NonEqualRandom" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Vector_OtherSize" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+    <testcase name="EigenMatrixNearGTest_Vector_Near5" type_param="double" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/0" />
+  </testsuite>
+  <testsuite name="EigenChecks/1" tests="10" failures="0" disabled="0" errors="0" time="0.001" timestamp="2025-11-04T17:58:48">
+    <testcase name="EigenMatrixNearGTest_Matrix_Equal" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Matrix_EqualFloatingPoint" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Matrix_NonEqualRandom" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Matrix_OtherSize" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Matrix_Near5" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Vector_Equal" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Vector_EqualFloatingPoint" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Vector_NonEqualRandom" type_param="float" status="run" result="completed" time="0.001" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Vector_OtherSize" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+    <testcase name="EigenMatrixNearGTest_Vector_Near5" type_param="float" status="run" result="completed" time="0" timestamp="2025-11-04T17:58:48" classname="eigen_checks.EigenChecks/1" />
+  </testsuite>
+</testsuites>

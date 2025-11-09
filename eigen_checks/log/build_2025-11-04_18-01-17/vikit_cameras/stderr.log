@@ -1,0 +1,36 @@
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (YamlCpp)
+  does not match the name of the calling package (yaml-cpp).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+  /home/carbs/hdvio2.0/eigen_checks/install/vikit_common/share/vikit_common/cmake/vikit_commonConfig.cmake:41 (include)
+  CMakeLists.txt:13 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:438 (message):
+  The package name passed to `find_package_handle_standard_args` (YamlCpp)
+  does not match the name of the calling package (yaml-cpp).  This can lead
+  to problems in calling code that expects `find_package` result variables
+  (e.g., `_FOUND`) to follow a certain pattern.
+Call Stack (most recent call first):
+  /home/carbs/hdvio2.0/eigen_checks/install/svo_cmake/share/svo_cmake/cmake/Modules/Findyaml-cpp.cmake:88 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  CMakeLists.txt:14 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[33mCMake Warning (dev) at /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:50 (add_executable):
+  Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+  "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  File:
+
+    /home/carbs/hdvio2.0/vikit/vikit_cameras/test/test_cameras.cpp
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest_executable.cmake:37 (_ament_add_gtest_executable)
+  /opt/ros/humble/share/ament_cmake_gtest/cmake/ament_add_gtest.cmake:68 (ament_add_gtest_executable)
+  CMakeLists.txt:78 (ament_add_gtest)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m

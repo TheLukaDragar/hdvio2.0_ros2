@@ -1,0 +1,334 @@
+[0.000000] (-) TimerEvent: {}
+[0.000178] (-) JobUnselected: {'identifier': 'catkin_simple'}
+[0.000371] (-) JobUnselected: {'identifier': 'ceres_catkin'}
+[0.000572] (-) JobUnselected: {'identifier': 'eigen_catkin'}
+[0.000632] (-) JobUnselected: {'identifier': 'fast'}
+[0.000692] (-) JobUnselected: {'identifier': 'gflags_catkin'}
+[0.000733] (-) JobUnselected: {'identifier': 'glog_catkin'}
+[0.000760] (-) JobUnselected: {'identifier': 'hdvio2'}
+[0.000823] (-) JobUnselected: {'identifier': 'minkindr'}
+[0.000861] (-) JobUnselected: {'identifier': 'minkindr_conversions'}
+[0.000949] (-) JobUnselected: {'identifier': 'minkindr_python'}
+[0.000977] (-) JobUnselected: {'identifier': 'opengv'}
+[0.001004] (-) JobUnselected: {'identifier': 'rpg_common'}
+[0.001043] (-) JobUnselected: {'identifier': 'svo'}
+[0.001072] (-) JobUnselected: {'identifier': 'svo_benchmarking'}
+[0.001143] (-) JobUnselected: {'identifier': 'svo_ceres_backend'}
+[0.001176] (-) JobUnselected: {'identifier': 'svo_cmake'}
+[0.001229] (-) JobUnselected: {'identifier': 'svo_common'}
+[0.001265] (-) JobUnselected: {'identifier': 'svo_direct'}
+[0.001286] (-) JobUnselected: {'identifier': 'svo_img_align'}
+[0.001307] (-) JobUnselected: {'identifier': 'svo_msgs'}
+[0.001327] (-) JobUnselected: {'identifier': 'svo_test_utils'}
+[0.001390] (-) JobUnselected: {'identifier': 'svo_tracker'}
+[0.001412] (-) JobUnselected: {'identifier': 'svo_vio_common'}
+[0.001548] (-) JobUnselected: {'identifier': 'vikit_cameras'}
+[0.001624] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.001691] (-) JobUnselected: {'identifier': 'vikit_py'}
+[0.001723] (-) JobUnselected: {'identifier': 'vikit_ros'}
+[0.001788] (-) JobUnselected: {'identifier': 'vikit_solver'}
+[0.001823] (eigen_checks) JobQueued: {'identifier': 'eigen_checks', 'dependencies': OrderedDict()}
+[0.001900] (eigen_checks) JobStarted: {'identifier': 'eigen_checks'}
+[0.009256] (eigen_checks) JobProgress: {'identifier': 'eigen_checks', 'progress': 'cmake'}
+[0.009659] (eigen_checks) JobProgress: {'identifier': 'eigen_checks', 'progress': 'build'}
+[0.010154] (eigen_checks) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', '--', '-j24', '-l24'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[0.073528] (eigen_checks) StdoutLine: {'line': b'[  7%] Built target eigen_checks\n'}
+[0.075606] (eigen_checks) StdoutLine: {'line': b'[ 15%] Built target gtest_main\n'}
+[0.076207] (eigen_checks) StdoutLine: {'line': b'[ 23%] Built target gtest\n'}
+[0.099770] (-) TimerEvent: {}
+[0.100135] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_gtest_equal\n'}
+[0.100299] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_glog_near\n'}
+[0.100559] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_glog_equal\n'}
+[0.101932] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_glog_zero\n'}
+[0.102220] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_gtest_near\n'}
+[0.102610] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_gtest_zero\n'}
+[0.103139] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_glog_zero_sized_types\n'}
+[0.103212] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_gtest_zero_sized_types\n'}
+[0.103801] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_gtest_equal_double\n'}
+[0.106269] (eigen_checks) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target test_glog_equal_double\n'}
+[0.114535] (eigen_checks) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o\n'}
+[0.114723] (eigen_checks) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o\n'}
+[0.115423] (eigen_checks) StdoutLine: {'line': b'[ 34%] Building CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o\n'}
+[0.116435] (eigen_checks) StdoutLine: {'line': b'[ 38%] Building CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o\n'}
+[0.116587] (eigen_checks) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o\n'}
+[0.116925] (eigen_checks) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o\n'}
+[0.117013] (eigen_checks) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o\n'}
+[0.117295] (eigen_checks) StdoutLine: {'line': b'[ 53%] Building CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o\n'}
+[0.118476] (eigen_checks) StdoutLine: {'line': b'[ 57%] Building CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o\n'}
+[0.120338] (eigen_checks) StdoutLine: {'line': b'[ 61%] Building CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o\n'}
+[0.199890] (-) TimerEvent: {}
+[0.300101] (-) TimerEvent: {}
+[0.400329] (-) TimerEvent: {}
+[0.500551] (-) TimerEvent: {}
+[0.600770] (-) TimerEvent: {}
+[0.700989] (-) TimerEvent: {}
+[0.801191] (-) TimerEvent: {}
+[0.901388] (-) TimerEvent: {}
+[1.001589] (-) TimerEvent: {}
+[1.101824] (-) TimerEvent: {}
+[1.202072] (-) TimerEvent: {}
+[1.302312] (-) TimerEvent: {}
+[1.395910] (eigen_checks) StderrLine: {'line': b'In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,\n'}
+[1.396209] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,\n'}
+[1.396315] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25:\n'}
+[1.396602] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.396698] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.396879] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.396986] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.397073] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.397167] (eigen_checks) StderrLine: {'line': b'   36 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.397483] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.397579] (eigen_checks) StderrLine: {'line': b'In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,\n'}
+[1.397659] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,\n'}
+[1.397744] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25:\n'}
+[1.397831] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.398064] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.398154] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.398242] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.398555] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.398649] (eigen_checks) StderrLine: {'line': b'   37 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.398741] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.398821] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.398917] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.399006] (eigen_checks) StderrLine: {'line': b'  134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$\n'}
+[1.399340] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.399430] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\xe2\x80\x99\n'}
+[1.399528] (eigen_checks) StderrLine: {'line': b'   41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(\n'}
+[1.399614] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.399832] (eigen_checks) StderrLine: {'line': b'In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,\n'}
+[1.400073] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,\n'}
+[1.400164] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25:\n'}
+[1.400250] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixNearGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.400334] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.400420] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.400504] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.400590] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.400675] (eigen_checks) StderrLine: {'line': b'   43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(\n'}
+[1.400758] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.400836] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.400939] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.401032] (eigen_checks) StderrLine: {'line': b'  134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$\n'}
+[1.401116] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.401205] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\xe2\x80\x99\n'}
+[1.401295] (eigen_checks) StderrLine: {'line': b'   43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(\n'}
+[1.401382] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.401469] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.401566] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.401652] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.401739] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.401819] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.401916] (eigen_checks) StderrLine: {'line': b'   46 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.402008] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.402093] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixNearGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.402180] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.402264] (eigen_checks) StderrLine: {'line': b'  134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$\n'}
+[1.402341] (-) TimerEvent: {}
+[1.402365] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.402455] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\xe2\x80\x99\n'}
+[1.402542] (eigen_checks) StderrLine: {'line': b'   48 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(\n'}
+[1.402623] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.402709] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.402798] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.402887] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.402984] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.403064] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.403147] (eigen_checks) StderrLine: {'line': b'   49 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.403232] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.403318] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.403402] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.403485] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.403571] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.403654] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.403747] (eigen_checks) StderrLine: {'line': b'   56 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.403829] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.403924] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.404012] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.404097] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.404180] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.404265] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.404347] (eigen_checks) StderrLine: {'line': b'   61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.404426] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.404507] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.404589] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.404671] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.404764] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.404846] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.404947] (eigen_checks) StderrLine: {'line': b'   61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.405027] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.405112] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixNearGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.405196] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.405284] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.405369] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.405453] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.405539] (eigen_checks) StderrLine: {'line': b'   71 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(\n'}
+[1.405623] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.405705] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixZeroGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.405785] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.405876] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.405966] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.406052] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.406134] (eigen_checks) StderrLine: {'line': b'   66 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.406220] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.406301] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.406394] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.406474] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.406557] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.406637] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.406720] (eigen_checks) StderrLine: {'line': b'   67 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.406805] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.406901] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixNearGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.406992] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.407085] (eigen_checks) StderrLine: {'line': b'  134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$\n'}
+[1.407169] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.407248] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\xe2\x80\x99\n'}
+[1.407331] (eigen_checks) StderrLine: {'line': b'   76 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(CHECK_EIGEN_MATRIX_NEAR(\n'}
+[1.407416] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.407498] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.407585] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.407670] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.407754] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.407835] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.407934] (eigen_checks) StderrLine: {'line': b'   73 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.408021] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.418894] (eigen_checks) StderrLine: {'line': b'In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,\n'}
+[1.419111] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,\n'}
+[1.419202] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25:\n'}
+[1.419290] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.419378] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.419468] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.419638] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.419731] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.419818] (eigen_checks) StderrLine: {'line': b'   37 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.419914] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.420004] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.420089] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:134:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.420187] (eigen_checks) StderrLine: {'line': b'  134 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices have a different$\n'}
+[1.420271] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.420353] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE\xe2\x80\x99\n'}
+[1.420448] (eigen_checks) StderrLine: {'line': b'   43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE(\n'}
+[1.420616] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.420705] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.420792] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.420902] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.421000] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.421084] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.421171] (eigen_checks) StderrLine: {'line': b'   49 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.421255] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.421986] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.422099] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.422189] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.422276] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.422360] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.422446] (eigen_checks) StderrLine: {'line': b'   61 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.422535] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.422886] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.422998] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.423086] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.423175] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.423260] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.423359] (eigen_checks) StderrLine: {'line': b'   67 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.423448] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.424100] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()\xe2\x80\x99:\n'}
+[1.424202] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.424272] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.424340] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.424416] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.424492] (eigen_checks) StderrLine: {'line': b'   73 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(\n'}
+[1.424577] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.467815] (eigen_checks) StderrLine: {'line': b'In file included from /opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62,\n'}
+[1.468103] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29,\n'}
+[1.468198] (eigen_checks) StderrLine: {'line': b'                 from /home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25:\n'}
+[1.468284] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix_Test::TestBody()\xe2\x80\x99:\n'}
+[1.468369] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.468454] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.468541] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.468628] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.468712] (eigen_checks) StderrLine: {'line': b'   34 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));\n'}
+[1.468795] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.483307] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc: In member function \xe2\x80\x98virtual void EigenChecks_EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector_Test::TestBody()\xe2\x80\x99:\n'}
+[1.483605] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:137:16: warning: ISO C++ forbids braced-groups within expressions [-Wpedantic]\n'}
+[1.483692] (eigen_checks) StderrLine: {'line': b'  137 |   EXPECT_DEATH(({ X; }), "^")  // ^The matrices are different$\n'}
+[1.483781] (eigen_checks) StderrLine: {'line': b'      |                ^\n'}
+[1.483862] (eigen_checks) StderrLine: {'line': b'/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3: note: in expansion of macro \xe2\x80\x98GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA\xe2\x80\x99\n'}
+[1.483964] (eigen_checks) StderrLine: {'line': b'   41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));\n'}
+[1.484044] (eigen_checks) StderrLine: {'line': b'      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'}
+[1.502487] (-) TimerEvent: {}
+[1.602739] (-) TimerEvent: {}
+[1.702994] (-) TimerEvent: {}
+[1.803231] (-) TimerEvent: {}
+[1.894681] (eigen_checks) StdoutLine: {'line': b'[ 65%] Linking CXX executable test_gtest_zero_sized_types\n'}
+[1.903367] (-) TimerEvent: {}
+[1.973230] (eigen_checks) StdoutLine: {'line': b'[ 69%] Linking CXX executable test_glog_zero_sized_types\n'}
+[2.003509] (-) TimerEvent: {}
+[2.056682] (eigen_checks) StdoutLine: {'line': b'[ 69%] Built target test_gtest_zero_sized_types\n'}
+[2.103625] (-) TimerEvent: {}
+[2.140706] (eigen_checks) StdoutLine: {'line': b'[ 69%] Built target test_glog_zero_sized_types\n'}
+[2.203751] (-) TimerEvent: {}
+[2.303967] (-) TimerEvent: {}
+[2.404214] (-) TimerEvent: {}
+[2.504466] (-) TimerEvent: {}
+[2.604692] (-) TimerEvent: {}
+[2.704918] (-) TimerEvent: {}
+[2.805127] (-) TimerEvent: {}
+[2.905335] (-) TimerEvent: {}
+[2.978995] (eigen_checks) StdoutLine: {'line': b'[ 73%] Linking CXX executable test_gtest_equal_double\n'}
+[3.005445] (-) TimerEvent: {}
+[3.006077] (eigen_checks) StdoutLine: {'line': b'[ 76%] Linking CXX executable test_gtest_equal\n'}
+[3.105562] (-) TimerEvent: {}
+[3.162608] (eigen_checks) StdoutLine: {'line': b'[ 76%] Built target test_gtest_equal_double\n'}
+[3.189503] (eigen_checks) StdoutLine: {'line': b'[ 76%] Built target test_gtest_equal\n'}
+[3.205659] (-) TimerEvent: {}
+[3.305842] (-) TimerEvent: {}
+[3.406056] (-) TimerEvent: {}
+[3.506267] (-) TimerEvent: {}
+[3.574582] (eigen_checks) StdoutLine: {'line': b'[ 80%] Linking CXX executable test_glog_zero\n'}
+[3.605522] (eigen_checks) StdoutLine: {'line': b'[ 84%] Linking CXX executable test_gtest_near\n'}
+[3.606328] (-) TimerEvent: {}
+[3.620507] (eigen_checks) StdoutLine: {'line': b'[ 88%] Linking CXX executable test_glog_equal\n'}
+[3.635879] (eigen_checks) StdoutLine: {'line': b'[ 92%] Linking CXX executable test_glog_equal_double\n'}
+[3.659663] (eigen_checks) StdoutLine: {'line': b'[ 96%] Linking CXX executable test_glog_near\n'}
+[3.695531] (eigen_checks) StdoutLine: {'line': b'[100%] Linking CXX executable test_gtest_zero\n'}
+[3.706414] (-) TimerEvent: {}
+[3.783958] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_glog_zero\n'}
+[3.806559] (-) TimerEvent: {}
+[3.816224] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_gtest_near\n'}
+[3.831456] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_glog_equal\n'}
+[3.839385] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_glog_equal_double\n'}
+[3.894838] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_glog_near\n'}
+[3.900878] (eigen_checks) StdoutLine: {'line': b'[100%] Built target test_gtest_zero\n'}
+[3.906621] (-) TimerEvent: {}
+[3.918135] (eigen_checks) CommandEnded: {'returncode': 0}
+[3.918855] (eigen_checks) JobProgress: {'identifier': 'eigen_checks', 'progress': 'install'}
+[3.932024] (eigen_checks) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks'], 'cwd': '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'carbs'), ('SSH_CLIENT', '100.80.168.145 63752 22'), ('GIT_ASKPASS', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass.sh'), ('ISAACSIM_PATH', '/home/carbs/isaacsim'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/lib:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib:/home/carbs/hdvio2.0/install/svo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64:/usr/local/cuda-13.0/lib64:/home/carbs/mindopt/2.2.0/linux64-x86/lib:/usr/local/cuda-13.0/lib64::/home/carbs/gurobi1003/linux64/lib:/home/carbs/gurobi1003/linux64/lib'), ('BROWSER', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/helpers/browser.sh'), ('HOME', '/home/carbs'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/carbs/hdvio2.0'), ('TERM_PROGRAM_VERSION', '1.106.0-insider'), ('NVM_BIN', '/home/carbs/.nvm/versions/node/v22.19.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-cb320735-4e3c-400e-9b68-98cffd2de710.sock'), ('NVM_INC', '/home/carbs/.nvm/versions/node/v22.19.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/carbs/miniconda3'), ('NVM_DIR', '/home/carbs/.nvm'), ('COLCON_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install:/home/carbs/hdvio2.0/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('MINDOPT_HOME', '/home/carbs/mindopt/2.2.0'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/copilotCli:/home/carbs/.vscode-server-insiders/data/User/globalStorage/github.copilot-chat/debugCommand:/home/carbs/.vscode-server-insiders/cli/servers/Insiders-005cfa92907d127e9df88f4cdd0846c773ee663a/server/bin/remote-cli:/home/carbs/.local/bin:/home/carbs/miniconda3/condabin:/usr/local/cuda-13.0/bin:/home/carbs/mindopt/2.2.0/linux64-x86/bin:/usr/local/cuda-13.0/bin:/home/carbs/.npm-global/bin:/home/carbs/.nvm/versions/node/v22.19.0/bin:/home/carbs/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/home/carbs/gurobi1003/linux64/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-22507c0997.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/carbs/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PM_PACKAGES_ROOT', '/home/carbs/packman-repo'), ('_CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('GIT_PAGER', 'cat'), ('PWD', '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks'), ('CONDA_EXE', '/home/carbs/miniconda3/bin/conda'), ('SSH_CONNECTION', '100.80.168.145 63752 100.98.200.29 22'), ('GUROBI_HOME', '/home/carbs/gurobi1003/linux64'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs/local/lib/python3.10/dist-packages:/home/carbs/hdvio2.0/install/svo_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/carbs/hdvio2.0/eigen_checks/install/svo_msgs:/home/carbs/hdvio2.0/eigen_checks/install/svo_cmake:/home/carbs/hdvio2.0/eigen_checks/install/minkindr:/home/carbs/hdvio2.0/eigen_checks/install/eigen_checks:/home/carbs/hdvio2.0/install/svo_msgs:/home/carbs/hdvio2.0/install/svo_cmake:/opt/ros/humble')]), 'shell': False}
+[3.943459] (eigen_checks) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.943964] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib/libeigen_checks.a\n'}
+[3.944074] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include\n'}
+[3.944180] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks\n'}
+[3.944426] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/entrypoint.h\n'}
+[3.944639] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal\n'}
+[3.944742] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal/gtest-equal.h\n'}
+[3.945047] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/gtest.h\n'}
+[3.945175] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/glog.h\n'}
+[3.945368] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.sh\n'}
+[3.945802] (eigen_checks) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.dsv\n'}
+[3.945933] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/package_run_dependencies/eigen_checks\n'}
+[3.946050] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/parent_prefix_path/eigen_checks\n'}
+[3.946159] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.sh\n'}
+[3.946269] (eigen_checks) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.dsv\n'}
+[3.946390] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.sh\n'}
+[3.946499] (eigen_checks) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.dsv\n'}
+[3.946606] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.bash\n'}
+[3.946714] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.sh\n'}
+[3.946829] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.zsh\n'}
+[3.947005] (eigen_checks) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.dsv\n'}
+[3.947117] (eigen_checks) StdoutLine: {'line': b'-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.dsv\n'}
+[3.947232] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/packages/eigen_checks\n'}
+[3.947348] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.947456] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.947806] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.948426] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig.cmake\n'}
+[3.948810] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig-version.cmake\n'}
+[3.949041] (eigen_checks) StdoutLine: {'line': b'-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.xml\n'}
+[3.949397] (eigen_checks) CommandEnded: {'returncode': 0}
+[3.980769] (eigen_checks) JobEnded: {'identifier': 'eigen_checks', 'rc': 0}
+[3.981278] (-) EventReactorShutdown: {}

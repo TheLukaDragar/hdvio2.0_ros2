@@ -1,0 +1,1526 @@
+[0.010s] Invoking command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24
+[0.073s] [  7%] Built target eigen_checks
+[0.078s] [ 15%] Built target gtest_main
+[0.081s] [ 23%] Built target gtest
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_equal[0m
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_zero[0m
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_near[0m
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target test_glog_near[0m
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target test_glog_equal_double[0m
+[0.096s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_equal_double[0m
+[0.096s] [35m[1mConsolidate compiler generated dependencies of target test_glog_equal[0m
+[0.097s] [35m[1mConsolidate compiler generated dependencies of target test_glog_zero[0m
+[0.097s] [35m[1mConsolidate compiler generated dependencies of target test_gtest_zero_sized_types[0m
+[0.097s] [35m[1mConsolidate compiler generated dependencies of target test_glog_zero_sized_types[0m
+[0.121s] [ 34%] [32mBuilding CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o[0m
+[0.121s] [ 34%] [32mBuilding CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o[0m
+[0.121s] [ 34%] [32mBuilding CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o[0m
+[0.122s] [ 38%] [32mBuilding CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o[0m
+[0.122s] [ 42%] [32mBuilding CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o[0m
+[0.122s] [ 46%] [32mBuilding CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o[0m
+[0.122s] [ 50%] [32mBuilding CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o[0m
+[0.123s] [ 53%] [32mBuilding CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o[0m
+[0.124s] [ 57%] [32mBuilding CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o[0m
+[0.124s] [ 61%] [32mBuilding CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o[0m
+[1.371s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62[m[K,
+[1.372s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[1.372s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:25[m[K:
+[1.372s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.372s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_38[m[K’
+[1.372s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.372s]       |       [01;31m[K^~~~~~~[m[K
+[1.372s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.372s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.372s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.372s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.372s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.373s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.373s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.373s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.373s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.373s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.373s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.373s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.373s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_38[m[K’
+[1.373s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.374s]       |       [01;31m[K^~~~~~~[m[K
+[1.374s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.374s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.374s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.374s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.374s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.374s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.374s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.374s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.374s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.374s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.374s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.375s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.375s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.375s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.375s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.375s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.375s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.375s]       |                [01;36m[K^[m[K
+[1.375s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.375s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.375s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.377s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_38[m[K’ was not declared in this scope
+[1.377s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.377s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.377s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.377s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.377s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.378s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.378s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.378s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.378s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.378s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.378s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.378s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.378s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.378s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.379s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.379s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.379s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_44[m[K’
+[1.379s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.379s]       |       [01;31m[K^~~~~~~[m[K
+[1.379s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.379s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.379s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.380s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.380s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.380s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.380s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.380s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.380s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.380s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.380s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_44[m[K’
+[1.381s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.381s]       |       [01;31m[K^~~~~~~[m[K
+[1.381s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.381s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.381s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.381s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.381s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.381s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.381s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.381s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.381s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.381s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.382s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.382s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.382s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.382s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.382s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.382s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.382s]   133 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices have a different$
+[1.382s]       |                [01;36m[K^[m[K
+[1.382s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.382s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.382s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.383s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_44[m[K’ was not declared in this scope
+[1.383s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.383s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.383s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.383s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.383s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.383s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.383s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.384s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.384s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.384s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.384s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.384s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.384s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.384s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.384s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.384s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.385s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.385s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.385s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_50[m[K’
+[1.385s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.385s]       |       [01;31m[K^~~~~~~[m[K
+[1.385s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.385s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.385s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.385s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.385s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.385s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.385s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.386s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.386s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.386s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.386s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.386s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.386s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.386s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.386s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.386s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_50[m[K’
+[1.386s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.386s]       |       [01;31m[K^~~~~~~[m[K
+[1.386s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.387s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.387s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.387s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.387s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.387s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.387s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.387s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.387s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.387s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.387s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.387s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.388s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.388s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.388s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.388s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.388s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.388s]       |                [01;36m[K^[m[K
+[1.388s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.388s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.388s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.389s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_50[m[K’ was not declared in this scope
+[1.389s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.389s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.389s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.389s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.389s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.389s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.389s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.389s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.389s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.389s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.389s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.390s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.390s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.390s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.390s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.390s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_matrix_54,
+[1.390s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.390s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.390s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_62[m[K’
+[1.390s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.391s]       |       [01;31m[K^~~~~~~[m[K
+[1.391s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.391s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.391s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.391s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.391s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.391s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.391s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.391s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.391s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.391s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.391s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.392s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.392s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.392s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.392s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.392s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_62[m[K’
+[1.392s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.392s]       |       [01;31m[K^~~~~~~[m[K
+[1.392s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.392s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.392s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.392s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.392s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.393s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.393s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.393s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.393s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.393s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.393s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.393s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.393s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.393s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.393s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.393s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.393s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.394s]       |                [01;36m[K^[m[K
+[1.394s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.394s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.394s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.395s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_62[m[K’ was not declared in this scope
+[1.395s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.395s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.395s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.395s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.395s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.395s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.396s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.396s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.396s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.396s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.396s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.396s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.396s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.396s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.396s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.396s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.397s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.397s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.397s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_68[m[K’
+[1.397s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.397s]       |       [01;31m[K^~~~~~~[m[K
+[1.397s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.397s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.397s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.397s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.397s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.397s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.398s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.398s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.398s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.398s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.398s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.398s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.398s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_68[m[K’
+[1.398s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.399s]       |       [01;31m[K^~~~~~~[m[K
+[1.399s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.399s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.399s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.399s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.399s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.399s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.399s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.399s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.399s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.399s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.399s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.400s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.400s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.400s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.400s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.400s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.400s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.400s]       |                [01;36m[K^[m[K
+[1.400s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.400s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.400s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.401s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_68[m[K’ was not declared in this scope
+[1.401s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.401s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.401s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.401s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.401s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.401s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.402s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.402s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.402s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.402s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.402s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.402s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.402s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.402s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.402s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.402s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.403s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.403s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.403s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_74[m[K’
+[1.403s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.403s]       |       [01;31m[K^~~~~~~[m[K
+[1.403s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.403s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.403s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.403s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.403s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.403s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.404s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.404s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.404s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.404s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.404s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.404s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.404s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.404s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.404s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.404s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_74[m[K’
+[1.404s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.404s]       |       [01;31m[K^~~~~~~[m[K
+[1.405s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.405s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.405s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.405s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.405s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.405s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.405s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.405s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.405s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.405s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.405s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.405s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.406s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.406s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.406s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.406s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.406s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.406s]       |                [01;36m[K^[m[K
+[1.406s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.406s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.406s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.407s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_74[m[K’ was not declared in this scope
+[1.407s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.407s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.407s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.407s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.407s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.407s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.407s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.407s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.407s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.407s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.408s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.408s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:47:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.408s]    47 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.408s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.408s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL[m[K’
+[1.408s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL[m[K(this->ground_truth_vector_5,
+[1.408s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.419s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62[m[K,
+[1.419s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[1.419s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:25[m[K:
+[1.419s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.419s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_43[m[K’
+[1.419s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.419s]       |       [01;31m[K^~~~~~~[m[K
+[1.419s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.420s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.420s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.420s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.420s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.420s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.420s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.420s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.420s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.420s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.420s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.420s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.420s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.421s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.421s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.421s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_43[m[K’
+[1.421s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.421s]       |       [01;31m[K^~~~~~~[m[K
+[1.421s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.421s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.421s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.421s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.421s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.421s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.421s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.422s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.422s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.422s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.422s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.422s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.422s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.422s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.422s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.422s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.422s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.422s]       |                [01;36m[K^[m[K
+[1.422s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.423s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.423s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.424s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_43[m[K’ was not declared in this scope
+[1.424s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.425s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.425s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.425s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.425s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.425s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.425s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.425s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.425s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.426s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.426s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.426s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.426s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.426s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.426s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:43:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.426s]    43 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.426s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.426s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.426s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_49[m[K’
+[1.426s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.427s]       |       [01;31m[K^~~~~~~[m[K
+[1.427s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.427s]    48 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.427s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.427s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.427s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.427s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.427s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.427s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.428s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.428s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.428s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.428s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.428s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:49:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.428s]    49 |       [01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(this->ground_truth_matrix_54,
+[1.428s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.428s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_49[m[K’
+[1.428s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.428s]       |       [01;31m[K^~~~~~~[m[K
+[1.428s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.429s]    48 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.429s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.429s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.429s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.429s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.429s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.429s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.429s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.429s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.429s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.429s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.430s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:49:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.430s]    49 |       [01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(this->ground_truth_matrix_54,
+[1.430s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.430s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.430s]   133 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices have a different$
+[1.430s]       |                [01;36m[K^[m[K
+[1.430s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.430s]    48 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.430s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.430s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62[m[K,
+[1.430s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[1.430s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:25[m[K:
+[1.431s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.431s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_37[m[K’
+[1.431s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.431s]       |       [01;31m[K^~~~~~~[m[K
+[1.431s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.431s]    36 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.431s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.431s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.431s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.431s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.432s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.432s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.432s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.432s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.432s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.432s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.432s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:37:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.432s]    37 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_random, 1e-5));
+[1.432s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.433s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_37[m[K’
+[1.433s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.433s]       |       [01;31m[K^~~~~~~[m[K
+[1.433s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.433s]    36 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.433s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.433s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.434s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.434s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.434s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.434s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.434s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.434s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.434s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.434s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.434s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:37:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.434s]    37 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_random, 1e-5));
+[1.435s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.435s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.435s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.435s]       |                [01;36m[K^[m[K
+[1.435s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.435s]    36 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.435s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.435s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_49[m[K’ was not declared in this scope
+[1.435s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.436s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.436s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:48:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.436s]    48 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.436s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.436s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.436s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.436s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.436s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.436s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.436s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.436s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.437s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.437s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.437s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:49:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.437s]    49 |       [01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(this->ground_truth_matrix_54,
+[1.437s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.437s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_37[m[K’ was not declared in this scope
+[1.437s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.437s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.437s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:36:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.437s]    36 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.437s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.438s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.438s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.438s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.438s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.438s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.438s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.438s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.438s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.439s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.451s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:37:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.452s]    37 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_random, 1e-5));
+[1.452s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.453s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.453s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_42[m[K’
+[1.453s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.453s]       |       [01;31m[K^~~~~~~[m[K
+[1.453s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.453s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.453s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.453s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.453s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.454s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.454s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.454s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.454s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.454s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.454s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.454s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.454s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:42:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.454s]    42 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_D4, 1e-5));
+[1.454s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.454s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_42[m[K’
+[1.454s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.455s]       |       [01;31m[K^~~~~~~[m[K
+[1.455s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.455s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.455s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.455s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.455s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.455s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.455s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.455s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.455s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.455s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.455s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.456s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.456s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:42:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.456s]    42 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_D4, 1e-5));
+[1.456s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.456s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.456s]   133 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices have a different$
+[1.456s]       |                [01;36m[K^[m[K
+[1.456s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.456s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.456s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.456s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.457s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_71[m[K’
+[1.457s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.457s]       |       [01;31m[K^~~~~~~[m[K
+[1.457s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.457s]    71 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.457s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.457s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.457s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.457s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.457s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.458s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.458s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.458s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.458s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.458s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.458s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.458s]    71 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.458s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.458s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_71[m[K’
+[1.459s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.459s]       |       [01;31m[K^~~~~~~[m[K
+[1.459s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.459s]    71 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.459s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.459s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.459s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.459s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.459s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.459s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.460s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.460s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.460s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.460s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.460s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.460s]    71 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.460s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.460s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.461s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.461s]       |                [01;36m[K^[m[K
+[1.461s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.461s]    71 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.461s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.461s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62[m[K,
+[1.461s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[1.461s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:25[m[K:
+[1.461s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.461s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_38[m[K’
+[1.461s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.462s]       |       [01;31m[K^~~~~~~[m[K
+[1.462s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.462s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.462s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.462s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.462s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.462s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.462s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.462s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.462s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.462s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.463s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.463s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.463s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.463s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.463s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.463s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_38[m[K’
+[1.463s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.463s]       |       [01;31m[K^~~~~~~[m[K
+[1.463s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.463s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.463s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.464s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.464s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.464s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.464s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.464s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.464s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.464s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.465s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.465s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.465s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.465s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.465s]       |                [01;36m[K^[m[K
+[1.465s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.465s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.465s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.466s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_42[m[K’ was not declared in this scope
+[1.466s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.466s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.466s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.466s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.466s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.466s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.466s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.467s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.467s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.467s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.467s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.467s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.467s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.467s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.467s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:42:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.467s]    42 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_D4, 1e-5));
+[1.468s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.468s] In file included from [01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:62[m[K,
+[1.468s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/entrypoint.h:29[m[K,
+[1.468s]                  from [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:25[m[K:
+[1.468s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix_Test::TestBody()[m[K’:
+[1.468s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_34[m[K’
+[1.468s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.468s]       |       [01;31m[K^~~~~~~[m[K
+[1.468s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.468s]    34 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.468s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.469s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.469s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.469s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.469s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.469s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.469s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.469s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.469s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.469s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.469s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.469s]    34 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.470s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.470s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_34[m[K’
+[1.470s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.470s]       |       [01;31m[K^~~~~~~[m[K
+[1.470s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.470s]    34 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.470s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.470s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.470s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.470s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.470s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.471s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.471s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.471s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.471s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.471s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.471s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.471s]    34 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.471s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.471s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.472s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.472s]       |                [01;36m[K^[m[K
+[1.472s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.472s]    34 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.472s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.472s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.472s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_47[m[K’
+[1.472s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.472s]       |       [01;31m[K^~~~~~~[m[K
+[1.473s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.473s]    46 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.473s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.473s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.473s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.473s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.473s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.473s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.473s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.473s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.473s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.474s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.474s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:47:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.474s]    47 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_near_e_minus_5, 1e-5));
+[1.474s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.474s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_47[m[K’
+[1.474s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.474s]       |       [01;31m[K^~~~~~~[m[K
+[1.474s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.474s]    46 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.474s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.474s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.475s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.475s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.475s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.475s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.475s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.475s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.475s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.475s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.475s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:47:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.475s]    47 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_near_e_minus_5, 1e-5));
+[1.476s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.476s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.476s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.476s]       |                [01;36m[K^[m[K
+[1.476s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.476s]    46 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.476s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.476s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_71[m[K’ was not declared in this scope
+[1.476s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.476s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.476s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.476s]    71 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.477s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.477s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.477s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.477s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.477s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.477s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.477s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.477s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.477s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.477s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.477s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:71:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.478s]    71 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.478s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.478s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixNearGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.478s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_76[m[K’
+[1.478s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.478s]       |       [01;31m[K^~~~~~~[m[K
+[1.478s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.478s]    76 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.478s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.479s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.479s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.479s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.479s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.479s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.479s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.479s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.479s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.479s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.479s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.480s]    76 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.480s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.480s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_76[m[K’
+[1.480s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.480s]       |       [01;31m[K^~~~~~~[m[K
+[1.480s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.480s]    76 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.480s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.480s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.480s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.480s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.480s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.481s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.481s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.481s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.481s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.481s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.481s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.481s]    76 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.481s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.481s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.481s]   133 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices have a different$
+[1.481s]       |                [01;36m[K^[m[K
+[1.481s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.482s]    76 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.482s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.482s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_38[m[K’ was not declared in this scope
+[1.482s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.482s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.482s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:37:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.482s]    37 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.482s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.482s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.482s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.482s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.483s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.483s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.483s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.483s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.483s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.483s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.483s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:38:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.483s]    38 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.483s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.483s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.483s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_44[m[K’
+[1.484s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.484s]       |       [01;31m[K^~~~~~~[m[K
+[1.484s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.484s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.484s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.484s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.484s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.484s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.484s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.484s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.485s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.485s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.485s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.485s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.485s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_44[m[K’
+[1.485s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.485s]       |       [01;31m[K^~~~~~~[m[K
+[1.485s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.486s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.486s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.486s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.486s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.486s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.486s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.486s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.486s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.486s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.486s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.486s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.486s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.487s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.487s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.487s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_47[m[K’ was not declared in this scope
+[1.487s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.487s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.487s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:46:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.487s]    46 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.487s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.487s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.487s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.487s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.488s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.488s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.488s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.488s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.488s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.488s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.488s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:47:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.488s]    47 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->test_matrix_54_near_e_minus_5, 1e-5));
+[1.488s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.488s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:133:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.488s]   133 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices have a different$
+[1.489s]       |                [01;36m[K^[m[K
+[1.489s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.489s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.489s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.489s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_34[m[K’ was not declared in this scope
+[1.489s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.489s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.489s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.489s]    34 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.489s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.489s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.489s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.489s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.490s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.490s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.490s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.490s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.490s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.490s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.490s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:34:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.490s]    34 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.490s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.490s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_76[m[K’ was not declared in this scope
+[1.490s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.491s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.491s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.491s]    76 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(CHECK_EIGEN_MATRIX_NEAR(
+[1.491s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.491s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.491s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.491s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.491s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.491s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.491s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.491s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.492s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.492s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.492s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-near.cc:76:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.492s]    76 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(
+[1.492s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.492s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.492s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_57[m[K’
+[1.492s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.492s]       |       [01;31m[K^~~~~~~[m[K
+[1.492s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.492s]    56 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.492s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.493s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.493s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.493s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.493s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.493s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.493s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.493s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.493s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.493s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.493s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:57:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.493s]    57 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.494s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.494s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_57[m[K’
+[1.494s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.494s]       |       [01;31m[K^~~~~~~[m[K
+[1.494s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.494s]    56 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.494s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.494s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.494s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.494s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.494s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.494s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.495s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.495s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.495s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.495s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.495s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:57:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.495s]    57 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.495s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.495s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.495s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.495s]       |                [01;36m[K^[m[K
+[1.495s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.496s]    56 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.496s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.496s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_44[m[K’ was not declared in this scope
+[1.496s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.496s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.496s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:43:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K’
+[1.496s]    43 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_SIZE[m[K(
+[1.496s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.496s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.496s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.496s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.496s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.497s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.497s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.497s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.497s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.497s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.497s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:44:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.497s]    44 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.497s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.497s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Matrix_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.497s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_50[m[K’
+[1.497s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.498s]       |       [01;31m[K^~~~~~~[m[K
+[1.498s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.498s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.498s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.498s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.498s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.498s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.498s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.498s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.498s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.498s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.498s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.499s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.499s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.499s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.499s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.499s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_50[m[K’
+[1.499s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.499s]       |       [01;31m[K^~~~~~~[m[K
+[1.499s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.499s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.499s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.499s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.500s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.500s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.500s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.500s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.500s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.500s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.500s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.500s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.500s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.500s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.500s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.500s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.501s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.501s]       |                [01;36m[K^[m[K
+[1.501s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.501s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.501s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.501s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_57[m[K’ was not declared in this scope
+[1.501s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.501s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.501s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:56:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.501s]    56 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.501s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.501s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.502s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.502s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.502s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.502s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.502s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.502s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.502s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.502s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.502s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:57:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.502s]    57 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.503s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.503s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.503s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_62[m[K’
+[1.503s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.503s]       |       [01;31m[K^~~~~~~[m[K
+[1.503s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.503s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.503s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.503s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.503s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.503s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.504s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.504s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.504s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.504s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.504s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.504s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.504s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.504s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.504s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.504s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_62[m[K’
+[1.504s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.504s]       |       [01;31m[K^~~~~~~[m[K
+[1.505s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.505s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.505s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.505s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.505s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.505s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.505s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.505s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.505s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.505s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.505s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.506s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.506s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.506s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.506s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.506s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.506s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.506s]       |                [01;36m[K^[m[K
+[1.506s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.506s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.506s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.506s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_50[m[K’ was not declared in this scope
+[1.506s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.507s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.507s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:49:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.507s]    49 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.507s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.507s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.507s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.507s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.507s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.507s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.507s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.507s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.507s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.508s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.508s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:50:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.508s]    50 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_matrix_54,
+[1.508s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.508s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_62[m[K’ was not declared in this scope
+[1.508s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.508s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.508s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.508s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.508s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.508s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.509s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.509s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.509s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.509s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.509s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.509s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.509s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.509s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.509s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.509s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.509s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.509s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.509s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_62[m[K’
+[1.510s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.510s]       |       [01;31m[K^~~~~~~[m[K
+[1.510s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.510s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.510s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.510s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.510s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.510s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.510s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.510s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.510s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.510s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.511s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.511s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.511s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.511s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.511s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.511s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_62[m[K’
+[1.511s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.511s]       |       [01;31m[K^~~~~~~[m[K
+[1.511s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.511s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.511s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.512s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.512s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.512s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.512s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.512s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.512s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.512s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.512s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.512s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.513s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.513s]       |                [01;36m[K^[m[K
+[1.513s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.513s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.513s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.513s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixZeroGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.513s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_67[m[K’
+[1.513s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.513s]       |       [01;31m[K^~~~~~~[m[K
+[1.513s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.514s]    66 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.514s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.514s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.514s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.514s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.514s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.514s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.514s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.514s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:67:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.515s]    67 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.515s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.515s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_67[m[K’
+[1.515s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.515s]       |       [01;31m[K^~~~~~~[m[K
+[1.515s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.515s]    66 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.515s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.515s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.515s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.515s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.515s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.516s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.516s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.516s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.516s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.516s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.516s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:67:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.516s]    67 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.516s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.516s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.516s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.516s]       |                [01;36m[K^[m[K
+[1.517s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.517s]    66 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.517s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.517s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector_Test::TestBody()[m[K’:
+[1.517s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_41[m[K’
+[1.517s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.517s]       |       [01;31m[K^~~~~~~[m[K
+[1.517s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.517s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.517s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.517s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.518s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.518s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.518s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.518s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.518s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.518s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.518s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.518s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.518s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.518s]    41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.518s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.518s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_41[m[K’
+[1.519s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.519s]       |       [01;31m[K^~~~~~~[m[K
+[1.519s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.519s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.519s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.519s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.519s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.519s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.519s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.519s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.519s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.520s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.520s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.520s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.520s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.520s]    41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.520s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.520s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.520s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.520s]       |                [01;36m[K^[m[K
+[1.520s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.520s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.520s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.521s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_67[m[K’ was not declared in this scope
+[1.521s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.521s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.521s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:66:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.521s]    66 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.521s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.521s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.521s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.521s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.521s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.521s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.522s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.522s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:68:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.522s]    68 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.522s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.522s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero.cc:67:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_ZERO[m[K’
+[1.522s]    67 |       [01;36m[KCHECK_EIGEN_MATRIX_ZERO[m[K(this->ground_truth_vector_5, 1e-5));
+[1.522s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.522s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_62[m[K’ was not declared in this scope
+[1.522s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.522s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.522s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:61:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.522s]    61 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.523s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.523s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.523s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.523s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.523s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.523s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.523s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.523s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.523s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.523s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.523s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:62:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.523s]    62 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.524s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.524s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_OtherSize_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.524s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_68[m[K’
+[1.524s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.524s]       |       [01;31m[K^~~~~~~[m[K
+[1.524s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.524s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.524s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.524s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.524s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.524s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.525s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.525s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.525s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.525s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.525s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.525s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.525s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.525s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.525s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.525s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_68[m[K’
+[1.525s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.525s]       |       [01;31m[K^~~~~~~[m[K
+[1.526s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.526s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.526s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.526s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.526s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.526s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.526s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.526s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.526s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.526s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.526s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.526s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.527s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.527s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.527s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.527s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.527s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.527s]       |                [01;36m[K^[m[K
+[1.527s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.527s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.527s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.527s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_41[m[K’ was not declared in this scope
+[1.527s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.528s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.528s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.528s]    41 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(CHECK_EIGEN_MATRIX_NEAR(A, B, 0.01));
+[1.528s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.528s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.528s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.528s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.528s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.528s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.528s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.528s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:63:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.528s]    63 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.529s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.529s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-zero-sized-types.cc:41:41:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_NEAR[m[K’
+[1.529s]    41 |   GLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA([01;36m[KCHECK_EIGEN_MATRIX_NEAR[m[K(A, B, 0.01));
+[1.529s]       |                                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.529s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_68[m[K’ was not declared in this scope
+[1.529s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.529s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.529s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:67:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.529s]    67 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.529s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.529s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.530s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.530s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.530s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.530s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.530s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.530s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.530s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.530s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.530s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:68:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.530s]    68 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.530s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.530s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:[m[K In member function ‘[01m[Kvirtual void EigenChecks_EigenMatrixEqualDoubleGLog_Vector_Near5_Test<gtest_TypeParam_>::TestBody()[m[K’:
+[1.531s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kresult_74[m[K’
+[1.531s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.531s]       |       [01;31m[K^~~~~~~[m[K
+[1.531s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.531s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.531s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.531s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.531s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.531s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.531s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.531s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.532s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.532s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.532s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.532s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.532s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.532s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.532s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.532s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:42:7:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kresult_74[m[K’
+[1.532s]    42 |       [01;31m[Kresult_[m[K, __LINE__) = (X);                                              \
+[1.532s]       |       [01;31m[K^~~~~~~[m[K
+[1.532s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.532s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.533s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.533s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.533s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.533s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.533s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:41:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.533s]    41 |   ::testing::AssertionResult [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(                 \
+[1.533s]       |                              [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.533s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.533s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.533s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.533s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.533s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.534s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.534s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_helper.h:136:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.534s]   136 |   EXPECT_DEATH([01;36m[K([m[KX), "^")  // ^The matrices are different$
+[1.534s]       |                [01;36m[K^[m[K
+[1.534s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.534s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.534s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.534s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_74[m[K’ was not declared in this scope
+[1.534s]    43 |   CHECK(static_cast<bool>(INTERNAL_EIGEN_CHECKS_MAKE_VAR([01;31m[Kresult_[m[K, __LINE__)))\
+[1.534s]       |                                                          [01;31m[K^~~~~~~[m[K
+[1.534s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:73:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K’
+[1.534s]    73 |   [01;36m[KGLOG_TEST_EXPECT_DEATH_DIFFERENT_DATA[m[K(
+[1.535s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.535s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:38:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K’
+[1.535s]    38 |   [01;36m[KINTERNAL_EIGEN_CHECKS_LOCAL_UNIQUE_VAR[m[K(var, line)
+[1.535s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.535s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:43:27:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K’
+[1.535s]    43 |   CHECK(static_cast<bool>([01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_VAR[m[K(result_, __LINE__)))\
+[1.535s]       |                           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.535s] [01m[K/home/carbs/hdvio2.0/eigen_checks/include/eigen-checks/glog.h:54:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K’
+[1.535s]    54 |   [01;36m[KINTERNAL_EIGEN_CHECKS_MAKE_GLOG_CHECK[m[K(                                     \
+[1.535s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.535s] [01m[K/home/carbs/hdvio2.0/eigen_checks/test/test_glog-equal-double.cc:74:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K’
+[1.535s]    74 |       [01;36m[KCHECK_EIGEN_MATRIX_EQUAL_DOUBLE[m[K(this->ground_truth_vector_5,
+[1.536s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.720s] gmake[2]: *** [CMakeFiles/test_glog_zero_sized_types.dir/build.make:76: CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o] Error 1
+[1.720s] gmake[1]: *** [CMakeFiles/Makefile2:427: CMakeFiles/test_glog_zero_sized_types.dir/all] Error 2
+[1.720s] gmake[1]: *** Waiting for unfinished jobs....
+[1.870s] [ 65%] [32m[1mLinking CXX executable test_gtest_zero_sized_types[0m
+[2.034s] [ 65%] Built target test_gtest_zero_sized_types
+[2.308s] gmake[2]: *** [CMakeFiles/test_glog_equal.dir/build.make:76: CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o] Error 1
+[2.309s] gmake[1]: *** [CMakeFiles/Makefile2:343: CMakeFiles/test_glog_equal.dir/all] Error 2
+[2.373s] gmake[2]: *** [CMakeFiles/test_glog_near.dir/build.make:76: CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o] Error 1
+[2.373s] gmake[1]: *** [CMakeFiles/Makefile2:315: CMakeFiles/test_glog_near.dir/all] Error 2
+[2.392s] gmake[2]: *** [CMakeFiles/test_glog_equal_double.dir/build.make:76: CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o] Error 1
+[2.392s] gmake[1]: *** [CMakeFiles/Makefile2:399: CMakeFiles/test_glog_equal_double.dir/all] Error 2
+[2.415s] gmake[2]: *** [CMakeFiles/test_glog_zero.dir/build.make:76: CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o] Error 1
+[2.415s] gmake[1]: *** [CMakeFiles/Makefile2:371: CMakeFiles/test_glog_zero.dir/all] Error 2
+[2.913s] [ 69%] [32m[1mLinking CXX executable test_gtest_equal[0m
+[2.921s] [ 73%] [32m[1mLinking CXX executable test_gtest_equal_double[0m
+[3.085s] [ 73%] Built target test_gtest_equal
+[3.086s] [ 73%] Built target test_gtest_equal_double
+[3.508s] [ 76%] [32m[1mLinking CXX executable test_gtest_near[0m
+[3.660s] [ 80%] [32m[1mLinking CXX executable test_gtest_zero[0m
+[3.694s] [ 80%] Built target test_gtest_near
+[3.851s] [ 80%] Built target test_gtest_zero
+[3.853s] gmake: *** [Makefile:146: all] Error 2
+[3.856s] Invoked command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks -- -j24 -l24

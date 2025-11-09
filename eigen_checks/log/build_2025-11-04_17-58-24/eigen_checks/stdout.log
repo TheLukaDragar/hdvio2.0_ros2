@@ -1,0 +1,72 @@
+[  7%] Built target eigen_checks
+[ 15%] Built target gtest_main
+[ 23%] Built target gtest
+Consolidate compiler generated dependencies of target test_gtest_equal
+Consolidate compiler generated dependencies of target test_glog_near
+Consolidate compiler generated dependencies of target test_glog_equal
+Consolidate compiler generated dependencies of target test_glog_zero
+Consolidate compiler generated dependencies of target test_gtest_near
+Consolidate compiler generated dependencies of target test_gtest_zero
+Consolidate compiler generated dependencies of target test_glog_zero_sized_types
+Consolidate compiler generated dependencies of target test_gtest_zero_sized_types
+Consolidate compiler generated dependencies of target test_gtest_equal_double
+Consolidate compiler generated dependencies of target test_glog_equal_double
+[ 30%] Building CXX object CMakeFiles/test_glog_equal.dir/test/test_glog-equal.cc.o
+[ 30%] Building CXX object CMakeFiles/test_glog_near.dir/test/test_glog-near.cc.o
+[ 34%] Building CXX object CMakeFiles/test_gtest_equal.dir/test/test_gtest-equal.cc.o
+[ 38%] Building CXX object CMakeFiles/test_gtest_near.dir/test/test_gtest-near.cc.o
+[ 42%] Building CXX object CMakeFiles/test_gtest_zero_sized_types.dir/test/test_gtest-zero-sized-types.cc.o
+[ 46%] Building CXX object CMakeFiles/test_gtest_zero.dir/test/test_gtest-zero.cc.o
+[ 50%] Building CXX object CMakeFiles/test_glog_zero_sized_types.dir/test/test_glog-zero-sized-types.cc.o
+[ 53%] Building CXX object CMakeFiles/test_gtest_equal_double.dir/test/test_gtest-equal-double.cc.o
+[ 57%] Building CXX object CMakeFiles/test_glog_zero.dir/test/test_glog-zero.cc.o
+[ 61%] Building CXX object CMakeFiles/test_glog_equal_double.dir/test/test_glog-equal-double.cc.o
+[ 65%] Linking CXX executable test_gtest_zero_sized_types
+[ 69%] Linking CXX executable test_glog_zero_sized_types
+[ 69%] Built target test_gtest_zero_sized_types
+[ 69%] Built target test_glog_zero_sized_types
+[ 73%] Linking CXX executable test_gtest_equal_double
+[ 76%] Linking CXX executable test_gtest_equal
+[ 76%] Built target test_gtest_equal_double
+[ 76%] Built target test_gtest_equal
+[ 80%] Linking CXX executable test_glog_zero
+[ 84%] Linking CXX executable test_gtest_near
+[ 88%] Linking CXX executable test_glog_equal
+[ 92%] Linking CXX executable test_glog_equal_double
+[ 96%] Linking CXX executable test_glog_near
+[100%] Linking CXX executable test_gtest_zero
+[100%] Built target test_glog_zero
+[100%] Built target test_gtest_near
+[100%] Built target test_glog_equal
+[100%] Built target test_glog_equal_double
+[100%] Built target test_glog_near
+[100%] Built target test_gtest_zero
+-- Install configuration: ""
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/lib/libeigen_checks.a
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/entrypoint.h
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/internal/gtest-equal.h
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/gtest.h
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/include/eigen-checks/glog.h
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/library_path.dsv
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/package_run_dependencies/eigen_checks
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/parent_prefix_path/eigen_checks
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.sh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/environment/path.dsv
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.bash
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.sh
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.zsh
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/local_setup.dsv
+-- Installing: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.dsv
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/ament_index/resource_index/packages/eigen_checks
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig.cmake
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/cmake/eigen_checksConfig-version.cmake
+-- Up-to-date: /home/carbs/hdvio2.0/eigen_checks/install/eigen_checks/share/eigen_checks/package.xml

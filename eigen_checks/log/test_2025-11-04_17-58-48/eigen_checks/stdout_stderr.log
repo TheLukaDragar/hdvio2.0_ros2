@@ -1,0 +1,524 @@
+UpdateCTestConfiguration  from :/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/CTestConfiguration.ini
+Parse Config file:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/CTestConfiguration.ini
+   Site: carbs-STRIX
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20251104-1658 - Experimental
+UpdateCTestConfiguration  from :/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/CTestConfiguration.ini
+Parse Config file:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/CTestConfiguration.ini
+Test project /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+      Start  1: test_gtest_near
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_near.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_gtest_near.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_near" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_near.gtest.xml"
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+1:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_near --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_near.gtest.xml
+1: [==========] Running 20 tests from 2 test suites.
+1: [----------] Global test environment set-up.
+1: [----------] 10 tests from EigenChecks/0, where TypeParam = double
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Matrix_Equal
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Matrix_Equal (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Matrix_EqualFloatingPoint
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Matrix_EqualFloatingPoint (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Matrix_NonEqualRandom
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Matrix_NonEqualRandom (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Matrix_OtherSize
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Matrix_OtherSize (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Matrix_Near5
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Matrix_Near5 (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Vector_Equal
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Vector_Equal (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Vector_EqualFloatingPoint
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Vector_EqualFloatingPoint (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Vector_NonEqualRandom
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Vector_NonEqualRandom (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Vector_OtherSize
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Vector_OtherSize (0 ms)
+1: [ RUN      ] EigenChecks/0.EigenMatrixNearGTest_Vector_Near5
+1: [       OK ] EigenChecks/0.EigenMatrixNearGTest_Vector_Near5 (0 ms)
+1: [----------] 10 tests from EigenChecks/0 (1 ms total)
+1: 
+1: [----------] 10 tests from EigenChecks/1, where TypeParam = float
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Matrix_Equal
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Matrix_Equal (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Matrix_EqualFloatingPoint
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Matrix_EqualFloatingPoint (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Matrix_NonEqualRandom
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Matrix_NonEqualRandom (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Matrix_OtherSize
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Matrix_OtherSize (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Matrix_Near5
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Matrix_Near5 (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Vector_Equal
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Vector_Equal (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Vector_EqualFloatingPoint
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Vector_EqualFloatingPoint (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Vector_NonEqualRandom
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Vector_NonEqualRandom (1 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Vector_OtherSize
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Vector_OtherSize (0 ms)
+1: [ RUN      ] EigenChecks/1.EigenMatrixNearGTest_Vector_Near5
+1: [       OK ] EigenChecks/1.EigenMatrixNearGTest_Vector_Near5 (0 ms)
+1: [----------] 10 tests from EigenChecks/1 (1 ms total)
+1: 
+1: [----------] Global test environment tear-down
+1: [==========] 20 tests from 2 test suites ran. (2 ms total)
+1: [  PASSED  ] 20 tests.
+1: -- run_test.py: return code 0
+1: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_near.gtest.xml'
+1: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_near.gtest.xml'
+ 1/10 Test  #1: test_gtest_near ..................   Passed    0.07 sec
+test 2
+      Start  2: test_gtest_equal
+
+2: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_gtest_equal.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_equal" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal.gtest.xml"
+2: Test timeout computed to be: 60
+2: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+2:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_equal --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal.gtest.xml
+2: [==========] Running 16 tests from 2 test suites.
+2: [----------] Global test environment set-up.
+2: [----------] 8 tests from EigenChecks/0, where TypeParam = double
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_Equal
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_Equal (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_NonEqualRandom
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_NonEqualRandom (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_OtherSize
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_OtherSize (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_Near5
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Matrix_Near5 (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Vector_Equal
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Vector_Equal (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Vector_NonEqualRandom
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Vector_NonEqualRandom (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Vector_OtherSize
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Vector_OtherSize (0 ms)
+2: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTest_Vector_Near5
+2: [       OK ] EigenChecks/0.EigenMatrixEqualGTest_Vector_Near5 (0 ms)
+2: [----------] 8 tests from EigenChecks/0 (0 ms total)
+2: 
+2: [----------] 8 tests from EigenChecks/1, where TypeParam = float
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_Equal
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_Equal (1 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_NonEqualRandom
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_NonEqualRandom (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_OtherSize
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_OtherSize (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_Near5
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Matrix_Near5 (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Vector_Equal
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Vector_Equal (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Vector_NonEqualRandom
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Vector_NonEqualRandom (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Vector_OtherSize
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Vector_OtherSize (0 ms)
+2: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTest_Vector_Near5
+2: [       OK ] EigenChecks/1.EigenMatrixEqualGTest_Vector_Near5 (0 ms)
+2: [----------] 8 tests from EigenChecks/1 (1 ms total)
+2: 
+2: [----------] Global test environment tear-down
+2: [==========] 16 tests from 2 test suites ran. (1 ms total)
+2: [  PASSED  ] 16 tests.
+2: -- run_test.py: return code 0
+2: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal.gtest.xml'
+2: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal.gtest.xml'
+ 2/10 Test  #2: test_gtest_equal .................   Passed    0.06 sec
+test 3
+      Start  3: test_gtest_zero
+
+3: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_gtest_zero.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_zero" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero.gtest.xml"
+3: Test timeout computed to be: 60
+3: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+3:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_zero --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero.gtest.xml
+3: [==========] Running 16 tests from 2 test suites.
+3: [----------] Global test environment set-up.
+3: [----------] 8 tests from EigenChecks/0, where TypeParam = double
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_Equal
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_Equal (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_NonEqualRandom
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_NonEqualRandom (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_OtherSize
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_OtherSize (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_Near5
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Matrix_Near5 (1 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Vector_Equal
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Vector_Equal (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Vector_NonEqualRandom
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Vector_NonEqualRandom (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Vector_OtherSize
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Vector_OtherSize (0 ms)
+3: [ RUN      ] EigenChecks/0.EigenMatrixZeroGTest_Vector_Near5
+3: [       OK ] EigenChecks/0.EigenMatrixZeroGTest_Vector_Near5 (0 ms)
+3: [----------] 8 tests from EigenChecks/0 (1 ms total)
+3: 
+3: [----------] 8 tests from EigenChecks/1, where TypeParam = float
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_Equal
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_Equal (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_NonEqualRandom
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_NonEqualRandom (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_OtherSize
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_OtherSize (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_Near5
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Matrix_Near5 (1 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Vector_Equal
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Vector_Equal (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Vector_NonEqualRandom
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Vector_NonEqualRandom (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Vector_OtherSize
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Vector_OtherSize (0 ms)
+3: [ RUN      ] EigenChecks/1.EigenMatrixZeroGTest_Vector_Near5
+3: [       OK ] EigenChecks/1.EigenMatrixZeroGTest_Vector_Near5 (0 ms)
+3: [----------] 8 tests from EigenChecks/1 (1 ms total)
+3: 
+3: [----------] Global test environment tear-down
+3: [==========] 16 tests from 2 test suites ran. (2 ms total)
+3: [  PASSED  ] 16 tests.
+3: -- run_test.py: return code 0
+3: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero.gtest.xml'
+3: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero.gtest.xml'
+ 3/10 Test  #3: test_gtest_zero ..................   Passed    0.06 sec
+test 4
+      Start  4: test_gtest_equal_double
+
+4: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_gtest_equal_double.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_equal_double" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml"
+4: Test timeout computed to be: 60
+4: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+4:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_equal_double --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml
+4: [==========] Running 20 tests from 2 test suites.
+4: [----------] Global test environment set-up.
+4: [----------] 10 tests from EigenChecks/0, where TypeParam = double
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Equal
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Equal (1 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_OtherSize
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_OtherSize (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Near5
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Matrix_Near5 (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Equal
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Equal (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_OtherSize
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_OtherSize (0 ms)
+4: [ RUN      ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Near5
+4: [       OK ] EigenChecks/0.EigenMatrixEqualGTestDouble_Vector_Near5 (0 ms)
+4: [----------] 10 tests from EigenChecks/0 (1 ms total)
+4: 
+4: [----------] 10 tests from EigenChecks/1, where TypeParam = float
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Equal
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Equal (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_EqualFloatingPoint (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_NonEqualRandom (1 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_OtherSize
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_OtherSize (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Near5
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Matrix_Near5 (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Equal
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Equal (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_EqualFloatingPoint (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_NonEqualRandom (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_OtherSize
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_OtherSize (0 ms)
+4: [ RUN      ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Near5
+4: [       OK ] EigenChecks/1.EigenMatrixEqualGTestDouble_Vector_Near5 (0 ms)
+4: [----------] 10 tests from EigenChecks/1 (1 ms total)
+4: 
+4: [----------] Global test environment tear-down
+4: [==========] 20 tests from 2 test suites ran. (2 ms total)
+4: [  PASSED  ] 20 tests.
+4: -- run_test.py: return code 0
+4: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml'
+4: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_equal_double.gtest.xml'
+ 4/10 Test  #4: test_gtest_equal_double ..........   Passed    0.06 sec
+test 5
+      Start  5: test_glog_near
+
+5: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_near.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_glog_near.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_near" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_near.gtest.xml"
+5: Test timeout computed to be: 60
+5: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+5:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_near --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_near.gtest.xml
+5: [==========] Running 20 tests from 2 test suites.
+5: [----------] Global test environment set-up.
+5: [----------] 10 tests from EigenChecks/0, where TypeParam = double
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Matrix_Equal
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Matrix_Equal (0 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Matrix_EqualFloatingPoint
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Matrix_EqualFloatingPoint (0 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Matrix_NonEqualRandom
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Matrix_NonEqualRandom (82 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Matrix_OtherSize
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Matrix_OtherSize (75 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Matrix_Near5
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Matrix_Near5 (0 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Vector_Equal
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Vector_Equal (0 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Vector_EqualFloatingPoint
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Vector_EqualFloatingPoint (0 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Vector_NonEqualRandom
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Vector_NonEqualRandom (85 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Vector_OtherSize
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Vector_OtherSize (83 ms)
+5: [ RUN      ] EigenChecks/0.EigenMatrixNearGLog_Vector_Near5
+5: [       OK ] EigenChecks/0.EigenMatrixNearGLog_Vector_Near5 (0 ms)
+5: [----------] 10 tests from EigenChecks/0 (325 ms total)
+5: 
+5: [----------] 10 tests from EigenChecks/1, where TypeParam = float
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Matrix_Equal
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Matrix_Equal (0 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Matrix_EqualFloatingPoint
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Matrix_EqualFloatingPoint (0 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Matrix_NonEqualRandom
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Matrix_NonEqualRandom (84 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Matrix_OtherSize
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Matrix_OtherSize (82 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Matrix_Near5
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Matrix_Near5 (0 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Vector_Equal
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Vector_Equal (0 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Vector_EqualFloatingPoint
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Vector_EqualFloatingPoint (0 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Vector_NonEqualRandom
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Vector_NonEqualRandom (79 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Vector_OtherSize
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Vector_OtherSize (83 ms)
+5: [ RUN      ] EigenChecks/1.EigenMatrixNearGLog_Vector_Near5
+5: [       OK ] EigenChecks/1.EigenMatrixNearGLog_Vector_Near5 (0 ms)
+5: [----------] 10 tests from EigenChecks/1 (328 ms total)
+5: 
+5: [----------] Global test environment tear-down
+5: [==========] 20 tests from 2 test suites ran. (653 ms total)
+5: [  PASSED  ] 20 tests.
+5: -- run_test.py: return code 0
+5: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_near.gtest.xml'
+5: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_near.gtest.xml'
+ 5/10 Test  #5: test_glog_near ...................   Passed    0.72 sec
+test 6
+      Start  6: test_glog_equal
+
+6: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_glog_equal.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_equal" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml"
+6: Test timeout computed to be: 60
+6: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+6:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_equal --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml
+6: [==========] Running 16 tests from 2 test suites.
+6: [----------] Global test environment set-up.
+6: [----------] 8 tests from EigenChecks/0, where TypeParam = double
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Equal
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Equal (0 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_NonEqualRandom
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_NonEqualRandom (74 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_OtherSize
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_OtherSize (85 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Near5
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Matrix_Near5 (78 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Equal
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Equal (0 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_NonEqualRandom
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_NonEqualRandom (77 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_OtherSize
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_OtherSize (75 ms)
+6: [ RUN      ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Near5
+6: [       OK ] EigenChecks/0.EigenMatrixEqualGLog_Vector_Near5 (84 ms)
+6: [----------] 8 tests from EigenChecks/0 (474 ms total)
+6: 
+6: [----------] 8 tests from EigenChecks/1, where TypeParam = float
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Equal
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Equal (0 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_NonEqualRandom
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_NonEqualRandom (84 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_OtherSize
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_OtherSize (79 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Near5
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Matrix_Near5 (84 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Equal
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Equal (0 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_NonEqualRandom
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_NonEqualRandom (82 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_OtherSize
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_OtherSize (82 ms)
+6: [ RUN      ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Near5
+6: [       OK ] EigenChecks/1.EigenMatrixEqualGLog_Vector_Near5 (77 ms)
+6: [----------] 8 tests from EigenChecks/1 (488 ms total)
+6: 
+6: [----------] Global test environment tear-down
+6: [==========] 16 tests from 2 test suites ran. (962 ms total)
+6: [  PASSED  ] 16 tests.
+6: -- run_test.py: return code 0
+6: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml'
+6: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal.gtest.xml'
+ 6/10 Test  #6: test_glog_equal ..................   Passed    1.03 sec
+test 7
+      Start  7: test_glog_zero
+
+7: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_glog_zero.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_zero" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero.gtest.xml"
+7: Test timeout computed to be: 60
+7: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+7:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_zero --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero.gtest.xml
+7: [==========] Running 16 tests from 2 test suites.
+7: [----------] Global test environment set-up.
+7: [----------] 8 tests from EigenChecks/0, where TypeParam = double
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_Equal
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_Equal (0 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_NonEqualRandom
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_NonEqualRandom (77 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_OtherSize
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_OtherSize (75 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_Near5
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Matrix_Near5 (83 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Vector_Equal
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Vector_Equal (0 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Vector_NonEqualRandom
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Vector_NonEqualRandom (85 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Vector_OtherSize
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Vector_OtherSize (78 ms)
+7: [ RUN      ] EigenChecks/0.EigenMatrixZeroGLog_Vector_Near5
+7: [       OK ] EigenChecks/0.EigenMatrixZeroGLog_Vector_Near5 (78 ms)
+7: [----------] 8 tests from EigenChecks/0 (476 ms total)
+7: 
+7: [----------] 8 tests from EigenChecks/1, where TypeParam = float
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_Equal
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_Equal (0 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_NonEqualRandom
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_NonEqualRandom (78 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_OtherSize
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_OtherSize (78 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_Near5
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Matrix_Near5 (85 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Vector_Equal
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Vector_Equal (0 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Vector_NonEqualRandom
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Vector_NonEqualRandom (78 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Vector_OtherSize
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Vector_OtherSize (81 ms)
+7: [ RUN      ] EigenChecks/1.EigenMatrixZeroGLog_Vector_Near5
+7: [       OK ] EigenChecks/1.EigenMatrixZeroGLog_Vector_Near5 (82 ms)
+7: [----------] 8 tests from EigenChecks/1 (482 ms total)
+7: 
+7: [----------] Global test environment tear-down
+7: [==========] 16 tests from 2 test suites ran. (958 ms total)
+7: [  PASSED  ] 16 tests.
+7: -- run_test.py: return code 0
+7: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero.gtest.xml'
+7: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero.gtest.xml'
+ 7/10 Test  #7: test_glog_zero ...................   Passed    1.02 sec
+test 8
+      Start  8: test_glog_equal_double
+
+8: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal_double.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_glog_equal_double.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_equal_double" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal_double.gtest.xml"
+8: Test timeout computed to be: 60
+8: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+8:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_equal_double --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal_double.gtest.xml
+8: [==========] Running 16 tests from 2 test suites.
+8: [----------] Global test environment set-up.
+8: [----------] 8 tests from EigenChecks/0, where TypeParam = double
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_Equal
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_Equal (0 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom (82 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_OtherSize
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_OtherSize (79 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_Near5
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Matrix_Near5 (82 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_Equal
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_Equal (0 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom (78 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_OtherSize
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_OtherSize (78 ms)
+8: [ RUN      ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_Near5
+8: [       OK ] EigenChecks/0.EigenMatrixEqualDoubleGLog_Vector_Near5 (81 ms)
+8: [----------] 8 tests from EigenChecks/0 (480 ms total)
+8: 
+8: [----------] 8 tests from EigenChecks/1, where TypeParam = float
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_Equal
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_Equal (0 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_NonEqualRandom (82 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_OtherSize
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_OtherSize (84 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_Near5
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Matrix_Near5 (85 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_Equal
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_Equal (0 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_NonEqualRandom (79 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_OtherSize
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_OtherSize (80 ms)
+8: [ RUN      ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_Near5
+8: [       OK ] EigenChecks/1.EigenMatrixEqualDoubleGLog_Vector_Near5 (80 ms)
+8: [----------] 8 tests from EigenChecks/1 (490 ms total)
+8: 
+8: [----------] Global test environment tear-down
+8: [==========] 16 tests from 2 test suites ran. (970 ms total)
+8: [  PASSED  ] 16 tests.
+8: -- run_test.py: return code 0
+8: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal_double.gtest.xml'
+8: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_equal_double.gtest.xml'
+ 8/10 Test  #8: test_glog_equal_double ...........   Passed    1.04 sec
+test 9
+      Start  9: test_glog_zero_sized_types
+
+9: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero_sized_types.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_glog_zero_sized_types.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_zero_sized_types" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero_sized_types.gtest.xml"
+9: Test timeout computed to be: 60
+9: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+9:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_glog_zero_sized_types --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero_sized_types.gtest.xml
+9: [==========] Running 2 tests from 1 test suite.
+9: [----------] Global test environment set-up.
+9: [----------] 2 tests from EigenChecks
+9: [ RUN      ] EigenChecks.EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix
+9: [       OK ] EigenChecks.EigenMatrixEqualGlog_Zero_Sized_Dynamic_Matrix (82 ms)
+9: [ RUN      ] EigenChecks.EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector
+9: [       OK ] EigenChecks.EigenVectorEqualGlog_Zero_Sized_Dynamic_Vector (74 ms)
+9: [----------] 2 tests from EigenChecks (156 ms total)
+9: 
+9: [----------] Global test environment tear-down
+9: [==========] 2 tests from 1 test suite ran. (156 ms total)
+9: [  PASSED  ] 2 tests.
+9: -- run_test.py: return code 0
+9: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero_sized_types.gtest.xml'
+9: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_glog_zero_sized_types.gtest.xml'
+ 9/10 Test  #9: test_glog_zero_sized_types .......   Passed    0.22 sec
+test 10
+      Start 10: test_gtest_zero_sized_types
+
+10: Test command: /usr/bin/python3 "-u" "/opt/ros/humble/share/ament_cmake_test/cmake/run_test.py" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml" "--package-name" "eigen_checks" "--output-file" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/ament_cmake_gtest/test_gtest_zero_sized_types.txt" "--command" "/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_zero_sized_types" "--gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml"
+10: Test timeout computed to be: 60
+10: -- run_test.py: invoking following command in '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks':
+10:  - /home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_gtest_zero_sized_types --gtest_output=xml:/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml
+10: [==========] Running 2 tests from 1 test suite.
+10: [----------] Global test environment set-up.
+10: [----------] 2 tests from EigenChecks
+10: [ RUN      ] EigenChecks.EigenMatrixEqualGtest_Zero_Sized_Dynamic_Matrix
+10: [       OK ] EigenChecks.EigenMatrixEqualGtest_Zero_Sized_Dynamic_Matrix (0 ms)
+10: [ RUN      ] EigenChecks.EigenVectorEqualGtest_Zero_Sized_Dynamic_Vector
+10: [       OK ] EigenChecks.EigenVectorEqualGtest_Zero_Sized_Dynamic_Vector (0 ms)
+10: [----------] 2 tests from EigenChecks (0 ms total)
+10: 
+10: [----------] Global test environment tear-down
+10: [==========] 2 tests from 1 test suite ran. (0 ms total)
+10: [  PASSED  ] 2 tests.
+10: -- run_test.py: return code 0
+10: -- run_test.py: inject classname prefix into gtest result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml'
+10: -- run_test.py: verify result file '/home/carbs/hdvio2.0/eigen_checks/build/eigen_checks/test_results/eigen_checks/test_gtest_zero_sized_types.gtest.xml'
+10/10 Test #10: test_gtest_zero_sized_types ......   Passed    0.06 sec
+
+[0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 10
+
+Label Time Summary:
+gtest    =   4.35 sec*proc (10 tests)
+
+Total Test time (real) =   4.35 sec

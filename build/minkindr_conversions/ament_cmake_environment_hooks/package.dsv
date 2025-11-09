@@ -1,0 +1,4 @@
+source;share/minkindr_conversions/local_setup.bash
+source;share/minkindr_conversions/local_setup.dsv
+source;share/minkindr_conversions/local_setup.sh
+source;share/minkindr_conversions/local_setup.zsh

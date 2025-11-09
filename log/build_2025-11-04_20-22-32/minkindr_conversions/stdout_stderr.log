@@ -1,0 +1,68 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found minkindr: 1.0.0 (/home/carbs/hdvio2.0/install/minkindr/share/minkindr/cmake)
+-- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_eigen: 0.25.16 (/opt/ros/humble/share/tf2_eigen/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/carbs/hdvio2.0/minkindr_ros/build/minkindr_conversions
+-- Install configuration: ""
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/kindr_tf.h
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-16-22
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-16-22/events.log
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-16-22/logger_all.log
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-18-17
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-18-17/events.log
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/build_2025-11-04_20-18-17/logger_all.log
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/COLCON_IGNORE
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/latest
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/log/latest_build
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/kindr_msg.h
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/kindr_xml.h
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/build
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/build/COLCON_IGNORE
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/build/.built_by
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/local_setup.bash
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/setup.zsh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/setup.ps1
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/COLCON_IGNORE
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/local_setup.ps1
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/local_setup.zsh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/_local_setup_util_sh.py
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/_local_setup_util_ps1.py
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/setup.bash
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/setup.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/.colcon_install_layout
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/include/minkindr_conversions/install/local_setup.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/library_path.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/library_path.dsv
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/ament_index/resource_index/package_run_dependencies/minkindr_conversions
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/ament_index/resource_index/parent_prefix_path/minkindr_conversions
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/ament_prefix_path.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/ament_prefix_path.dsv
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/path.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/environment/path.dsv
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/local_setup.bash
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/local_setup.sh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/local_setup.zsh
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/local_setup.dsv
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/package.dsv
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/ament_index/resource_index/packages/minkindr_conversions
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/cmake/minkindr_conversionsTargetsExport.cmake
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/cmake/minkindr_conversionsConfig.cmake
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/cmake/minkindr_conversionsConfig-version.cmake
+-- Installing: /home/carbs/hdvio2.0/minkindr_ros/install/minkindr_conversions/share/minkindr_conversions/package.xml

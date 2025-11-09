@@ -18,10 +18,10 @@ TEST(KindrMsgTest, poseKindrToMsgToKindr) {
   Eigen::Vector3d position(Eigen::Vector3d::Random());
   kindr::minimal::QuatTransformation kindr_transform(rotation, position);
 
-  geometry_msgs::Pose msg;
-  poseKindrToMsg(kindr_transform, &msg);
+  geometry_msgs::msg::Pose msg;
+  tf2::poseKindrToMsg(kindr_transform, &msg);
   kindr::minimal::QuatTransformation output_transform;
-  poseMsgToKindr(msg, &output_transform);
+  tf2::poseMsgToKindr(msg, &output_transform);
 
   EXPECT_NEAR_EIGEN(
       output_transform.getRotation().toImplementation().coeffs(),
@@ -35,10 +35,10 @@ TEST(KindrMsgTest, poseKindr2DToMsgToKindr2D) {
     const Eigen::Vector2d position = Eigen::Vector2d::Random();
     kindr::minimal::Transformation2D kindr_transform(rotation, position);
 
-    geometry_msgs::Pose msg;
-    poseKindr2DToMsg(kindr_transform, &msg);
+    geometry_msgs::msg::Pose msg;
+    tf2::poseKindr2DToMsg(kindr_transform, &msg);
     kindr::minimal::Transformation2D output_transform;
-    poseMsgToKindr2D(msg, &output_transform);
+    tf2::poseMsgToKindr2D(msg, &output_transform);
 
     EXPECT_NEAR(
         output_transform.getRotation().angle(), angle_rad, kTestTolerance)
@@ -48,21 +48,21 @@ TEST(KindrMsgTest, poseKindr2DToMsgToKindr2D) {
 }
 
 TEST(KindrMsgTest, poseMsgToKindr2DFailsForInvalidInputPose) {
-  geometry_msgs::Pose invalid_position_msg;
+  geometry_msgs::msg::Pose invalid_position_msg;
   invalid_position_msg.position.z = 1.0;
   kindr::minimal::Transformation2D invalid_position_output_transform;
   EXPECT_DEATH(
-      poseMsgToKindr2D(
+      tf2::poseMsgToKindr2D(
           invalid_position_msg, &invalid_position_output_transform),
       "No proper 2D position.");
 
-  geometry_msgs::Pose invalid_rotation_msg;
+  geometry_msgs::msg::Pose invalid_rotation_msg;
   kindr::minimal::Transformation2D invalid_rotation_output_transform;
   const kindr::minimal::RotationQuaternion invalid_2d_rotation(
       kindr::minimal::AngleAxis(0.5, 0.0, 1.0, 0.0));
-  quaternionKindrToMsg(invalid_2d_rotation, &invalid_rotation_msg.orientation);
+  tf2::quaternionKindrToMsg(invalid_2d_rotation, &invalid_rotation_msg.orientation);
   EXPECT_DEATH(
-      poseMsgToKindr2D(invalid_rotation_msg, &invalid_rotation_output_transform),
+      tf2::poseMsgToKindr2D(invalid_rotation_msg, &invalid_rotation_output_transform),
       "No proper 2D rotation.");
 }
 
@@ -72,10 +72,10 @@ TEST(KindrMsgTest, transformKindrToMsgToKindr) {
   Eigen::Vector3d position(Eigen::Vector3d::Random());
   kindr::minimal::QuatTransformation kindr_transform(rotation, position);
 
-  geometry_msgs::Transform msg;
-  transformKindrToMsg(kindr_transform, &msg);
+  geometry_msgs::msg::Transform msg;
+  tf2::transformKindrToMsg(kindr_transform, &msg);
   kindr::minimal::QuatTransformation output_transform;
-  transformMsgToKindr(msg, &output_transform);
+  tf2::transformMsgToKindr(msg, &output_transform);
 
   EXPECT_NEAR_EIGEN(
       output_transform.getRotation().toImplementation().coeffs(),
@@ -87,10 +87,10 @@ TEST(KindrMsgTest, quaternionKindrToMsgToKindr) {
   Eigen::Quaterniond rotation(Eigen::Vector4d::Random());
   rotation.normalize();
 
-  geometry_msgs::Quaternion msg;
-  quaternionKindrToMsg(rotation, &msg);
+  geometry_msgs::msg::Quaternion msg;
+  tf2::quaternionKindrToMsg(rotation, &msg);
   Eigen::Quaterniond output_rotation;
-  quaternionMsgToKindr(msg, &output_rotation);
+  tf2::quaternionMsgToKindr(msg, &output_rotation);
 
   EXPECT_NEAR_EIGEN(
       output_rotation.coeffs(), rotation.coeffs(), kTestTolerance);
@@ -99,10 +99,10 @@ TEST(KindrMsgTest, quaternionKindrToMsgToKindr) {
 TEST(KindrMsgTest, vectorKindrToMsgToKindr) {
   Eigen::Vector3d position(Eigen::Vector3d::Random());
 
-  geometry_msgs::Vector3 msg;
-  vectorKindrToMsg(position, &msg);
+  geometry_msgs::msg::Vector3 msg;
+  tf2::vectorKindrToMsg(position, &msg);
   Eigen::Vector3d output_position;
-  vectorMsgToKindr(msg, &output_position);
+  tf2::vectorMsgToKindr(msg, &output_position);
 
   EXPECT_NEAR_EIGEN(output_position, position, kTestTolerance);
 }

@@ -1,0 +1,204 @@
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_msg_test.cc:8[m[K:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_msg.h:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+    1 | #ifndef MINKINDR_CONVERSIONS_KINDR_MSG_H
+      | 
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_msg_test.cc:11:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   11 | [01;31m[Knamespace[m[K tf {
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_msg_test.cc:115:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  115 | }
+      |  [01;31m[K^[m[K
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_msg_test.cc:8[m[K:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_msg.h:19:15:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   19 | namespace tf2 [01;36m[K{[m[K
+      |               [01;36m[K^[m[K
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h: In instantiation of ‘[01m[Kvoid tf2::vectorKindrToTF(const Eigen::Matrix<Type, 3, 1>&, tf2::Vector3*) [with Scalar = double][m[K’:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:26:23:[m[K   required from here
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:57:13:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KtoMsg(const Eigen::Matrix<double, 3, 1>&, tf2::Vector3&)[m[K’
+   57 |   [01;31m[Ktf2::toMsg(kindr, *tf_type)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:41[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class A, class B> B tf2::toMsg(const A&)[m[K’
+  129 | B [01;36m[KtoMsg[m[K(const A & a);
+      |   [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:57:13:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+   57 |   [01;36m[Ktf2::toMsg(kindr, *tf_type)[m[K;
+      |   [01;36m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Point tf2::toMsg(const Vector3d&)[m[K’
+  183 | geometry_msgs::msg::Point [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Vector3& tf2::toMsg(const Vector3d&, geometry_msgs::msg::Vector3&)[m[K’
+  211 | geometry_msgs::msg::Vector3 & [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in, geometry_msgs::msg::Vector3 & out)
+      |                               [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:95:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Ktf2::Vector3[m[K’ to ‘[01m[Kgeometry_msgs::msg::Vector3&[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::Vector3_<std::allocator<void> >&[m[K’}
+  211 | geometry_msgs::msg::Vector3 & toMsg(const Eigen::Vector3d & in, [01;36m[Kgeometry_msgs::msg::Vector3 & out[m[K)
+      |                                                                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped tf2::toMsg(const tf2::Stamped<Eigen::Matrix<double, 3, 1> >&)[m[K’
+  257 | geometry_msgs::msg::PointStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Vector3d> & in)
+      |                                  [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Quaternion tf2::toMsg(const Quaterniond&)[m[K’
+  314 | geometry_msgs::msg::Quaternion [01;36m[KtoMsg[m[K(const Eigen::Quaterniond & in)
+      |                                [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::QuaternionStamped tf2::toMsg(const tf2::Stamped<Eigen::Quaternion<double> >&)[m[K’
+  362 | geometry_msgs::msg::QuaternionStamped [01;36m[KtoMsg[m[K(const Stamped<Eigen::Quaterniond> & in)
+      |                                       [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Affine3d&)[m[K’
+  410 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Affine3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Isometry3d&)[m[K’
+  430 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Isometry3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Twist tf2::toMsg(const Eigen::Matrix<double, 6, 1>&)[m[K’
+  501 | geometry_msgs::msg::Twist [01;36m[KtoMsg[m[K(const Eigen::Matrix<double, 6, 1> & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 2> >&)[m[K’
+  577 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Affine3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 1> >&)[m[K’
+  587 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Isometry3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h: In instantiation of ‘[01m[Kvoid tf2::quaternionKindrToTF(const Eigen::Quaternion<_Scalar>&, tf2::Quaternion*) [with Scalar = double][m[K’:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:57:27:[m[K   required from here
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:39:13:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KtoMsg(const Eigen::Quaternion<double>&, tf2::Quaternion&)[m[K’
+   39 |   [01;31m[Ktf2::toMsg(kindr, *tf_type)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:41[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class A, class B> B tf2::toMsg(const A&)[m[K’
+  129 | B [01;36m[KtoMsg[m[K(const A & a);
+      |   [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:39:13:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+   39 |   [01;36m[Ktf2::toMsg(kindr, *tf_type)[m[K;
+      |   [01;36m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Point tf2::toMsg(const Vector3d&)[m[K’
+  183 | geometry_msgs::msg::Point [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Vector3& tf2::toMsg(const Vector3d&, geometry_msgs::msg::Vector3&)[m[K’
+  211 | geometry_msgs::msg::Vector3 & [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in, geometry_msgs::msg::Vector3 & out)
+      |                               [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:61:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Eigen::Quaternion<double>[m[K’ to ‘[01m[Kconst Vector3d&[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<double, 3, 1>&[m[K’}
+  211 | geometry_msgs::msg::Vector3 & toMsg([01;36m[Kconst Eigen::Vector3d & in[m[K, geometry_msgs::msg::Vector3 & out)
+      |                                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped tf2::toMsg(const tf2::Stamped<Eigen::Matrix<double, 3, 1> >&)[m[K’
+  257 | geometry_msgs::msg::PointStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Vector3d> & in)
+      |                                  [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Quaternion tf2::toMsg(const Quaterniond&)[m[K’
+  314 | geometry_msgs::msg::Quaternion [01;36m[KtoMsg[m[K(const Eigen::Quaterniond & in)
+      |                                [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::QuaternionStamped tf2::toMsg(const tf2::Stamped<Eigen::Quaternion<double> >&)[m[K’
+  362 | geometry_msgs::msg::QuaternionStamped [01;36m[KtoMsg[m[K(const Stamped<Eigen::Quaterniond> & in)
+      |                                       [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Affine3d&)[m[K’
+  410 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Affine3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Isometry3d&)[m[K’
+  430 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Isometry3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Twist tf2::toMsg(const Eigen::Matrix<double, 6, 1>&)[m[K’
+  501 | geometry_msgs::msg::Twist [01;36m[KtoMsg[m[K(const Eigen::Matrix<double, 6, 1> & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 2> >&)[m[K’
+  577 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Affine3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 1> >&)[m[K’
+  587 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Isometry3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h: In instantiation of ‘[01m[Kvoid tf2::quaternionKindrToTF(const kindr::minimal::RotationQuaternionTemplate<Scalar>&, tf2::Quaternion*) [with Scalar = double][m[K’:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:78:22:[m[K   required from ‘[01m[Kvoid tf2::transformKindrToTF(const kindr::minimal::QuatTransformationTemplate<Scalar>&, tf2::Transform*) [with Scalar = double][m[K’
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:21:26:[m[K   required from here
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:22:13:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KtoMsg(const Implementation&, tf2::Quaternion&)[m[K’
+   22 |   [01;31m[Ktf2::toMsg(kindr.toImplementation(), *tf_type)[m[K;
+      |   [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:41[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class A, class B> B tf2::toMsg(const A&)[m[K’
+  129 | B [01;36m[KtoMsg[m[K(const A & a);
+      |   [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:22:13:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+   22 |   [01;36m[Ktf2::toMsg(kindr.toImplementation(), *tf_type)[m[K;
+      |   [01;36m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/include/minkindr_conversions/kindr_tf.h:10[m[K,
+                 from [01m[K/home/carbs/hdvio2.0/minkindr_ros/minkindr_conversions/test/kindr_tf_test.cc:1[m[K:
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Point tf2::toMsg(const Vector3d&)[m[K’
+  183 | geometry_msgs::msg::Point [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:183:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Vector3& tf2::toMsg(const Vector3d&, geometry_msgs::msg::Vector3&)[m[K’
+  211 | geometry_msgs::msg::Vector3 & [01;36m[KtoMsg[m[K(const Eigen::Vector3d & in, geometry_msgs::msg::Vector3 & out)
+      |                               [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:211:61:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Implementation[m[K’ {aka ‘[01m[Kconst Eigen::Quaternion<double>[m[K’} to ‘[01m[Kconst Vector3d&[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<double, 3, 1>&[m[K’}
+  211 | geometry_msgs::msg::Vector3 & toMsg([01;36m[Kconst Eigen::Vector3d & in[m[K, geometry_msgs::msg::Vector3 & out)
+      |                                     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped tf2::toMsg(const tf2::Stamped<Eigen::Matrix<double, 3, 1> >&)[m[K’
+  257 | geometry_msgs::msg::PointStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Vector3d> & in)
+      |                                  [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:257:34:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Quaternion tf2::toMsg(const Quaterniond&)[m[K’
+  314 | geometry_msgs::msg::Quaternion [01;36m[KtoMsg[m[K(const Eigen::Quaterniond & in)
+      |                                [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:314:32:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::QuaternionStamped tf2::toMsg(const tf2::Stamped<Eigen::Quaternion<double> >&)[m[K’
+  362 | geometry_msgs::msg::QuaternionStamped [01;36m[KtoMsg[m[K(const Stamped<Eigen::Quaterniond> & in)
+      |                                       [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:362:39:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Affine3d&)[m[K’
+  410 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Affine3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:410:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Pose tf2::toMsg(const Isometry3d&)[m[K’
+  430 | geometry_msgs::msg::Pose [01;36m[KtoMsg[m[K(const Eigen::Isometry3d & in)
+      |                          [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:430:26:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::Twist tf2::toMsg(const Eigen::Matrix<double, 6, 1>&)[m[K’
+  501 | geometry_msgs::msg::Twist [01;36m[KtoMsg[m[K(const Eigen::Matrix<double, 6, 1> & in)
+      |                           [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:501:27:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 2> >&)[m[K’
+  577 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Affine3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:577:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PoseStamped tf2::toMsg(const tf2::Stamped<Eigen::Transform<double, 3, 1> >&)[m[K’
+  587 | geometry_msgs::msg::PoseStamped [01;36m[KtoMsg[m[K(const tf2::Stamped<Eigen::Isometry3d> & in)
+      |                                 [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2_eigen/tf2_eigen/tf2_eigen.hpp:587:33:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+gmake[2]: *** [CMakeFiles/kindr_msg_test.dir/build.make:76: CMakeFiles/kindr_msg_test.dir/test/kindr_msg_test.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:185: CMakeFiles/kindr_msg_test.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/kindr_tf_test.dir/build.make:76: CMakeFiles/kindr_tf_test.dir/test/kindr_tf_test.cc.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:158: CMakeFiles/kindr_tf_test.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

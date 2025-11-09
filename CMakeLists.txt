@@ -1,16 +1,42 @@
-project(fast)
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
+project(fast_neon)
 
-SET(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Werror -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unknown-pragmas")
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-unused-variable -Wno-unused-but-set-variable -Wno-unknown-pragmas")
+
+# Auto-detect architecture
 IF(DEFINED ENV{ARM_ARCHITECTURE})
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mfpu=neon -march=armv7-a")
+  SET(IS_ARM TRUE)
+ELSEIF(CMAKE_SYSTEM_PROCESSOR MATCHES "^(aarch64|arm.*)")
+  SET(IS_ARM TRUE)
 ELSE()
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -mmmx -msse -msse -msse2 -msse3 -mssse3 -fomit-frame-pointer")
+  SET(IS_ARM FALSE)
 ENDIF()
 
-find_package(catkin_simple REQUIRED)
-catkin_simple()
+IF(IS_ARM)
+  # Check if ARM64 or ARM32
+  IF(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
+    # ARM64 - NEON is always available, but need to define the macro
+    add_compile_definitions(__ARM_NEON__)
+    MESSAGE(STATUS "Building for ARM64 (aarch64) architecture with NEON support")
+  ELSE()
+    # ARM32 - need to explicitly enable NEON
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mfpu=neon -march=armv7-a")
+    MESSAGE(STATUS "Building for ARM32 architecture with NEON support")
+  ENDIF()
+ELSE()
+  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mmmx -msse -msse2 -msse3 -mssse3 -fomit-frame-pointer")
+  MESSAGE(STATUS "Building for x86 architecture with SSE support")
+ENDIF()
+
+find_package(ament_cmake REQUIRED)
 
 set(HEADERS
   include/fast/corner_9.h
@@ -26,14 +52,30 @@ set(SOURCES
   src/nonmax_3x3.cpp
   )
 
-IF(DEFINED ENV{ARM_ARCHITECTURE})
+IF(IS_ARM)
   LIST(APPEND SOURCES ${PROJECT_SOURCE_DIR}/src/faster_corner_9_neon.cpp)
 ELSE()
   LIST(APPEND SOURCES ${PROJECT_SOURCE_DIR}/src/faster_corner_10_sse.cpp)
 ENDIF()
 
-cs_add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+add_library(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+target_include_directories(${PROJECT_NAME} PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
 
 ################################################################################
-cs_install()
-cs_export()
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+
+ament_package()

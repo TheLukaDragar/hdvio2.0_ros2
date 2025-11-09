@@ -1,0 +1,8 @@
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[ 25%] Built target gtest_main
+[ 50%] Built target gtest
+[35m[1mConsolidate compiler generated dependencies of target kindr_tf_test[0m
+[35m[1mConsolidate compiler generated dependencies of target kindr_msg_test[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/kindr_msg_test.dir/test/kindr_msg_test.cc.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/kindr_tf_test.dir/test/kindr_tf_test.cc.o[0m

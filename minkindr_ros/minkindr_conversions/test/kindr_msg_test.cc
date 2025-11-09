@@ -1,0 +1,115 @@
+#include <Eigen/Core>
+#include <Eigen/Geometry>
+#include <glog/logging.h>
+#include <gtest/gtest.h>
+#include <kindr/minimal/quat-transformation.h>
+#include <kindr/minimal/transform-2d.h>
+
+#include "minkindr_conversions/kindr_msg.h"
+#include "testing_predicates.h"
+
+namespace tf {
+
+const double kTestTolerance = std::numeric_limits<double>::epsilon() * 3;
+
+TEST(KindrMsgTest, poseKindrToMsgToKindr) {
+  Eigen::Quaterniond rotation(Eigen::Vector4d::Random());
+  rotation.normalize();
+  Eigen::Vector3d position(Eigen::Vector3d::Random());
+  kindr::minimal::QuatTransformation kindr_transform(rotation, position);
+
+  geometry_msgs::msg::Pose msg;
+  tf2::poseKindrToMsg(kindr_transform, &msg);
+  kindr::minimal::QuatTransformation output_transform;
+  tf2::poseMsgToKindr(msg, &output_transform);
+
+  EXPECT_NEAR_EIGEN(
+      output_transform.getRotation().toImplementation().coeffs(),
+      rotation.coeffs(), kTestTolerance);
+  EXPECT_NEAR_EIGEN(output_transform.getPosition(), position, kTestTolerance);
+}
+
+TEST(KindrMsgTest, poseKindr2DToMsgToKindr2D) {
+  for(auto const angle_rad : {-0.5, 0.5}) {
+    Eigen::Rotation2D<double> rotation(angle_rad);
+    const Eigen::Vector2d position = Eigen::Vector2d::Random();
+    kindr::minimal::Transformation2D kindr_transform(rotation, position);
+
+    geometry_msgs::msg::Pose msg;
+    tf2::poseKindr2DToMsg(kindr_transform, &msg);
+    kindr::minimal::Transformation2D output_transform;
+    tf2::poseMsgToKindr2D(msg, &output_transform);
+
+    EXPECT_NEAR(
+        output_transform.getRotation().angle(), angle_rad, kTestTolerance)
+            << "Angle: " << angle_rad;
+    EXPECT_NEAR_EIGEN(output_transform.getPosition(), position, kTestTolerance);
+  }
+}
+
+TEST(KindrMsgTest, poseMsgToKindr2DFailsForInvalidInputPose) {
+  geometry_msgs::msg::Pose invalid_position_msg;
+  invalid_position_msg.position.z = 1.0;
+  kindr::minimal::Transformation2D invalid_position_output_transform;
+  EXPECT_DEATH(
+      tf2::poseMsgToKindr2D(
+          invalid_position_msg, &invalid_position_output_transform),
+      "No proper 2D position.");
+
+  geometry_msgs::msg::Pose invalid_rotation_msg;
+  kindr::minimal::Transformation2D invalid_rotation_output_transform;
+  const kindr::minimal::RotationQuaternion invalid_2d_rotation(
+      kindr::minimal::AngleAxis(0.5, 0.0, 1.0, 0.0));
+  tf2::quaternionKindrToMsg(invalid_2d_rotation, &invalid_rotation_msg.orientation);
+  EXPECT_DEATH(
+      tf2::poseMsgToKindr2D(invalid_rotation_msg, &invalid_rotation_output_transform),
+      "No proper 2D rotation.");
+}
+
+TEST(KindrMsgTest, transformKindrToMsgToKindr) {
+  Eigen::Quaterniond rotation(Eigen::Vector4d::Random());
+  rotation.normalize();
+  Eigen::Vector3d position(Eigen::Vector3d::Random());
+  kindr::minimal::QuatTransformation kindr_transform(rotation, position);
+
+  geometry_msgs::msg::Transform msg;
+  tf2::transformKindrToMsg(kindr_transform, &msg);
+  kindr::minimal::QuatTransformation output_transform;
+  tf2::transformMsgToKindr(msg, &output_transform);
+
+  EXPECT_NEAR_EIGEN(
+      output_transform.getRotation().toImplementation().coeffs(),
+      rotation.coeffs(), kTestTolerance);
+  EXPECT_NEAR_EIGEN(output_transform.getPosition(), position, kTestTolerance);
+}
+
+TEST(KindrMsgTest, quaternionKindrToMsgToKindr) {
+  Eigen::Quaterniond rotation(Eigen::Vector4d::Random());
+  rotation.normalize();
+
+  geometry_msgs::msg::Quaternion msg;
+  tf2::quaternionKindrToMsg(rotation, &msg);
+  Eigen::Quaterniond output_rotation;
+  tf2::quaternionMsgToKindr(msg, &output_rotation);
+
+  EXPECT_NEAR_EIGEN(
+      output_rotation.coeffs(), rotation.coeffs(), kTestTolerance);
+}
+
+TEST(KindrMsgTest, vectorKindrToMsgToKindr) {
+  Eigen::Vector3d position(Eigen::Vector3d::Random());
+
+  geometry_msgs::msg::Vector3 msg;
+  tf2::vectorKindrToMsg(position, &msg);
+  Eigen::Vector3d output_position;
+  tf2::vectorMsgToKindr(msg, &output_position);
+
+  EXPECT_NEAR_EIGEN(output_position, position, kTestTolerance);
+}
+
+}  // namespace tf
+
+int main(int argc, char** argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
+}

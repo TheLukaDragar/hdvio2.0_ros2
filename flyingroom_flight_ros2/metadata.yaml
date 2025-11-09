@@ -8,16 +8,16 @@ rosbag2_bagfile_information:
   - duration:
       nanoseconds: 104823355516
     message_count: 59199
-    path: flyingroom_flight_ros2.db3
+    path: flyingroom_flight_ros2.mcap
     starting_time:
       nanoseconds_since_epoch: 1674813258709883581
   message_count: 59199
   relative_file_paths:
-  - flyingroom_flight_ros2.db3
+  - flyingroom_flight_ros2.mcap
   ros_distro: rosbags
   starting_time:
     nanoseconds_since_epoch: 1674813258709883581
-  storage_identifier: sqlite3
+  storage_identifier: mcap
   topics_with_message_count:
   - message_count: 10479
     topic_metadata:

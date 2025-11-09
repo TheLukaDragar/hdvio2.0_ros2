@@ -17,7 +17,8 @@ def generate_launch_description():
     record_arg = DeclareLaunchArgument('record', default_value='false')
     
     # Set environment variables for debug logging
-    glog_verbose = SetEnvironmentVariable('GLOG_v', '5')  # Maximum verbosity to see state transitions
+    # Set environment variables for debug logging
+    glog_verbose = SetEnvironmentVariable('GLOG_v', '3')  # Maximum verbosity to see state transitions
     glog_stderr = SetEnvironmentVariable('GLOG_logtostderr', '1')
 
     # Get arguments
@@ -30,6 +31,11 @@ def generate_launch_description():
     pkg_path = get_package_share_directory('hdvio2')
 
     # SVO node with environment variable for compressed transport
+    import os
+    env_vars = os.environ.copy()
+    env_vars['IMAGE_TRANSPORT'] = 'compressed'
+    
+     # SVO node with environment variable for compressed transport
     import os
     env_vars = os.environ.copy()
     env_vars['IMAGE_TRANSPORT'] = 'compressed'

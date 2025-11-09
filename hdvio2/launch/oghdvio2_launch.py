@@ -2,7 +2,7 @@
 
 import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable
+from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable, ExecuteProcess, TimerAction
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
@@ -15,6 +15,11 @@ def generate_launch_description():
     vio_param_file_arg = DeclareLaunchArgument('vio_param_file', default_value='vio_mono_fisheye_ros2')
     use_dynamics_arg = DeclareLaunchArgument('use_dynamics', default_value='false')
     record_arg = DeclareLaunchArgument('record', default_value='false')
+    bag_file_arg = DeclareLaunchArgument(
+        'bag_file', 
+        default_value='./flyingroom_flight_ros2',
+        description='Path to the bag file to play'
+    )
     
     # Set environment variables for debug logging
     glog_verbose = SetEnvironmentVariable('GLOG_v', '5')  # Maximum verbosity to see state transitions
@@ -25,9 +30,16 @@ def generate_launch_description():
     quad_name = LaunchConfiguration('quad_name')
     vio_param_file = LaunchConfiguration('vio_param_file')
     use_dynamics = LaunchConfiguration('use_dynamics')
+    bag_file = LaunchConfiguration('bag_file')
     
     # Package path
     pkg_path = get_package_share_directory('hdvio2')
+    
+    # Bag playback process
+    bag_play = ExecuteProcess(
+        cmd=['ros2', 'bag', 'play', bag_file, '--clock', '--rate', '1.0', '--loop'],
+        output='screen'
+    )
 
     # SVO node with environment variable for compressed transport
     # import os
@@ -53,6 +65,12 @@ def generate_launch_description():
         # ],
         # additional_env=env_vars,
     )
+    
+    # Delay the SVO node start by 2 seconds to ensure bag starts first
+    delayed_svo_node = TimerAction(
+        period=2.0,
+        actions=[svo_node]
+    )
 
     # # RViz node (direct port from ROS1)
     # rviz_node = Node(
@@ -71,6 +89,8 @@ def generate_launch_description():
         vio_param_file_arg,
         use_dynamics_arg,
         record_arg,
-        svo_node,
+        bag_file_arg,
+        bag_play,
+        delayed_svo_node,
         # rviz_node
     ])

@@ -37,7 +37,7 @@ def generate_launch_description():
     
     # Bag playback process
     bag_play = ExecuteProcess(
-        cmd=['ros2', 'bag', 'play', bag_file, '--clock', '--rate', '0.8', '--loop'],
+        cmd=['ros2', 'bag', 'play', bag_file, '--clock', '--rate', '1.0', '--loop'],
         output='screen'
     )
 

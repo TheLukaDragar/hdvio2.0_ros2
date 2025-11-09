@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>opengv</name>
   <version>1.0.0</version>
   <description>opengv</description>
@@ -8,10 +9,10 @@
   <author>Laurent Kneip</author>
   <url>http://ros.org/wiki/opengv</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <buildtool_depend>catkin_simple</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <build_depend>roscpp</build_depend>
-  <build_depend>eigen_catkin</build_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
 

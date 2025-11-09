@@ -10,6 +10,8 @@ This repository contains a ROS2 port of HDVIO2.0, a sliding-window optimization-
 
 It builds on top of the visual-inertial odometry algorithm [SVO Pro](https://github.com/uzh-rpg/rpg_svo_pro_open). The B-spline implementation is based on this [work](https://openaccess.thecvf.com/content_CVPR_2020/papers/Sommer_Efficient_Derivative_Computation_for_Cumulative_B-Splines_on_Lie_Groups_CVPR_2020_paper.pdf).
 
+
+Note this was vibe coded so it still needs full testing and validation. But the example works!
 ## Installation
 
 The code has been tested on:
@@ -82,24 +84,6 @@ ros2 launch hdvio2 oghdvio2_launch.py
 
 This launch file automatically plays the bag file (`flyingroom_flight_ros2`) along with launching the HDVIO2 node.
 
-### Launch Options
-
-You can customize the launch with various arguments:
-
-```sh
-ros2 launch hdvio2 oghdvio2_launch.py \
-    calib_file:=realsense \
-    vio_param_file:=vio_mono_fisheye \
-    use_dynamics:=true \
-    quad_name:=parrot \
-    record:=false
-```
-
-View all available arguments:
-```sh
-ros2 launch hdvio2 oghdvio2_launch.py --show-args
-```
-
 **Note:** For manual bag playback, use `hdvio2_launch.py` and play the bag separately in another terminal.
 
 ## Configuration
@@ -110,13 +94,16 @@ Located in: `hdvio2/param/calib/`
 
 ### VIO Parameters  
 Located in: `hdvio2/param/`
-- `vio_mono_fisheye.yaml` - Monocular fisheye configuration
+- `vio_mono_fisheye_ros2.yaml` - Monocular fisheye configuration for ROS2
+  - **Note:** The `use_learned_residuals` parameter is set to `false` by default since the TensorRT models need to be retrained for ROS2 compatibility.
 
 ### TensorRT Models
 Located in: `hdvio2/net_models/`
 - Place your trained `.engine` files here for dynamics prediction
 - `thrust_net_flyingroom.engine` - Thrust prediction model
 - `torque_net_flyingroom.engine` - Torque prediction model
+
+**⚠️ Important Note:** The current TensorRT model files (`thrust_net_flyingroom.engine` and `torque_net_flyingroom.engine`) are from the original ROS1 version and are **not compatible** with the ROS2 port. They need to be retrained and exported to the newest TensorRT engine format. Until new models are available, set `use_learned_residuals:=false` when launching to disable dynamics prediction.
 
 ## Topics
 
@@ -132,17 +119,6 @@ Located in: `hdvio2/net_models/`
 ## ROS2 Migration Notes
 
 
-
-## Troubleshooting
-
-### Large Bag Files
-Large bag files (>100MB) are excluded from git via `.gitignore`. Always download and convert bags locally rather than committing them to the repository.
-
-### RViz Plugin Errors
-If you see errors like "rviz/Orbit could not be found", use the ROS2-compatible config:
-```sh
-ros2 launch hdvio2 hdvio2_launch.py rviz_config:=rviz_config_vio_ros2.rviz
-```
 
 ## Credits
 

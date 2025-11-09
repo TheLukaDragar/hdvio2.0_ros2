@@ -167,4 +167,9 @@ svo:
     calib_file: "/home/carbs/hdvio2.0/install/hdvio2/share/hdvio2/param/calib/realsense.yaml"
     
     # Use dynamics
-    use_dynamics: false
+    use_dynamics: true
+    use_learned_residuals: false  # Set to false until TensorRT models are retrained for ROS2
+    use_rotational_dynamics: true
+    thrust_net_model_file: "net_models/thrust_net_flyingroom.engine"
+    torque_net_model_file: "net_models/torque_net_flyingroom.engine"
+
